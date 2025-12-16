@@ -1,0 +1,373 @@
+@import '../_var'
+
+.home-secA
+    padding-top: 10rem
+    overflow: hidden
+    @include before()
+    &::before
+        background: url(/assets/images/home/circular-vector.svg) no-repeat
+        inset: -29% -10% 0 0
+        z-index: -1
+        background-position: 100% 10%
+    .main_wrapper
+        --gap: 50px
+        align-items: center
+        gap: var(--gap)
+        .colA
+            flex: 0 1 calc( 60% - var(--gap) )
+            max-width: calc( 60% - var(--gap) )
+            width: 100%
+            .heading
+                h2
+                    line-height: 1.1
+                    font-size: 64px
+                    span
+                        font-family: $IvyPresto
+                p
+                    max-width: 660px
+            .btn
+                margin-top: 30px
+                --height: 62px
+                padding: 0 50px
+        .colB
+            flex: 1 
+            max-width: 40%
+            width: 100%  
+            figure
+                width: 100%
+                height: 100%
+
+.home-secB 
+    .services_wrapper
+        position: relative
+        border-radius: 25px
+        .tab-nav-content
+            position: relative
+            .tabs
+                transition: all .5s ease
+                &:not(.active)
+                    .banner
+                        .banner-wrapper
+                            .heading
+                                h2, p
+                                    opacity: 0
+                                .btn
+                                    transform: translateY(20px)
+            .banner
+                border-radius: 25px
+                &::before
+                    border-radius: 25px
+                .bg
+                    video, img
+                        border-radius: 25px 
+                .banner-wrapper
+                    top: 25%
+                    translate: 0 -25%
+                    padding: 0 40px
+                    max-width: 730px
+                    h6
+                        font-size: 18px
+                        font-weight: 700
+                        color: $white
+                        margin-bottom: 70px
+                    .heading
+                        h2
+                            font-size: 48px
+                            font-weight: 700
+                            line-height: 1.2
+                            transition: 1s ease
+                            opacity: 1
+                            span
+                                font-family: $IvyPresto
+                                font-weight: 300
+                        p
+                            line-height: 1.2
+                            font-size: 18px
+                            color: #FFFFFFB2
+                            transition: 1s ease
+                            opacity: 1
+                        .btn
+                            margin-top: 30px
+                            transform: translateY(0px)
+                            transition: 1s ease
+                .logo-vector
+                    width: 90px
+                    position: absolute
+                    top: 7%
+                    right: 3%
+        .tab-nav
+            width: 100%
+            display: flex
+            align-items: center
+            gap: 50px
+            overflow-x: auto
+            position: absolute
+            bottom: 8%
+            left: 0
+            padding: 0 20px
+            z-index: 2
+            @include scrollbar($background: rgb(0 0 0 / .3), $color: #56C4DC)
+            li
+                display: flex
+                align-items: center
+                gap: 20px
+                position: relative
+                padding-bottom: 15px
+                cursor: pointer
+                &.active
+                    .icon
+                        border-color: #56C4DC
+                    p
+                        color: #56C4DC
+                    &::before
+                        width: 100%
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    height: 2px
+                    width: 0
+                    background: #56C4DC
+                    transition: .5s ease
+                .icon
+                    flex: 0 1 60px 
+                    width: 60px 
+                    height: 60px 
+                    border: 1px solid #FFFFFF
+                    border-radius: 50%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    svg, img
+                        width: 70%
+                        height: 70%
+                p
+                    flex: 1
+                    line-height: 1.2
+                    font-size: 18px
+                    font-weight: 700
+                    color: #FFFFFF
+                    font-family: $Helvetica
+                    min-width: 104px
+
+.home-secC
+    position: relative
+    --headingfont: 48px
+    --headinglineheight: 1.2
+    --totalline: 2
+    --headingpaddingtop: 1.75rem
+    --headingpaddingbottom: 5.75rem
+    --headingheight: calc((var(--headingpaddingtop) + var(--headingpaddingbottom)) + (var(--headingfont) * var(--headinglineheight) * var(--totalline)))
+    .container
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 200px
+            height: 200px
+            background: #56C4DC
+            border-radius: 50%
+            filter: blur(100px)
+            bottom: 10%
+            z-index: -1
+    .heading
+        max-width: 720px
+        margin: 0 auto
+        padding: var(--headingpaddingtop) 0 var(--headingpaddingbottom)
+        height: var(--headingheight)
+        text-align: center
+        position: relative
+        z-index: 1
+    .sticky-sec
+        height: calc(100vh - calc( var(--headingheight) + var(--headerheight)  ))
+        position: relative
+        transition: 1s ease
+        --item: 3
+        --gap: 15px
+        --colsize: 425px
+        &::before, &::after
+            content: ""
+            width: 100%
+            height: 100%
+            background: url(/assets/images/home/home_building.svg) no-repeat
+            position: absolute
+            z-index: -1
+            opacity: .25
+        &::before
+            background-position: 0 50%
+        &::after
+            background-position: 100% 50%
+        &.all-active
+            @include flex
+            transition: .5s ease
+            justify-content: space-between
+            .sticky-wrap
+                &.fake-col
+                    display: none
+                &:nth-child(2)
+                    .cards_outer_col
+                        animation: card_bounce 2s linear infinite
+                    .cards_col
+                        transform: translateX(calc(var(--colsize) * -1 + var(--gap) * -1)) translateY(100px)
+                        @include media(991)
+                            transform: translateX(0)
+                &:nth-child(3)
+                    .cards_outer_col
+                        animation: card_bounce2 2s linear infinite
+                    .cards_col
+                        transform: translateX(0)
+                &:nth-child(4)
+                    .cards_outer_col
+                        animation: card_bounce 2s linear infinite
+                    .cards_col
+                        transform: translateX(calc(var(--colsize) * 1 + var(--gap) * 1)) translateY(100px)
+                        @include media(991)
+                            transform: translateX(calc(var(--colsize) * 2 + var(--gap) * 23))
+        .sticky-wrap
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            height: 100%
+            width: 100%
+            max-width: var(--colsize)
+            margin: 0 auto
+            transition: transform .8s ease, opacity .8s ease
+            border-radius: 15px
+            transform: translateY(100%)
+            opacity: 0
+            pointer-events: none
+            user-select: none
+            &.active
+                opacity: 1
+                transform: translateY(0)
+                pointer-events: auto
+                user-select: auto
+            &:nth-child(2)
+                .cards_col
+                    background: #224690
+            &:nth-child(3)
+                .cards_col
+                    background: #35BCF6
+                    transform: translate(25px, 30px)
+            &:nth-child(4)
+                .cards_col
+                    background: #76429A
+                    transform: translate(60px, 80px)
+            .cards_col
+                width: 100%
+                height: 260px
+                padding: 30px
+                border-radius: 15px
+                transition: 1s ease
+                .icon
+                    width: 50px
+                    height: 50px
+                    margin-left: auto
+                .content
+                    margin-top: 10px
+                    h5
+                        font-size: 30px
+                        font-weight: 500
+                        font-family: $Poppins
+                        color: $white
+                        margin-bottom: 5px
+                    p
+                        font-weight: 400
+                        line-height: 1.2
+                        color: $white
+
+@keyframes card_bounce
+    0%, 100%
+        transform: translateY(0)
+    50%
+        transform: translateY(50px)
+@keyframes card_bounce2
+    0%, 100%
+        transform: translateY(50px)
+    50%
+        transform: translateY(0px)
+
+.home-secD
+    .main_wrapper
+        border-radius: 25px
+        background: linear-gradient(90deg,#D9F0FE, #FFFFFF00)
+        width: 100%
+        .heading
+            padding: 50px 40px 60px
+            display: flex
+            gap: 50px
+            h2
+                flex: 1 
+                max-width: 60% 
+            .desc
+                flex: 0 1 auto
+                max-width: 470px
+        .client_sec
+            display: flex
+            align-items: end
+            --gap: 50px
+            gap: var(--gap)
+            .colA
+                flex: 0 1 calc( 65% - var(--gap) )
+                max-width: calc( 65% - var(--gap) )
+                width: 100%
+                padding-bottom: 40px
+                .client_slider
+                    &:not(:last-child)
+                        margin-bottom: 20px
+                        margin-right: 80px
+                    &:last-child
+                        margin-left: 80px
+                    .swiper-wrapper
+                        transition-timing-function: linear !important
+                        figure
+                            height: 100px
+                            width: 100%
+                            background: $white
+                            border-radius: 10px
+                            padding: 15px
+                            img
+                                object-fit: contain
+            .colB
+                flex: 0 1 auto
+                max-width: 35%
+                .logo-vector
+                    line-height: 0
+                    mask-image: url(/assets/logo-vector.svg)
+                    mask-size: 100%
+                    mask-repeat: no-repeat
+                    width: 417px
+                    height: 300px
+
+.home-secE
+    .heading
+        max-width: 515px
+        margin: 0 auto 50px
+        text-align: center
+    .top_sucess
+        display: flex
+        align-items: center
+        gap: 40px
+        margin-bottom: 40px
+        .success_col
+            flex: 1
+            width: 100%
+            display: flex   
+            gap: 10px
+            figure
+                flex: 0 1 auto
+                width: 100%
+                height: 100%
+            figcaption
+                p
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 1.2
+                    color: $black
+                .date
+                    margin-top: auto
+                    font-weight: 500
+                    font-size: 14px
+                    color: $text
