@@ -505,11 +505,11 @@
   --headerpadding: 12px;
   --headerheight: 80px;
   --headerfixed: 75px;
-  --marque: 36px;
   --footerstrip: 60px;
   --filterstrip: 42px;
   --elementhover: #223C89;
   --primary: #000000;
+  --lightprime: #56c4dc;
   --secondary: #223C89;
   --bglight: #F0E3DD;
   --colortext: #FFFFFFB2;
@@ -786,7 +786,7 @@ h4, h5 {
 .heading h3, .heading h2 {
   font-size: 48px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 @media only screen and (max-width: 1280px) {
   .heading h3, .heading h2 {
@@ -1699,8 +1699,8 @@ img, video {
   }
 }
 .swiper-nav button img, .swiper-nav button svg {
-  width: 40%;
-  height: 40%;
+  width: 10px;
+  height: 16px;
 }
 .swiper-nav.group {
   display: flex;

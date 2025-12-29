@@ -52,7 +52,7 @@ export default function InnovationSection() {
         <div className="home-secC sec-pad">
             <div className="container">
                 <div className="heading">
-                    <h2>The Innovation that Reimagined the <span>Financial Access for wellness.</span></h2>
+                    <h2>The Pioneer in Next-Generation<span> Financial Ecosystems.</span></h2>
                 </div>
                 <div className="sticky-sec">
                     <div className="sticky-wrap">

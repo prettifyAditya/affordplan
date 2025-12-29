@@ -19,10 +19,7 @@ export default function ClientSection() {
               </h2>
               <div className="desc">
                 <p>
-                  Our strength is the mutual trust within our network. We
-                  collaborate with institutions that share our commitment to
-                  long-term financial predictability, ensuring continuous value
-                  for every user and partner in the ecosystem.
+                  Mutual trust within a vast network forms the foundation of the ecosystem. Collaboration with institutions committed to long-term financial predictability ensures continuous value for every participant and partner.
                 </p>
               </div>
             </div>

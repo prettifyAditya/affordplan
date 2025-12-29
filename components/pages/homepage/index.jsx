@@ -4,6 +4,8 @@ import ServicesTab from "./ServicesTab"
 import InnovationSection from "./InnovationSection"
 import ClientSection from "./ClientSection"
 import GlobalSuccess from "./GlobalSuccess"
+import Testimonials from "./Testimonials"
+import Milestone from "./Milestone"
 export default function HomePage(){
     return(
         <main>
@@ -12,6 +14,8 @@ export default function HomePage(){
             <InnovationSection />
             <ClientSection />
             <GlobalSuccess />
+            <Testimonials />
+            <Milestone />
         </main>
     )
 }
