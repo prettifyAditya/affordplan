@@ -49,61 +49,63 @@ export default function InnovationSection() {
     };
   }, []);
     return(
-        <div className="home-secC sec-pad">
-            <div className="container">
-                <div className="heading">
-                    <h2>The Pioneer in Next-Generation<span> Financial Ecosystems.</span></h2>
-                </div>
-                <div className="sticky-sec">
-                    <div className="sticky-wrap">
-                        <div className="fake-col"></div>
+        <section>
+            <div className="home-secC sec-pad">
+                <div className="container">
+                    <div className="heading">
+                        <h2>The Pioneer in Next-Generation<span> Financial Ecosystems.</span></h2>
                     </div>
-                    <div className="sticky-wrap">
-                        <div className="cards_outer_col">
-                            <div className="cards_col">
-                                <div className="icon">
-                                    <Image src="/assets/images/home/card1.svg" width="50" height="50" alt="Card Icon"></Image>
-                                </div>
-                                <div className="content">
-                                    <h5>30+ Major cities</h5>
-                                    <p>Delivering services and solutions across more than 30 major cities, ensuring nationwide accessibility.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="sticky-wrap">
-                        <div className="cards_outer_col">
-                            <div className="cards_col">
-                                <div className="icon">
-                                    <Image src="/assets/images/home/card2.svg" width="50" height="50" alt="Card Icon"></Image>
-                                </div>
-                                <div className="content">
-                                    <h5>100+ Hospitals PAN India</h5>
-                                    <p>Partnered with 100+ leading hospitals across the country to provide seamless, quality healthcare access.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="sticky-wrap">
-                        <div className="cards_outer_col">
-                            <div className="cards_col">
-                                <div className="icon">
-                                    <Image src="/assets/images/home/card3.svg" width="50" height="50" alt="Card Icon"></Image>
-                                </div>
-                                <div className="content">   
-                                    <h5>8 Lakh+ Families Across India</h5>
-                                    <p>Trusted by over 8 lakh families, supporting their health, safety, and well-being.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="sticky-wrap">
-                        <div className="cards_outer_col">
+                    <div className="sticky-sec">
+                        <div className="sticky-wrap">
                             <div className="fake-col"></div>
+                        </div>
+                        <div className="sticky-wrap">
+                            <div className="cards_outer_col">
+                                <div className="cards_col">
+                                    <div className="icon">
+                                        <Image src="/assets/images/home/card1.svg" width="50" height="50" alt="Card Icon"></Image>
+                                    </div>
+                                    <div className="content">
+                                        <h5>30+ Major cities</h5>
+                                        <p>Delivering services and solutions across more than 30 major cities, ensuring nationwide accessibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="sticky-wrap">
+                            <div className="cards_outer_col">
+                                <div className="cards_col">
+                                    <div className="icon">
+                                        <Image src="/assets/images/home/card2.svg" width="50" height="50" alt="Card Icon"></Image>
+                                    </div>
+                                    <div className="content">
+                                        <h5>100+ Hospitals PAN India</h5>
+                                        <p>Partnered with 100+ leading hospitals across the country to provide seamless, quality healthcare access.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="sticky-wrap">
+                            <div className="cards_outer_col">
+                                <div className="cards_col">
+                                    <div className="icon">
+                                        <Image src="/assets/images/home/card3.svg" width="50" height="50" alt="Card Icon"></Image>
+                                    </div>
+                                    <div className="content">   
+                                        <h5>8 Lakh+ Families Across India</h5>
+                                        <p>Trusted by over 8 lakh families, supporting their health, safety, and well-being.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="sticky-wrap">
+                            <div className="cards_outer_col">
+                                <div className="fake-col"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

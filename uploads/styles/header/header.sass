@@ -77,6 +77,13 @@ header
                             .icon
                                 &::after
                                     transform: scaleY(0)
+                            .dropdown-menu
+                                transform: translate(-25%, 0px)
+                                opacity: 1
+                                pointer-events: auto
+                                user-select: auto
+                                visibility: visible
+                                display: block
                         >a 
                             position: relative
                             &::before
@@ -113,53 +120,126 @@ header
                                 right: auto
                                 width: var(--border)
                                 height: 100%
-                        &:hover
-                            .dropdown-menu
-                                transform: translate(-15%, 0px)
-                                opacity: 1
-                                pointer-events: auto
                         .dropdown-menu
                             position: absolute
                             background: url(/assets/logo-vector.svg) no-repeat, linear-gradient(0deg, #e2e8f8 0%, #fff 100%) 
-                            background-position: 96% 100%
+                            background-position: 5% 100%
                             top: 100%
                             width: max-content
+                            height: 390px
                             border-bottom-left-radius: 10px
                             border-bottom-right-radius: 10px
                             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
                             left: -100%
-                            transform: translate(-15%, 30px)
+                            transform: translate(-25%, 30px)
                             transform-origin: top
                             transition: .4s ease
                             pointer-events: none
+                            user-select: none
+                            visibility: hidden
                             --triangle: 10px
                             opacity: 0
+                            display: none
                             @include media(991)    
                                 left: 6%
                                 top: 85%
                             .dropdown-menu-wrap
                                 height: 100%
-                                width: 900px
-                                display: grid
-                                grid-template-columns: repeat(3, 1fr)
-                                padding: 25px 25px 50px 25px
-                                grid-gap: 20px
-                                li
-                                    .head_service
-                                        display: flex
-                                        gap: 15px
-                                        figure
-                                            flex: 0 1 35px
-                                            width: 35px
-                                            height: 35px
-                                        figcaption
-                                            flex: 1
-                                            h6
-                                                font-size: 16px
-                                                margin-bottom: 3px
-                                            p
-                                                font-size: 14px
-
+                                width: 1100px
+                                .colA-md
+                                    position: relative
+                                    --leftwidth: 27%
+                                    --ulpadding: 15px 10px 20px
+                                    height: 100%
+                                    .solutions_ul
+                                        width: var(--leftwidth)
+                                        height: 100%
+                                        overflow-y: auto
+                                        padding: var(--ulpadding)
+                                        padding-left: 15px
+                                        padding-right: 20px
+                                        border-right: 1px solid #D5D5D5
+                                        .solutions_li
+                                            &.active
+                                                .solution_cat
+                                                    background: linear-gradient(270deg, #233f90, #000)
+                                                    .cat_ico
+                                                        img
+                                                            filter: brightness(0) invert(1)
+                                                    p
+                                                        color: $white
+                                                    svg
+                                                        path 
+                                                            fill: $white
+                                                .solution_submenu
+                                                    opacity: 1
+                                                    visibility: visible
+                                                    user-select: auto
+                                                    pointer-events: auto
+                                                    .submenu_grid
+                                                        transform: translateY(0px)
+                                                        opacity: 1
+                                            .solution_cat
+                                                display: flex
+                                                flex-wrap: wrap
+                                                gap: 15px
+                                                align-items: center
+                                                padding: 8px 12px
+                                                border-radius: 10px
+                                                cursor: pointer
+                                                transition: .5s ease
+                                                .cat_ico
+                                                    flex: 0 1 36px
+                                                p
+                                                    flex: 1
+                                                    font-size: 14px
+                                                    font-weight: 500
+                                                    line-height: 1.3
+                                                    color: $black
+                                                    transition: .5s ease
+                                                svg
+                                                    flex: 0 1 30px
+                                            .solution_submenu
+                                                position: absolute
+                                                top: 0
+                                                left: var(--leftwidth)
+                                                width: calc(100% - var(--leftwidth))
+                                                height: max-content
+                                                padding: 35px 25px
+                                                transition: .5s ease
+                                                opacity: 0
+                                                visibility: hidden
+                                                user-select: none
+                                                pointer-events: none
+                                                .heading
+                                                    h2
+                                                        font-size: 24px
+                                                    p
+                                                        font-size: 14px
+                                                        max-width: 500px
+                                                .submenu_grid
+                                                    margin-top: 20px
+                                                    display: grid
+                                                    grid-template-columns: repeat(3, 1fr)
+                                                    grid-gap: 10px
+                                                    transform: translateY(30px)
+                                                    opacity: 0
+                                                    transition: .5s ease
+                                                    .service_col
+                                                        border-radius: 10px
+                                                        max-height: 175px
+                                                        &::before
+                                                            border-radius: 10px
+                                                        figure
+                                                            video, img
+                                                                border-radius: 10px
+                                                        figcaption
+                                                            padding: 0 10px 15px
+                                                            h4
+                                                                font-size: 14px
+                                                            p
+                                                                font-size: 12px
+                                                                margin: 5px 0 0px
         .colC
             flex: 0 1 auto
             align-items: center
@@ -823,173 +903,110 @@ header
             margin: 10px 0 3rem 
             color: $black
 
-footer
-    @include media(675)
-        margin-bottom: var(--footerstrip)
-    @include before()
-    &::before
-        width: 100%
-        height: 100%
-        background: url(/assets/images/vector/logo_vector_color.svg) no-repeat 
-        background-position: 100% 100%
-    .container-fluid
-        padding: 0
-    .main-footer
-        padding: 50px 25px
-        display: flex
-        gap: 30px
-        @include media(1280)
-            padding: 40px 0 
-        @include media(991)
-            flex-direction: column
-        @include media(768)   
-            gap: 20px
-        @include media(540)     
-            padding: 30px 0
-            gap: 10px
-        .colA
-            flex: 0 1 auto
-            @include media(991)
-                margin: 0 auto 20px
-            @include media(540)     
-                margin: 0 auto
-            img
-                @include media(991)
-                    height: 100%
-                    object-fit: contain
-        .colB
-            flex: 1
-            display: flex
-            gap: 20px
-            padding: 0 40px
-            @include media(1280)
-                padding: 0
-            @include media(540)     
-                flex-wrap: wrap
-                padding: 0
-                gap: 10px
-            .list
-                flex: 1
-                @include media(540)     
-                    flex: 0 1 46%
-                &.list-a
-                    ul
-                        li
-                            a
-                                display: block
-                                font-size: 24px
-                                color: $white
-                                @include media(768)
-                                    font-size: 20px
-                                @include media(540)
-                                    font-size: 16px
-                                    color: var(--colortext)
-                                    transition: .5s ease
-                                    padding-bottom: 5px
-                                    &:hover
-                                        color: $white
-                &.list-b
-                    ul
-                        li
-                            &:not(:last-child)
-                                a
-                                    margin-bottom: 10px
-                ul
-                    li
-                        a
-                            display: block
-                            color: var(--colortext)
-                            transition: .5s ease
-                            padding-bottom: 5px
-                            &:hover
-                                color: $white
-                                transform: translateX(5px)
-                &:last-child
-                    flex: 0 1 40%
-                    @include media(540)     
-                        flex: 1
-                        border-top: 1px solid var(--colortext)
-                        border-bottom: 1px solid var(--colortext)
-                        padding: 10px 0
-                    a
-                        display: flex
-                        gap: 10px
-                        svg
-                            flex: 0 1 20px 
 
-        .colC
-            flex: 0 1 auto
-            .social-icons
+footer
+    .container-fluid
+        padding-bottom: 50px
+        .footer_wrapper
+            background: #000000E5
+            border-radius: 20px
+            padding: 70px 60px 50px
+            @include before(url(/assets/vector/footer_bg.svg)) 
+            &::before
+                background-repeat: no-repeat
+                background-position: 50% 100%
+                background-size: 80%
+                opacity: .2
+            .upper-footer
+                display: flex
+                flex-wrap: wrap
+                --gap: 100px
+                gap: var(--gap)
+                padding-bottom: 50px
+                border-bottom: 1px solid #666464
+                .colA
+                    flex: 0 1 auto
+                    .logo
+                        display: block
+                        width: 240px
+                    .list
+                        margin-top: 40px
+                        h6
+                            font-size: 16px
+                            color: $white
+                            padding-bottom: 10px
+                            border-bottom: 1px solid #666464
+                        .social_icons
+                            display: flex
+                            flex-wrap: wrap
+                            align-items: center
+                            gap: 15px
+                            margin-top: 20px
+                            li
+                                a
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    width: 41px
+                                    height: 41px
+                                    border: 1px solid #FFFFFF
+                                    border-radius: 50%
+                                    &:hover
+                                        background: $white
+                                        color: $black
+                .colB
+                    flex: 1
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-around
+                    .list
+                        flex: 0 1 auto
+                        h6
+                            font-size: 22px
+                            color: $white
+                            padding-bottom: 10px
+                            border-bottom: 1px solid #666464
+                        ul
+                            margin-top: 15px
+                            li
+                                display: flex
+                                align-items: center
+                                gap: 10px
+                                color: $white
+                                &:not(:last-child)
+                                    margin-bottom: 8px
+                                .icon
+                                    flex: 0 1 25px
+                                    width: 25px
+                                    svg 
+                                        width: 100%
+                                        height: 100%
+                                a
+                                    flex: 1
+                                    display: block
+                                    font-size: 16px
+                                    font-weight: 400
+                                    &:hover
+                                        transform: translateX(5px)
+            .lower-footer
+                margin-top: 20px
                 display: flex
                 align-items: center
-                gap: 20px
-                @include media(991)
-                    justify-content: center
-                @include media(540)     
-                    justify-content: start
-                a
-                    display: block
-                    width: 40px
-                    height: 40px
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    border-radius: 50%
-                    &:hover
-                        background: $white
-                        svg
-                            path
-                                fill: var(--primary)
-    .newsletter
-        padding: 0px 25px 40px
-        width: 100%
-        max-width: 500px
-        display: none
-        @include media(991) 
-            max-width: 100% 
-            padding: 0 0 40px
-        h6
-            font-family: $Poppins
-            font-size: 24px
-            margin-bottom: 10px
-        p
-            color: var(--colortext)
-            line-height: 1.2
-            max-width: 355px
-        .email
-            margin-top: 15px
-            display: flex
-            align-items: center
-            gap: 20px
-            .form-group
-                --labelfontbefore: 14px
-                --labelfontafter: 12px
-                .form-control
-                    &:-webkit-autofill
-                        -webkit-text-fill-color: #fff
-            .btn
-                font-size: 14px
-    .bottom-footer
-        padding: 30px 25px 40px
-        border-top: 1px solid #CCCCCC
-        @include media(540)
-            padding: 25px 15px 30px
-        .flex
-            width: 100%
-            align-items: center
-            justify-content: space-between
-            @include media(540)     
-                flex-direction: column
-                gap: 5px
-            .pret
-                a
-                    display: flex
-                    align-items: center
+                justify-content: center
+                gap: 10px
+                p
+                    font-size: 14px
                     color: $white
-                    img
-                        width: 80px
-                        padding-left: 10px
-
+                    font-weight: 600
+                .links
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    a
+                        padding-left: 8px
+                        border-left: 1px solid $white
+                        font-size: 14px
+                        font-weight: 600
 
 .thanks_banner
     margin-top: var(--headerheight)

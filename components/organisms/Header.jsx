@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useModalStore } from "@/store/modalStore";
 import "@/uploads/styles/header/header.css"
+import ServiceCol from "../molecules/ServiceCol";
 
 export default function Header() {
   const [headerFixed, setHeaderFixed] = useState(false);
@@ -28,6 +29,24 @@ export default function Header() {
         document.body.removeEventListener("click", handleBodyClick);
     };
   }, []);
+  useEffect(() => {
+    const solutionsLi = document.querySelectorAll('.solutions_li');
+
+    const handleMouseEnter = (e) => {
+        solutionsLi.forEach(li => li.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+    };
+
+    solutionsLi.forEach(li => {
+        li.addEventListener('mouseenter', handleMouseEnter);
+    });
+
+    return () => {
+        solutionsLi.forEach(li => {
+        li.removeEventListener('mouseenter', handleMouseEnter);
+        });
+    };
+    }, []);
   return (
       <header className={`${headerFixed ? "header-fixed" : ""}`}>
         <div className="container-fluid">
@@ -46,63 +65,148 @@ export default function Header() {
                         <Link href="/solution-listing">Solutions</Link>
                         <div className="icon"></div>
                         <div className="dropdown-menu">
-                            <ul className="dropdown-menu-wrap">
-                                <li>
-                                    <Link href="" className="head_service">
-                                        <figure>
-                                            <Image src="/assets/images/home/header1.svg" width="50" height="50" alt="Products"></Image>
-                                        </figure>
-                                        <figcaption>
-                                            <h6>Swasth for families</h6>
-                                            <p>A complete ecosystem for health and wellness</p>
-                                        </figcaption>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="head_service">
-                                        <figure>
-                                            <Image src="/assets/images/home/header2.svg" width="50" height="50" alt="Products"></Image>
-                                        </figure>
-                                        <figcaption>
-                                            <h6>Swasth for Hospitals</h6>
-                                            <p>Empowering hospitals for exceptional patient care</p>
-                                        </figcaption>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="head_service">
-                                        <figure>
-                                            <Image src="/assets/images/home/header3.svg" width="50" height="50" alt="Products"></Image>
-                                        </figure>
-                                        <figcaption>
-                                            <h6>Swasth for Corporates</h6>
-                                            <p>Elevating Employee Support Through Predictable Financial Access.</p>
-                                        </figcaption>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="head_service">
-                                        <figure>
-                                            <Image src="/assets/images/home/header4.svg" width="50" height="50" alt="Products"></Image>
-                                        </figure>
-                                        <figcaption>
-                                            <h6>Amaya Wellness</h6>
-                                            <p>Bridging the Gap Between Clinical Care and Everyday Wellness.</p>
-                                        </figcaption>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="head_service">
-                                        <figure>
-                                            <Image src="/assets/images/home/header5.svg" width="50" height="50" alt="Products"></Image>
-                                        </figure>
-                                        <figcaption>
-                                            <h6>Procalyx</h6>
-                                            <p>From Reactive Purchasing to Strategic Decision-Making: The AI-Driven Supply Chain.</p>
-                                        </figcaption>
-                                    </Link>
-                                </li>
-                            </ul>
+                            <div className="dropdown-menu-wrap">
+                                <div className="colA-md">
+                                    <ul className="solutions_ul">
+                                        <li className="solutions_li active">
+                                            <div className="solution_cat">
+                                                <div className="cat_ico">
+                                                    <Image src="/assets/images/header/head_icon1.svg" width="36" height="48" alt="Category icon"></Image>
+                                                </div>
+                                                <p>Families</p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4z"></path>
+                                                </svg>
+                                            </div>
+                                            <div className="solution_submenu">
+                                                <div className="submenu_wrapper">
+                                                    <div className="heading">
+                                                        <h2>Families</h2>
+                                                        <p>Swasth Card, families gain access to dependable cashback, comprehensive insurance, and meaningful rewards.</p>
+                                                    </div>
+                                                    <div className="submenu_grid">
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaType="video"
+                                                            mediaSrc="/assets/video/service1.mp4"
+                                                            title="Swasth for families"
+                                                            desc="A complete ecosystem for health and wellness"
+                                                        />
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            title="Amaya Wellness"
+                                                            desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="solutions_li">
+                                            <div className="solution_cat">
+                                                <div className="cat_ico">
+                                                    <Image src="/assets/images/header/head_icon2.svg" width="36" height="48" alt="Category icon"></Image>
+                                                </div>
+                                                <p>Hospitals</p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4z"></path>
+                                                </svg>
+                                            </div>
+                                            <div className="solution_submenu">
+                                                <div className="submenu_wrapper">
+                                                    <div className="heading">
+                                                        <h2>Hospitals</h2>
+                                                        <p>Hospitals benefit from integrated solutions that enhance patient care, operational efficiency, and long-term outcomes.</p>
+                                                    </div>
+                                                    <div className="submenu_grid">
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaType="video"
+                                                            mediaSrc="/assets/video/service1.mp4"
+                                                            title="Swasth for families"
+                                                            desc="A complete ecosystem for health and wellness"
+                                                        />
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            title="Amaya Wellness"
+                                                            desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="solutions_li">
+                                            <div className="solution_cat">
+                                                <div className="cat_ico">
+                                                    <Image src="/assets/images/header/head_icon3.svg" width="36" height="48" alt="Category icon"></Image>
+                                                </div>
+                                                <p>Pharmaceutical companies</p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4z"></path>
+                                                </svg>
+                                            </div>
+                                            <div className="solution_submenu">
+                                                <div className="submenu_wrapper">
+                                                    <div className="heading">
+                                                        <h2>Pharmaceutical companies</h2>
+                                                        <p>Pharma Companies & Manufacturing are supported through solutions designed to strengthen innovation, production, and delivery at scale.</p>
+                                                    </div>
+                                                    <div className="submenu_grid">
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaType="video"
+                                                            mediaSrc="/assets/video/service1.mp4"
+                                                            title="Swasth for families"
+                                                            desc="A complete ecosystem for health and wellness"
+                                                        />
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            title="Amaya Wellness"
+                                                            desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="solutions_li">
+                                            <div className="solution_cat">
+                                                <div className="cat_ico">
+                                                    <Image src="/assets/images/header/head_icon4.svg" width="36" height="48" alt="Category icon"></Image>
+                                                </div>
+                                                <p>Wellness Brand</p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4z"></path>
+                                                </svg>
+                                            </div>
+                                            <div className="solution_submenu">
+                                                <div className="submenu_wrapper">
+                                                    <div className="heading">
+                                                        <h2>Wellness Brand</h2>
+                                                        <p>Swasth Card, families gain access to dependable cashback, comprehensive insurance, and meaningful rewards.</p>
+                                                    </div>
+                                                    <div className="submenu_grid">
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaType="video"
+                                                            mediaSrc="/assets/video/service1.mp4"
+                                                            title="Swasth for families"
+                                                            desc="A complete ecosystem for health and wellness"
+                                                        />
+                                                        <ServiceCol
+                                                            classname="no_anchor"
+                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            title="Amaya Wellness"
+                                                            desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>

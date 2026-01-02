@@ -513,8 +513,9 @@ img, video
 
 .btn
     position: relative
+    z-index: 0
     --padding: 18px
-    --height: 36px
+    --height: 42px
     height: var(--height)
     width: 100%
     max-width: fit-content
@@ -543,6 +544,8 @@ img, video
         position: absolute
         left: 0
         bottom: 0
+        top: 0
+        right: 0  
         width: 100%
         height: 100%
         z-index: -1
@@ -698,6 +701,15 @@ img, video
     &.white
         button
             background: $white
+    &.white-border
+        button
+            border: 1px solid $white
+            img
+                filter: invert(1)
+            &:hover
+                background: $white
+                img 
+                    filter: invert(0)
     &.primary
         button
             background: $primary
