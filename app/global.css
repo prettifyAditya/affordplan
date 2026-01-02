@@ -78,6 +78,13 @@
 .form .form-group.active::after {
   width: 100%;
 }
+.form .form-group.border::before, .form .form-group.border::after {
+  display: none;
+}
+.form .form-group.border input {
+  border: 1px solid var(--white);
+  border-radius: 5px;
+}
 .form .form-group::before, .form .form-group::after {
   content: "";
   position: absolute;
@@ -113,7 +120,7 @@
   height: calc(var(--inputsize) - var(--borderwidth));
   border: none;
   resize: none;
-  border-radius: 0px !important;
+  border-radius: 0px;
   width: 100%;
   background: none;
   color: var(--color);
@@ -669,6 +676,11 @@
   --containerfluid: 2rem;
   --gradient-light: linear-gradient(270deg, #D9F0FE, #FFFFFF00);
   --gradient-dark: linear-gradient(270deg, #233F90, #000000);
+}
+@media only screen and (max-width: 1400px) {
+  :root {
+    --container: 1200px;
+  }
 }
 @media only screen and (max-width: 1152px) {
   :root {

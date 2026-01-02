@@ -1,6 +1,48 @@
+"use client"
 import Image from "next/image"
+import { useEffect } from "react";
 
 export default function FinancialSec(){
+    useEffect(() => {
+        const section = document.querySelector('.swasth-secC.sec-pad-all');
+        const cardWrapper = document.querySelector('.card_wrapper');
+        const financialWrapper = document.querySelector('.financial_wrapper');
+        if (!section || !cardWrapper || !financialWrapper) return;
+
+        let timeoutId;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+            if (entry.isIntersecting) {
+                cardWrapper.classList.remove('active');
+                financialWrapper.classList.remove('active');
+                cardWrapper.classList.add('active');
+
+                timeoutId = setTimeout(() => {
+                financialWrapper.classList.add('active');
+                }, 1000);
+            } else {
+                cardWrapper.classList.remove('active');
+                financialWrapper.classList.remove('active');
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                    timeoutId = null;
+                }
+            }
+            },
+            {
+            threshold: 0,
+            rootMargin: '0px 0px -60% 0px',
+            }
+        );
+
+        observer.observe(section);
+
+        return () => {
+            observer.disconnect();
+            clearTimeout(timeoutId);
+        };
+    }, []);
     return(
         <section>
             <div className="swasth-secC sec-pad-all">

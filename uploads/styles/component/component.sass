@@ -26,13 +26,139 @@
             line-height: 1.2
             margin: 5px 0 20px
 
-.home-secF
+.product_herosec
+    padding-top: 10rem
+    padding-bottom: 2rem
+    overflow: hidden
+    @include before()
+    &::before
+        background: url(/assets/images/home/circular-light-vector.svg) no-repeat
+        inset: 4% 0% 0 0
+        z-index: -1
+        background-position: 100% 0%
+        background-size: 50%
+        @include media-min(1336)
+            background-size: 30%
+            background-position: 100% 50%
+    @include after-blur
+    &::after
+        top: 0%
+        right: 2%
+        transform: translate(30%, 0)
+        filter: blur(150px)
+        width: 250px
+        height: 250px
+    .main_wrapper
+        --gap: 40px
+        align-items: center
+        gap: var(--gap)
+        .colA
+            flex: 0 1 calc( 50% - var(--gap) )
+            max-width: calc( 50% - var(--gap) )
+            width: 100%
+            .heading
+                h2
+                    font-size: 48px
+                    line-height: 1.1
+                    span
+                        font-family: $IvyPresto
+                p
+                    max-width: 525px
+                    color: #565656
+                    margin: 10px 0 25px
+                    font-weight: 500
+        .colB
+            flex: 1 
+            max-width: 50%
+            width: 100%  
+            figure
+                width: 100%
+                height: 100%
+                line-height: 0
+                border-radius: 150px 15px 15px 15px
+                img, video
+                    min-height: 405px 
+                    border-radius: 150px 15px 15px 15px
+
+.network-form
+    &.corporate
+        .network_wrapper
+            .form
+                background: #045AC6
+    &.amya_wellness
+        .network_wrapper
+            .form
+                background: #0CAC41
+    .network_wrapper
+        --gap: 60px
+        gap: var(--gap)
+        justify-content: space-between
+        .heading
+            flex: 0 1 calc( 50% - var(--gap) )
+            max-width: 520px
+            width: 100%
+            h2
+                margin-bottom: 20px
+            p
+                color: #070606
+        .form
+            flex: 0 1 50%
+            max-width: 50%
+            width: 100%
+            padding: 40px
+            background: #364C8D 
+            border-radius: 20px
+            @include before(url(/assets/logo-vector-light.svg)) 
+            &::before
+                background-repeat: no-repeat
+                background-size: 210px
+                background-position: 95% 100% 
+            .heading
+                h3
+                    font-size: 36px
+                    color: $white
+            .form-grid
+                margin: 25px 0 20px
+                --item: 2 
+                --labelfontbefore: 14px
+                --gaplr: 15px
+                --color: var(--black)
+                .form-group
+                    label
+                        position: static
+                        display: block
+                        margin-bottom: 10px
+                    .form-control
+                        background: #FBFBFB
+                        padding: 0 10px
+                        outline: none
+                        &::placeholder
+                            color: #818181
+            .disclaim
+                margin: 40px 0 25px
+                p
+                    font-size: 14px
+                    color: $white
+                    font-weight: 500
+                    max-width: 375px
+                    a
+                        text-decoration: underline
+
+.testimonial_sec
     overflow: hidden
     @include before(url(/assets/images/home/circular-vector.svg))
     &::before
         background-repeat: no-repeat
         background-position: 100% 50%
         right: -20%
+    &.products_testimonials
+        overflow: visible
+        @include before-blur
+        &::before
+            width: 250px
+            height: 250px
+            top: 0
+            left: 2%
     .upper_sec
         position: relative
         .heading
@@ -87,3 +213,148 @@
                 position: absolute
                 top: 4%
                 right: 6%
+
+.info_graphic
+    &.corporate
+        .main_wrapper
+            @include before(url(/assets/vector/corporate_bg.svg))
+            &::before
+                background-repeat: no-repeat
+                background-position: 0% 100%
+                z-index: -1
+    &.amya
+        .main_wrapper
+            background: linear-gradient(90deg, #56D29D, #08702B)
+            .colA
+                figure
+                    .card
+                        animation: none
+    .main_wrapper
+        background: linear-gradient(90deg, #0CB1DF, #0358C6)
+        padding: 50px 60px 90px
+        border-radius: 20px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        --gap: 80px 
+        gap: var(--gap)
+        z-index: 0
+        @include before(url(/assets/logo-vector-light.svg))
+        &::before
+            background-repeat: no-repeat
+            background-position: 95% 100%
+            z-index: -1
+        figcaption
+            flex: 1
+            width: 100%
+            max-width: 55%
+            .heading
+                h2
+                    font-size: 48px
+                    color: $white
+                p
+                    margin: 20px 0 30px
+                    color: $white
+                    max-width: 560px
+        .colA
+            flex: 0 1 40%
+            max-width: 40%
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            @keyframes jiggle
+                0%, 100%
+                    transform: translateY(0)
+                50%
+                    transform: translateY(50px)
+            figure
+                width: 360px
+                .card
+                    animation: jiggle 3s linear infinite
+
+.why_slider_sec
+    &.amya_wellness
+        .main_wrapper
+            background: linear-gradient(90deg, #A0DCB4, #F5FDF7)
+            .slider_wrapper
+                .why-nav
+                    button
+                        svg
+                            path 
+                                stroke: #0CAC41 
+                .why_slider
+                    .why_col
+                        &:hover
+                            background: #0CAC41 
+    .main_wrapper
+        position: relative
+        background: linear-gradient(90deg, #C2D7F0, #A7E6FE)
+        padding: 50px 40px 60px 50px
+        border-radius: 20px
+        .upper_sec
+            display: flex
+            flex-wrap: wrap
+            align-items: start
+            justify-content: space-between
+            .heading
+                flex: 1
+                max-width: 650px
+                h6
+                    font-size: 18px
+                    margin-bottom: 30px
+                    font-weight: 700
+            figure
+                flex: 0 1 auto
+                width: 130px
+        .slider_wrapper
+            position: relative
+            margin-top: 60px
+            .why-nav
+                width: 106%
+                max-width: 106%
+                button
+                    svg
+                        width: 25px
+                        height: 25px
+                        path 
+                            stroke: #1E89FA
+            .why_slider
+                .why_col
+                    width: 100%
+                    height: 100%
+                    padding: 20px 20px 40px
+                    background: $white
+                    border-radius: 20px
+                    transition: .5s ease
+                    &:hover
+                        background: #1C82FA
+                        .top_nav
+                            .icon
+                                img
+                                    filter: brightness(0) invert(1)
+                            h6
+                                color: $white
+                        .desc
+                            p
+                                color: $white
+                    .top_nav
+                        display: flex
+                        flex-wrap: wrap
+                        align-items: center
+                        margin-bottom: 15px
+                        gap: 15px
+                        .icon
+                            flex: 0 1 48px
+                            width: 48px
+                            height: 48px
+                            img
+                                transition: .3s ease
+                        h6
+                            flex: 1
+                            font-size: 18px
+                            line-height: 1.2
+                    .desc
+                        font-size: 14px
+                        line-height: 1.3

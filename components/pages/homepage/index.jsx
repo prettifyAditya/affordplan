@@ -6,6 +6,45 @@ import ClientSection from "./ClientSection"
 import GlobalSuccess from "./GlobalSuccess"
 import Milestone from "./Milestone"
 import Testimonials from "@/components/organisms/Testimonials"
+
+const TestimonialData = [
+    {
+        id: 1,
+        imgSrc: "/assets/images/other/testimony.jpg",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        name: "Name Here",
+        location: "Gurugram",
+    },
+    {
+        id: 2,
+        imgSrc: "/assets/images/other/testimony.jpg",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        name: "Name Here",
+        location: "Gurugram",
+    },
+    {
+        id: 3,
+        imgSrc: "/assets/images/other/testimony.jpg",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        name: "Name Here",
+        location: "Gurugram",
+    },
+    {
+        id: 4,
+        imgSrc: "/assets/images/other/testimony.jpg",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        name: "Name Here",
+        location: "Gurugram",
+    },
+    {
+        id: 5,
+        imgSrc: "/assets/images/other/testimony.jpg",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        name: "Name Here",
+        location: "Gurugram",
+    },
+]
+
 export default function HomePage(){
     return(
         <main>
@@ -14,7 +53,7 @@ export default function HomePage(){
             <InnovationSection />
             <ClientSection />
             <GlobalSuccess />
-            <Testimonials />
+            <Testimonials heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
             <Milestone />
         </main>
     )

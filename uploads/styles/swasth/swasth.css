@@ -169,6 +169,40 @@
 .swasth-secC .financial_wrapper {
   padding: 100px 0 50px;
   position: relative;
+  overflow: hidden;
+}
+.swasth-secC .financial_wrapper.active .card_wrapper figure {
+  animation: wiggle 2s linear infinite;
+}
+.swasth-secC .financial_wrapper.active .finance_col:nth-child(2) {
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+.swasth-secC .financial_wrapper.active .finance_col:nth-child(3) {
+  top: 30%;
+  right: 18%;
+  transform: translate(18%, -30%);
+}
+.swasth-secC .financial_wrapper.active .finance_col:nth-child(4) {
+  bottom: 25%;
+  right: 16%;
+  transform: translate(16%, 25%);
+}
+.swasth-secC .financial_wrapper.active .finance_col:nth-child(5) {
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.swasth-secC .financial_wrapper.active .finance_col:nth-child(6) {
+  top: 30%;
+  left: 18%;
+  transform: translate(-18%, -30%);
+}
+.swasth-secC .financial_wrapper.active .finance_col:nth-child(7) {
+  bottom: 25%;
+  left: 16%;
+  transform: translate(-16%, 25%);
 }
 .swasth-secC .financial_wrapper .card_wrapper {
   width: 400px;
@@ -181,9 +215,13 @@
   justify-content: center;
   margin: 0 auto;
 }
+.swasth-secC .financial_wrapper .card_wrapper.active figure {
+  transform: translateY(0vh) rotate(-13deg);
+}
 .swasth-secC .financial_wrapper .card_wrapper figure {
   width: 300px;
-  rotate: -13deg;
+  transform: translateY(-50vh) rotate(-13deg);
+  transition: 1s ease;
 }
 .swasth-secC .financial_wrapper .finance_col {
   display: flex;
@@ -191,35 +229,36 @@
   align-items: center;
   gap: 20px;
   position: absolute;
+  transition: 1s ease;
 }
 .swasth-secC .financial_wrapper .finance_col:nth-child(2) {
   top: 5%;
-  left: 50%;
-  transform: translate(-50%, -5%);
+  left: -20%;
+  transform: translate(-20%, -5%);
 }
 .swasth-secC .financial_wrapper .finance_col:nth-child(3) {
   top: 30%;
-  right: 18%;
+  right: -20%;
   transform: translate(18%, -30%);
 }
 .swasth-secC .financial_wrapper .finance_col:nth-child(4) {
   bottom: 25%;
-  right: 16%;
+  right: -20%;
   transform: translate(16%, 25%);
 }
 .swasth-secC .financial_wrapper .finance_col:nth-child(5) {
-  bottom: -5%;
+  bottom: -10%;
   left: 50%;
-  transform: translate(-50%, 5%);
+  transform: translate(-50%, 10%);
 }
 .swasth-secC .financial_wrapper .finance_col:nth-child(6) {
   top: 30%;
-  left: 18%;
+  left: -20%;
   transform: translate(-18%, -30%);
 }
 .swasth-secC .financial_wrapper .finance_col:nth-child(7) {
   bottom: 25%;
-  left: 16%;
+  left: -20%;
   transform: translate(-16%, 25%);
 }
 .swasth-secC .financial_wrapper .finance_col .icon {
@@ -239,7 +278,8 @@
   width: 100%;
   border-radius: 20px;
   z-index: 0;
-  min-height: 70vh;
+  height: 70vh;
+  max-height: 650px;
   position: relative;
 }
 .swasth-secD .maternity_wrapper::before {
@@ -263,7 +303,7 @@
 }
 @media only screen and (max-width: 1400px) {
   .swasth-secD .maternity_wrapper {
-    min-height: 80vh;
+    height: 80vh;
   }
 }
 .swasth-secD .maternity_wrapper > video, .swasth-secD .maternity_wrapper > img {
@@ -279,7 +319,7 @@
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
-  padding: 0 40px;
+  padding: 0 0px 0 60px;
 }
 .swasth-secD .maternity_wrapper .content .heading {
   max-width: 580px;
@@ -298,11 +338,12 @@
   position: relative;
   margin: 25px 0;
 }
+.swasth-secD .maternity_wrapper .content .benefits_wrapper .benefits_slider_wrap .swiper-nav {
+  width: 114%;
+  max-width: 114%;
+}
 .swasth-secD .maternity_wrapper .content .benefits_wrapper .benefits_slider_wrap .swiper-nav button img {
   filter: invert(1);
-}
-.swasth-secD .maternity_wrapper .content .benefits_wrapper .benefits_slider_wrap .benefits_slider {
-  max-width: 90%;
 }
 .swasth-secD .maternity_wrapper .content .benefits_wrapper .benefits_slider_wrap .benefits_slider .maternity_col {
   background: rgba(255, 255, 255, 0.2);
@@ -337,10 +378,10 @@
   right: 50px;
 }
 
-.swasth-secE {
+.swasth-secE .container {
   background: url(/assets/logo-vector.svg) no-repeat;
-  background-position: 98% 5%;
-  background-size: 350px;
+  background-position: 98% 3%;
+  background-size: 275px;
 }
 .swasth-secE .heading {
   max-width: 670px;
@@ -398,4 +439,110 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0px 11px 56px 10px rgba(17, 17, 26, 0.1019607843);
+}
+
+.swarth_corp_A .heading {
+  max-width: 661px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+.swarth_corp_A .benefits_wrapper {
+  padding: 100px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+.swarth_corp_A .benefits_wrapper.active .card_wrapper figure {
+  animation: wiggle 2s linear infinite;
+}
+.swarth_corp_A .benefits_wrapper.active .benefits_col:nth-child(2) {
+  top: 25%;
+  right: 10%;
+  transform: translate(10%, -25%) scale(1);
+}
+.swarth_corp_A .benefits_wrapper.active .benefits_col:nth-child(3) {
+  bottom: 25%;
+  right: 10%;
+  transform: translate(10%, 25%) scale(1);
+}
+.swarth_corp_A .benefits_wrapper.active .benefits_col:nth-child(4) {
+  top: 25%;
+  left: 10%;
+  transform: translate(-10%, -25%) scale(1);
+}
+.swarth_corp_A .benefits_wrapper.active .benefits_col:nth-child(5) {
+  bottom: 25%;
+  left: 10%;
+  transform: translate(-10%, 25%) scale(1);
+}
+.swarth_corp_A .benefits_wrapper .card_wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #A7E6FE, #64A6FC);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 2;
+}
+.swarth_corp_A .benefits_wrapper .card_wrapper.active figure {
+  transform: translateY(0px) rotate(-13deg);
+}
+.swarth_corp_A .benefits_wrapper .card_wrapper figure {
+  width: 300px;
+  transform: translateY(350px) rotate(-13deg);
+  transition: 1s ease;
+}
+.swarth_corp_A .benefits_wrapper .benefits_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  transition: 1s ease;
+}
+.swarth_corp_A .benefits_wrapper .benefits_col:nth-child(2) {
+  top: 25%;
+  right: 45%;
+  transform: translate(10%, -25%) scale(0.8);
+}
+.swarth_corp_A .benefits_wrapper .benefits_col:nth-child(3) {
+  bottom: 25%;
+  right: 45%;
+  transform: translate(10%, 25%) scale(0.8);
+}
+.swarth_corp_A .benefits_wrapper .benefits_col:nth-child(4) {
+  top: 25%;
+  left: 45%;
+  transform: translate(-10%, -25%) scale(0.8);
+}
+.swarth_corp_A .benefits_wrapper .benefits_col:nth-child(5) {
+  bottom: 25%;
+  left: 45%;
+  transform: translate(-10%, 25%) scale(0.8);
+}
+.swarth_corp_A .benefits_wrapper .benefits_col .icon {
+  flex: 0 1 50px;
+  width: 50px;
+  height: 50px;
+}
+.swarth_corp_A .benefits_wrapper .benefits_col p {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  max-width: 240px;
+  line-height: 1.2;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateY(0vh) rotate(-13deg);
+  }
+  50% {
+    transform: translateY(50px) rotate(-13deg);
+  }
 }/*# sourceMappingURL=swasth.css.map */

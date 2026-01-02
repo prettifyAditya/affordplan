@@ -45,6 +45,12 @@
         &.active 
             &::after
                 width: 100%
+        &.border
+            &::before, &::after
+                display: none
+            input
+                border: 1px solid $white
+                border-radius: 5px 
         &::before,&::after
             content: ''
             position: absolute
@@ -74,7 +80,7 @@
             height: calc(var(--inputsize) - var(--borderwidth))
             border: none
             resize: none
-            border-radius: 0px !important
+            border-radius: 0px 
             width: 100%
             background: none
             color: var(--color)

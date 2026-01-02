@@ -7,15 +7,15 @@ import "swiper/css";
 import "swiper/css/navigation"
 import SwiperButton from "@/components/atoms/SwiperButton";
 import "@/uploads/styles/component/component.css"
-export default function Testimonials(){
+export default function Testimonials({TestimonialData=[], classname="", heading=""}){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="home-secF sec-pad">
+            <div className={`testimonial_sec sec-pad ${classname}`}>
                 <div className="container">
                     <div className="upper_sec">
                         <div className="heading">
-                            <h2>Voices of the <span>Swasth Community</span></h2>
+                            <h2>{heading}</h2>
                         </div>
                         <div className="testimonial-nav swiper-nav">
                             <SwiperButton classname="testimonial-prev swiper-prev" />
@@ -47,74 +47,25 @@ export default function Testimonials(){
                                 }
                             }}
                             onSwiper={(swiper) => (swiperRef.current = swiper)}>
-                            <SwiperSlide>
-                                <div className="testimonial_col">
-                                    <div className="icon">
-                                        <Image src="/assets/images/other/testimony.jpg" width="81" height="81" alt="Testimony Image"></Image>
-                                    </div>
-                                    <div className="desc">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div className="desgn">
-                                        <p className="name">Name Here</p>
-                                        <p className="loc">Gurugram</p>
-                                    </div>
-                                    <div className="quote">
-                                        <Image src="/assets/icon/quote.svg" width="70" height="70" alt="Quote Icon"></Image>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="testimonial_col">
-                                    <div className="icon">
-                                        <Image src="/assets/images/other/testimony.jpg" width="81" height="81" alt="Testimony Image"></Image>
-                                    </div>
-                                    <div className="desc">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div className="desgn">
-                                        <p className="name">Name Here</p>
-                                        <p className="loc">Gurugram</p>
-                                    </div>
-                                    <div className="quote">
-                                        <Image src="/assets/icon/quote.svg" width="70" height="70" alt="Quote Icon"></Image>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="testimonial_col">
-                                    <div className="icon">
-                                        <Image src="/assets/images/other/testimony.jpg" width="81" height="81" alt="Testimony Image"></Image>
-                                    </div>
-                                    <div className="desc">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div className="desgn">
-                                        <p className="name">Name Here</p>
-                                        <p className="loc">Gurugram</p>
-                                    </div>
-                                    <div className="quote">
-                                        <Image src="/assets/icon/quote.svg" width="70" height="70" alt="Quote Icon"></Image>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="testimonial_col">
-                                    <div className="icon">
-                                        <Image src="/assets/images/other/testimony.jpg" width="81" height="81" alt="Testimony Image"></Image>
-                                    </div>
-                                    <div className="desc">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div className="desgn">
-                                        <p className="name">Name Here</p>
-                                        <p className="loc">Gurugram</p>
-                                    </div>
-                                    <div className="quote">
-                                        <Image src="/assets/icon/quote.svg" width="70" height="70" alt="Quote Icon"></Image>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
+                                {TestimonialData.map((testimony) => (
+                                    <SwiperSlide key={testimony.id}>
+                                        <div className="testimonial_col">
+                                            <div className="icon">
+                                                <Image src={testimony.imgSrc} width="81" height="81" alt="Testimony Image"></Image>
+                                            </div>
+                                            <div className="desc">
+                                                <p>{testimony.desc}</p>
+                                            </div>
+                                            <div className="desgn">
+                                                <p className="name">{testimony.name}</p>
+                                                <p className="loc">{testimony.location}</p>
+                                            </div>
+                                            <div className="quote">
+                                                <Image src="/assets/icon/quote.svg" width="70" height="70" alt="Quote Icon"></Image>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
                         </Swiper>
                     </div>
                 </div>
