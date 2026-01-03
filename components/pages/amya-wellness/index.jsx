@@ -3,6 +3,7 @@ import InfoGraphic from "../../organisms/InfoGraphic"
 import WhySliderSec from "@/components/organisms/WhySliderSec"
 import NetworkFormSec from "@/components/organisms/NetworkFormSec"
 import Testimonials from "@/components/organisms/Testimonials"
+import MedicalIntegrated from "./MedicalIntegrated"
 import "@/uploads/styles/swasth/swasth.css"
 
 const whyData = [
@@ -91,11 +92,12 @@ export default function AmyaWellnessPage(){
                 desc="Complexity is eliminated through a single, curated ecosystem. Targeted, medically-influenced support provides certainty across prevention, chronic care, and recovery goals."
                 btnText="Go to Amaya Wellness"
             />
+            <MedicalIntegrated />
             <WhySliderSec
                 classname="amya_wellness"
                 topHeading="Why Partner With the Swasth Ecosystem"
                 heading={<>A Personalized  <span>Health Journey</span></>}
-                topImage="/assets/logo-vector.svg"
+                topImage="/assets/images/swasth/amya_why_img.svg"
                 whyData={whyData}
             />
             <NetworkFormSec

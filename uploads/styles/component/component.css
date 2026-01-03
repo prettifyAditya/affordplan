@@ -435,6 +435,12 @@
 .why_slider_sec.amya_wellness .main_wrapper {
   background: linear-gradient(90deg, #A0DCB4, #F5FDF7);
 }
+.why_slider_sec.amya_wellness .main_wrapper .upper_sec .heading {
+  max-width: 460px;
+}
+.why_slider_sec.amya_wellness .main_wrapper .upper_sec figure {
+  width: 350px;
+}
 .why_slider_sec.amya_wellness .main_wrapper .slider_wrapper .why-nav button svg path {
   stroke: #0CAC41;
 }

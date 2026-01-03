@@ -545,4 +545,91 @@
   50% {
     transform: translateY(50px) rotate(-13deg);
   }
+}
+.amya_wellness_A .heading {
+  max-width: 688px;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+.amya_wellness_A .amya_wrapper {
+  padding: 0 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+.amya_wellness_A .amya_wrapper.active .amya_col:nth-child(2) {
+  opacity: 1;
+}
+.amya_wellness_A .amya_wrapper.active .amya_col:nth-child(3) {
+  opacity: 1;
+}
+.amya_wellness_A .amya_wrapper.active .amya_col:nth-child(4) {
+  opacity: 1;
+}
+.amya_wellness_A .amya_wrapper.active .amya_col:nth-child(5) {
+  opacity: 1;
+}
+.amya_wellness_A .amya_wrapper .card_wrapper {
+  position: relative;
+  width: 400px;
+  height: 310px;
+  border-bottom: 2px solid var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 2;
+}
+.amya_wellness_A .amya_wrapper .card_wrapper.active figure {
+  transform: translateY(0px);
+}
+.amya_wellness_A .amya_wrapper .card_wrapper figure {
+  transform: translateY(350px);
+  transition: 1s ease;
+}
+.amya_wellness_A .amya_wrapper .amya_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  transition: 1s ease;
+}
+.amya_wellness_A .amya_wrapper .amya_col:nth-child(2) {
+  top: 25%;
+  right: 10%;
+  transform: translate(10%, -25%);
+  opacity: 0;
+}
+.amya_wellness_A .amya_wrapper .amya_col:nth-child(3) {
+  bottom: 25%;
+  right: 10%;
+  transform: translate(10%, 25%);
+  opacity: 0;
+}
+.amya_wellness_A .amya_wrapper .amya_col:nth-child(4) {
+  top: 25%;
+  left: 10%;
+  transform: translate(-10%, -25%);
+  opacity: 0;
+}
+.amya_wellness_A .amya_wrapper .amya_col:nth-child(5) {
+  bottom: 25%;
+  left: 10%;
+  transform: translate(-10%, 25%);
+  opacity: 0;
+}
+.amya_wellness_A .amya_wrapper .amya_col .icon {
+  flex: 0 1 50px;
+  width: 50px;
+  height: 50px;
+}
+.amya_wellness_A .amya_wrapper .amya_col p {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  max-width: 240px;
+  line-height: 1.2;
 }/*# sourceMappingURL=swasth.css.map */
