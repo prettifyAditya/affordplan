@@ -6,15 +6,16 @@ import { Navigation} from "swiper/modules";
 import "swiper/css"; 
 import "swiper/css/navigation"
 import SwiperButton from "@/components/atoms/SwiperButton";
+import "@/uploads/styles/component/component.css"
 
-export default function Milestone(){
+export default function Milestone({ classname="" ,heading="" }){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="home-secG sec-pad-all">
+            <div className={`milestone_sec sec-pad-all ${classname}`}>
                 <div className="container">
                     <div className="heading">
-                        <h2>Milestones Defining <span>The Path of Innovation.</span></h2>
+                        <h2>{heading}</h2>
                     </div>
                     <div className="milestone_wrapper">
                         <div className="milestone-nav swiper-nav white-border group">
@@ -32,7 +33,6 @@ export default function Milestone(){
                                 }}
                                 modules={[Navigation]}
                                 direction="vertical"
-                                spaceBetween={20}
                                 speed={1000}
                                 slidesPerView = {1}
                                 onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -112,7 +112,6 @@ export default function Milestone(){
                                 }}
                                 modules={[Navigation]}
                                 direction="vertical"
-                                spaceBetween={20}
                                 speed={1000}
                                 slidesPerView = {1}
                                 onSwiper={(swiper) => (swiperRef.current = swiper)}

@@ -29,7 +29,7 @@ export default function ProcalyxPage(){
                 btnClass=""
                 btnText="Explore"
                 btnType="anchor"
-                linkHref="/procalyx-hospital"
+                linkHref="/procalyx-pharma"
             />
         </main>
     )

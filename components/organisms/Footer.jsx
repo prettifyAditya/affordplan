@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import Overlay from "./Overlay";
 
 export default function Footer(){
     return(
+        <>
         <footer className="sec-pad">
             <div className="container-fluid">
                 <div className="footer_wrapper">
@@ -100,5 +102,7 @@ export default function Footer(){
                 </div>
             </div>
         </footer>
+        <Overlay />
+        </>
     )
 }

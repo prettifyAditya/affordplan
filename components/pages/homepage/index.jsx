@@ -1,11 +1,11 @@
-import "@/uploads/styles/home/home.css"
 import HeroSection from "./HeroSection"
 import ServicesTab from "./ServicesTab"
 import InnovationSection from "./InnovationSection"
 import ClientSection from "./ClientSection"
 import GlobalSuccess from "./GlobalSuccess"
-import Milestone from "./Milestone"
+import Milestone from "../../organisms/Milestone"
 import Testimonials from "@/components/organisms/Testimonials"
+import "@/uploads/styles/home/home.css"
 
 const TestimonialData = [
     {
@@ -54,7 +54,7 @@ export default function HomePage(){
             <ClientSection />
             <GlobalSuccess />
             <Testimonials heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
-            <Milestone />
+            <Milestone heading={<>Milestones Defining <span>The Path of Innovation.</span></>} />
         </main>
     )
 }

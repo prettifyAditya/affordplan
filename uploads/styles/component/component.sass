@@ -27,7 +27,7 @@
             margin: 5px 0 20px
 
 .product_herosec
-    &.procalyx
+    &.procalyx, &.about_us
         .main_wrapper .colA .heading .btn
             display: none
     padding-top: 10rem
@@ -51,6 +51,7 @@
         filter: blur(150px)
         width: 250px
         height: 250px
+        z-index: -1
     .main_wrapper
         --gap: 40px
         align-items: center
@@ -262,7 +263,20 @@
                     .card
                         animation: none
                         border-radius: 10px
+        &.swasth
+            .main_wrapper
+                background: linear-gradient(90deg, #AEBDEC, #364C8D)
     &.procalyx_pharma_comp
+        &.swasth_hospitals
+            .main_wrapper
+                flex-direction: row
+        &.swasth_corporates
+            .main_wrapper
+                background: linear-gradient(90deg, #0358C6, #0CB1DF)
+                figcaption
+                    .heading
+                        h2, p
+                            color: $white
         .main_wrapper
             background: $white
             --gap: 40px
@@ -555,3 +569,250 @@
                                     font-size: 12px
                                     line-height: 1.3
                                     color: #FFFFFFB2
+
+.milestone_sec
+    padding-bottom: 130px
+    @include before-blur
+    &::before
+        top: 5%
+        left: 0 
+        transform: translate(0, -5%)
+        z-index: -1
+    &.about_us
+        .heading
+            max-width: 600px
+    .heading
+        max-width: 500px
+        margin: 0 auto 50px
+        text-align: center
+    .milestone_wrapper
+        position: relative
+        background: linear-gradient(90deg, #233F90, #000000)
+        padding: 0px 50px 0
+        border-radius: 25px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 100%
+        height: 440px
+        z-index: 0
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 100%
+            background: url(/assets/vector/logo_vector.svg) no-repeat 
+            background-position: 10% 100%
+            z-index: -1
+        &::after
+            content: ""
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 100%
+            background: url(/assets/vector/circle_vector.svg) no-repeat 
+            background-position: 100% 100%
+            z-index: -1
+        .milestone-nav
+            position: absolute
+            right: 26%
+            bottom: 28%
+            gap: 15px
+        .colA
+            flex: 0 1 40%
+            .heading_slider
+                line-height: 1.2
+                height: 92px
+                max-width: 340px
+                top: 35%
+                .swiper-slide
+                    p
+                        font-size: 30px
+                        color: $white
+                        font-weight: 500
+                        line-height: 1.2
+                        padding: 10px 0 
+        .colB
+            flex: 0 1 auto
+            --trophywidth: 230px
+            --trophyheight: 500px
+            position: absolute
+            left: 50%
+            top: 20%
+            transform: translate(-50%, -10%)
+            .milestone_trophy_slider
+                width: var(--trophywidth)
+                height: var(--trophyheight)
+                .swiper-slide
+                    transition: .5s ease
+                    &:not(.swiper-slide-active)
+                        opacity: 0
+                        figure
+                            transform: scale(0.7)
+                    &.swiper-slide-prev
+                        transform: translateY(-100px)
+                    &.swiper-slide-next
+                        transform: translateY(-100px)
+                    figure
+                        line-height: 0
+                        height: var(--trophyheight)
+                        padding: 15px
+                        transition: .5s ease
+                        img
+                            object-fit: contain
+                
+        .colC
+            flex: 0 1 41%
+            .description_slider
+                max-width: 275px
+                line-height: 1.2
+                height: 120px
+                top: 30%
+                .swiper-slide
+                    p
+                        color: $white
+                        font-weight: 400
+                        line-height: 1.5
+                        padding: 10px 0 
+
+.team_col
+    position: relative
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    cursor: pointer
+    &:hover
+        figcaption
+            .moreBtn
+                opacity: 1
+    figure
+        display: block
+        width: 100%
+        line-height: 0
+        background: #56C4DC
+        border-radius: 10px
+        img 
+            border-radius: 10px 
+    figcaption
+        position: absolute
+        left: 50%
+        bottom: 5%
+        transform: translate(-50%, 5%)
+        width: 100%
+        max-width: 92% 
+        background: #FFFFFFE5
+        padding: 15px
+        border-radius: 10px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: 10px
+        .mem_details
+            flex: 1
+            .name
+                font-size: 18px
+                line-height: 1.2
+            .desg
+                font-family: $IvyPresto
+                font-size: 16px
+                font-weight: 300
+                color: $black
+                line-height: 1.2
+        .moreBtn
+            flex: 0 1 42px
+            width: 42px
+            height: 42px
+            background: $black
+            display: flex
+            align-items: center
+            justify-content: center
+            color: $white
+            border-radius: 50%
+            transition: .5s
+            opacity: 0
+
+.team-pop
+    max-width: 800px
+    height: fit-content
+    left: 50%
+    top: 50%
+    border-radius: 15px
+    transform: translate(-50%, 100vh)
+    transition: 0.6s ease
+    @include media(768)
+        height: 100%
+        border-radius: 0
+    &.is-open
+        transform: translate(-50%, -50%)
+        transition: 0.6s ease
+    .close:not(.btn)
+        top: 20px
+        right: 20px
+        z-index: 1
+        svg
+            width: 20px
+            height: 20px
+    .model-body
+        padding: 0 30px 100px
+        margin-top: 30px
+        border-radius: 15px
+        background: $white
+        @include before(url(/assets/images/about/team_bg.svg)) 
+        &::before
+            background-repeat: no-repeat
+            background-position: 95% 100% 
+            background-size: 140px
+        @include media(768)
+            padding: 0 20px 20px  
+            margin-top: 50px
+        .team_wrapper
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            gap: 30px
+            @include media(768)
+                flex-direction: column
+            figure
+                flex: 0 1 40%
+                position: relative
+                line-height: 0
+                padding: 20px 20px 0 
+                background: #56C4DC
+                display: flex
+                align-items: flex-end
+                justify-content: center
+                border-radius: 10px
+                .linkedin
+                    width: 30px
+                    height: 30px
+                    position: absolute
+                    top: 5%
+                    right: 5%
+                    display: block
+                    z-index: 0
+                    img, svg
+                        width: 100%
+                        height: 100%
+            figcaption
+                flex: 1
+                .heading
+                    padding-bottom: 10px
+                    border-bottom: 2px solid #D2D2D2
+                    h6
+                        font-size: 24px
+                        color: $black
+                    p
+                        color: $black
+                        margin-top: 0
+                .team_details
+                    padding: 15px 15px 15px 0
+                    max-height: 240px
+                    overflow-y: auto
+                    @include scrollbar($width: 4px,$background: #D9D9D9,$color: $primary,)
+                    p
+                        font-size: 14px
+                        &:not(:last-child)
+                            margin-bottom: 10px

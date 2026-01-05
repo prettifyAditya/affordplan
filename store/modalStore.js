@@ -6,12 +6,14 @@ export const useModalStore = create((set) => {
       isHamOpen: false,
       isEnquireOpen: false,
       isVideoOpen: false,
+      isTeamPopOpen: false,
     });
 
   return {
     isHamOpen: false,
     isEnquireOpen: false,
     isVideoOpen: false,
+    isTeamPopOpen: false,
 
     openHam: () => {
       closeAll();
@@ -30,6 +32,12 @@ export const useModalStore = create((set) => {
       set({ isVideoOpen: true });
     },
     closeVideo: () => set({ isVideoOpen: false }),
+
+    openTeamPop: () => {
+      closeAll();
+      set({ isTeamPopOpen: true });
+    },
+    closeTeamPop: () => set({ isTeamPopOpen: false }),
 
     closeAll,
   };
