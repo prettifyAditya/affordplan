@@ -27,6 +27,9 @@
             margin: 5px 0 20px
 
 .product_herosec
+    &.procalyx
+        .main_wrapper .colA .heading .btn
+            display: none
     padding-top: 10rem
     padding-bottom: 2rem
     overflow: hidden
@@ -89,6 +92,18 @@
         .network_wrapper
             .form
                 background: #0CAC41
+    &.hospital
+        .network_wrapper
+            .form
+                background: #686FF2
+    &.procalyx_pharma
+        .network_wrapper
+            .form
+                background: #0AA3D4
+    &.procalyx_hospital
+        .network_wrapper
+            .form
+                background: #686FF2
     .network_wrapper
         --gap: 60px
         gap: var(--gap)
@@ -229,6 +244,73 @@
                 figure
                     .card
                         animation: none
+    &.procalyx_pharma
+        .main_wrapper
+            background: linear-gradient(90deg, #43C0B6, #0AA3D4)
+            .colA
+                figure
+                    .card
+                        animation: none
+    &.procalyx
+        .main_wrapper
+            background: linear-gradient(90deg, #111E48, #124477)
+            --gap: 40px
+            padding: 40px 35px
+            .colA
+                figure
+                    width: 100%
+                    .card
+                        animation: none
+                        border-radius: 10px
+    &.procalyx_pharma_comp
+        .main_wrapper
+            background: $white
+            --gap: 40px
+            padding: 40px 35px
+            flex-direction: row-reverse
+            &::before
+                display: none
+            .colA
+                figure
+                    width: 100%
+                    .card
+                        animation: none
+                        border-radius: 10px
+            figcaption
+                .heading
+                    h2, p
+                        color: $black
+    &.hospital
+        .main_wrapper
+            --gap: 60px
+            padding: 0px 60px
+            align-items: end
+            background: linear-gradient(90deg, #636CF1, #A292FD)
+            .colA
+                justify-content: start
+                figure
+                    line-height: 0
+                    .card
+                        animation: none
+            figcaption
+                padding: 60px 0
+                .content
+                    .btn 
+                        display: none
+    &.procalyx_hospital
+        .main_wrapper
+            --gap: 60px
+            padding: 0px 60px
+            align-items: end
+            background: linear-gradient(90deg, #636CF1, #A292FD)
+            .colA
+                figure
+                    line-height: 0
+                    width: 100%
+                    .card
+                        animation: none
+            figcaption
+                padding: 60px 0
     .main_wrapper
         background: linear-gradient(90deg, #0CB1DF, #0358C6)
         padding: 50px 60px 90px
@@ -293,6 +375,54 @@
                     .why_col
                         &:hover
                             background: #0CAC41 
+    &.procalyx_pharma
+        .main_wrapper
+            background: linear-gradient(90deg, #CBF1FB, #B4EAF6)
+            .slider_wrapper
+                .why-nav
+                    button
+                        svg
+                            path 
+                                stroke: #0BA3D3
+                .why_slider
+                    .why_col
+                        &:hover
+                            background: #0CA4D4
+    &.procalyx_hospital
+        .main_wrapper
+            background: linear-gradient(90deg, #000000, #233F90)
+            .upper_sec
+                .heading
+                    h6, h2
+                        color: $white
+            .slider_wrapper
+                .why-nav
+                    button
+                        svg
+                            path 
+                                stroke: $white
+                .why_slider
+                    .why_col
+                        &:hover
+                            background: #686FF2
+    &.hospital
+        padding: 0
+        .main_wrapper
+            background: linear-gradient(90deg, #000000, #233F90)
+            .upper_sec
+                .heading
+                    h6, h2
+                        color: $white
+            .slider_wrapper
+                .why-nav
+                    button
+                        svg
+                            path 
+                                stroke: $white
+                .why_slider
+                    .why_col
+                        &:hover
+                            background: #686FF2
     .main_wrapper
         position: relative
         background: linear-gradient(90deg, #C2D7F0, #A7E6FE)
@@ -356,6 +486,7 @@
                             height: 48px
                             img
                                 transition: .3s ease
+                                object-fit: contain
                         h6
                             flex: 1
                             font-size: 18px
@@ -363,3 +494,64 @@
                     .desc
                         font-size: 14px
                         line-height: 1.3
+
+.case_studies_sec
+    .heading
+        text-align: center
+        margin: 0 auto 50px
+    .case_wrapper
+        position: relative
+        .case_study_slider
+            max-width: 96%
+            .case_study_col
+                border-radius: 25px
+                &::before
+                    background: linear-gradient(0deg, #000 0%, #0000 100%)
+                    border-radius: 25px
+                figure
+                    img, video
+                        border-radius: 25px
+                figcaption
+                    width: 100%
+                    height: 100%
+                    padding: 30px 20px
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    .logo_vector
+                        width: 90px
+                        height: auto
+                        img
+                            object-fit: contain
+                    .case_details
+                        h3
+                            font-size: 32px
+                            color: $white
+                            margin-bottom: 10px
+                        .desc
+                            color: #FFFFFFB2
+                            font-size: 14px
+                        .case_det_grid
+                            display: grid
+                            grid-template-columns: repeat(3, 1fr)
+                            grid-gap: 10px
+                            margin: 20px 0 30px
+                            .case_det_col
+                                padding: 15px
+                                background: #FFFFFF33
+                                backdrop-filter: blur(10)
+                                border-radius: 10px
+                                text-align: center
+                                .icon
+                                    width: 35px
+                                    height: 35px
+                                    margin: 0 auto 10px
+                                h5
+                                    color: $white
+                                    font-size: 20px
+                                    line-height: 1.2
+                                    margin-bottom: 5px
+                                p
+                                    font-size: 12px
+                                    line-height: 1.3
+                                    color: #FFFFFFB2

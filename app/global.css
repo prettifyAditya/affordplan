@@ -1787,7 +1787,7 @@ img, video {
 }
 
 .swiper-slide {
-  height: auto;
+  height: auto !important;
 }
 
 .swiper-nav {
@@ -2787,4 +2787,11 @@ em {
   width: 50%;
   height: auto;
   fill: var(--white);
+}
+
+.btn_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
 }/*# sourceMappingURL=global.css.map */

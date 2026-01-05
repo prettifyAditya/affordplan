@@ -1,8 +1,8 @@
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
-import NetworkFormSec from "@/components/organisms/NetworkFormSec"
-import Testimonials from "@/components/organisms/Testimonials"
 import InfoGraphic from "../../organisms/InfoGraphic"
 import WhySliderSec from "@/components/organisms/WhySliderSec"
+import NetworkFormSec from "@/components/organisms/NetworkFormSec"
+import Testimonials from "@/components/organisms/Testimonials"
 import BenefitsSec from "./BenefitsSec"
 import "@/uploads/styles/swasth/swasth.css"
 

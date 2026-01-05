@@ -1,4 +1,4 @@
-import SwasthForFamiliesPage from "@/components/pages/swasth";
+import SwasthForFamiliesPage from "@/components/pages/swasth-families";
 
 export const metadata = {
   title: "Swasth for Families | Affordplan",

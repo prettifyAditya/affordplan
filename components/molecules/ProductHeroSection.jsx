@@ -1,10 +1,10 @@
 import Image from "next/image";
 import "@/uploads/styles/component/component.css"
 
-export default function ProductHeroSection({heading="Heading Here", subHeading="Subheading Here", btnText="Book a demo", mediaType="video", mediaSrc="assets/video/swasth_banner.mp4", videoPoster="assets/video/swasth_banner_poster.png"}) {
+export default function ProductHeroSection({classname="" ,heading="Heading Here", subHeading="Subheading Here", btnText="Book a demo", mediaType="video", mediaSrc="assets/video/swasth_banner.mp4", videoPoster="assets/video/swasth_banner_poster.png"}) {
   return (
     <section>
-      <div className="product_herosec sec-pad-all">
+      <div className={`product_herosec sec-pad-all ${classname}`}>
         <div className="container">
           <div className="main_wrapper flex">
             <div className="colA">

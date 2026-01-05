@@ -486,3 +486,239 @@
                 text-align: center
                 max-width: 240px
                 line-height: 1.2
+
+// Hospitals
+
+.value_add_sec
+    .heading
+        text-align: center
+        max-width: 375px
+        margin: 0 auto 50px
+    .value_wrapper
+        position: relative
+        .value_slider
+            max-width: 96%
+        .value_col
+            width: 100%
+            height: 100%
+            padding: 20px 
+            background: $white
+            border-radius: 10px
+            transition: .5s ease
+            .top_nav
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                gap: 10px
+                margin-bottom: 15px
+                h6
+                    flex: 1
+                    line-height: 1.2
+                    font-size: 24px
+                    font-weight: 700
+                .count
+                    flex: 0 1 auto
+                    span
+                        font-size: 32px
+                        font-weight: 700
+                        color: #686FF2
+            .desc
+                p
+                    font-size: 14px
+                    line-height: 1.4
+    .btn_wrap
+        margin-top: 50px
+        justify-content: center
+
+.operational_flow_sec
+    overflow: hidden
+    @include before(url(/assets/images/home/circular-vector.svg))
+    &::before
+        background-repeat: no-repeat
+        background-position: 100% 50%
+        right: -20%
+    .heading
+        text-align: center
+        max-width: 410px
+        margin: 0 auto 10px
+    .operational_wrapper
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        .colA
+            flex: 0 1 50%
+            max-width: 50%
+            width: 100%
+            display: flex
+            align-items: end
+            justify-content: center
+            .hand_wrapper
+                position: relative
+                width: 330px
+                line-height: 0
+                .hand_slider
+                    position: absolute
+                    top: 18%
+                    left: 41%
+                    transform: translate(-45%, -18%)
+                    width: 200px
+                    max-height: 160px
+                    .hand_col
+                        text-align: center
+                        .icon
+                            width: 56px
+                            height: 56px
+                            margin: 0 auto 10px
+                        h6
+                            font-size: 16px
+                            color: $text
+                            line-height: 1.2
+                            max-width: 135px
+                            margin: 0 auto
+        .colB
+            flex: 0 1 50%
+            max-width: 50%
+            width: 100%
+            border-left: 2px solid $black
+            .flow_details
+                padding: 50px 0
+                margin-left: -23px
+                .flow_col
+                    display: flex
+                    flex-wrap: wrap
+                    gap: 50px 
+                    &:not(:last-child)
+                        margin-bottom: 30px
+                    &.active
+                        .circle
+                            .icon
+                                &::after
+                                    transform: scaleY(0)
+                        .flow_content
+                            padding: 20px
+                            background: $white
+                            border-radius: 8px
+                            box-shadow: 0 4px 12px 0 #0000001A
+                            &::before
+                                opacity: 1
+                            .desc
+                                max-height: 100%
+                                opacity: 1
+                                user-select: auto
+                                pointer-events: auto
+                    .circle
+                        flex: 0 1 43px
+                        width: 43px
+                        height: 43px
+                        border: 1px solid $black
+                        border-radius: 50%
+                        background: $white
+                        transition: .5s ease
+                        position: relative
+                        cursor: pointer
+                        .icon
+                            --bgcolor: var(--black)
+                            --size: 20px
+                            --border: 2px
+                            height: var(--size)
+                            width: var(--size)
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                            @include before(var(--bgcolor))
+                            @include after(var(--bgcolor))
+                            &::before,&::after
+                                transition: .5s ease
+                            &::before
+                                top: calc(var(--size) / 2 - var(--border) / 2)
+                                bottom: auto
+                                height: var(--border)
+                                width: 100%
+                            &::after
+                                left: calc(var(--size) / 2)
+                                translate: -50% 0 
+                                right: auto
+                                width: var(--border)
+                                height: 100%
+                    .flow_content
+                        flex: 1
+                        max-width: 460px
+                        position: relative
+                        --triangle: 18px
+                        transition: .3s ease
+                        cursor: pointer
+                        z-index: 0
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 20%
+                            left: -2%
+                            width: var(--triangle)
+                            height: var(--triangle)
+                            rotate: 45deg
+                            background: $white
+                            z-index: -1
+                            transition: .3s ease
+                            opacity: 0
+                        h6
+                            font-size: 20px
+                            margin-bottom: 10px
+                        .desc
+                            max-height: 0
+                            opacity: 0
+                            transition: .3s ease
+                            user-select: none
+                            pointer-events: none
+                            p
+                                line-height: 1.3
+
+.how_it_works
+    &.procal_hospital
+        .how_wrapper .how_slider .how_col
+            figcaption
+                h3
+                    color: #686FF2
+    .container-fluid
+        padding: 0
+    .heading
+        max-width: 480px
+        text-align: center
+        margin: 0 auto 50px
+        p
+            color: $black
+    .how_wrapper
+        position: relative
+        .how-nav
+            max-width: 72%
+            width: 72%
+            button
+                svg
+                    width: 25px
+                    height: 25px
+        .how_slider
+            .swiper-slide
+                transition: .5s ease
+                &:not(.swiper-slide-active)
+                    opacity: 0.3
+            .how_col
+                width: 100%
+                height: 100%
+                padding: 30px 25px
+                background: $white
+                border-radius: 15px
+                display: flex
+                flex-wrap: wrap
+                gap: 40px
+                figcaption, figure  
+                    flex: 1 
+                figure
+                    img
+                        border-radius: 15px
+                figcaption
+                    h3
+                        font-size: 36px
+                        line-height: 1.1
+                        color: #19B5D7
+                    p
+                        line-height: 1.4
+                        margin: 10px 0 20px

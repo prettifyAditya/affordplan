@@ -632,4 +632,325 @@
   text-align: center;
   max-width: 240px;
   line-height: 1.2;
+}
+
+.value_add_sec .heading {
+  text-align: center;
+  max-width: 375px;
+  margin: 0 auto 50px;
+}
+.value_add_sec .value_wrapper {
+  position: relative;
+}
+.value_add_sec .value_wrapper .value_slider {
+  max-width: 96%;
+}
+.value_add_sec .value_wrapper .value_col {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.value_add_sec .value_wrapper .value_col .top_nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.value_add_sec .value_wrapper .value_col .top_nav h6 {
+  flex: 1;
+  line-height: 1.2;
+  font-size: 24px;
+  font-weight: 700;
+}
+.value_add_sec .value_wrapper .value_col .top_nav .count {
+  flex: 0 1 auto;
+}
+.value_add_sec .value_wrapper .value_col .top_nav .count span {
+  font-size: 32px;
+  font-weight: 700;
+  color: #686FF2;
+}
+.value_add_sec .value_wrapper .value_col .desc p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.value_add_sec .btn_wrap {
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.operational_flow_sec {
+  overflow: hidden;
+  position: relative;
+}
+.operational_flow_sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: url(/assets/images/home/circular-vector.svg);
+  transition: 0.5s ease;
+}
+.operational_flow_sec::before {
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  right: -20%;
+}
+.operational_flow_sec .heading {
+  text-align: center;
+  max-width: 410px;
+  margin: 0 auto 10px;
+}
+.operational_flow_sec .operational_wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.operational_flow_sec .operational_wrapper .colA {
+  flex: 0 1 50%;
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.operational_flow_sec .operational_wrapper .colA .hand_wrapper {
+  position: relative;
+  width: 330px;
+  line-height: 0;
+}
+.operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider {
+  position: absolute;
+  top: 18%;
+  left: 41%;
+  transform: translate(-45%, -18%);
+  width: 200px;
+  max-height: 160px;
+}
+.operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider .hand_col {
+  text-align: center;
+}
+.operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider .hand_col .icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+}
+.operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider .hand_col h6 {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.2;
+  max-width: 135px;
+  margin: 0 auto;
+}
+.operational_flow_sec .operational_wrapper .colB {
+  flex: 0 1 50%;
+  max-width: 50%;
+  width: 100%;
+  border-left: 2px solid var(--black);
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details {
+  padding: 50px 0;
+  margin-left: -23px;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col:not(:last-child) {
+  margin-bottom: 30px;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col.active .circle .icon::after {
+  transform: scaleY(0);
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col.active .flow_content {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1019607843);
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col.active .flow_content::before {
+  opacity: 1;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col.active .flow_content .desc {
+  max-height: 100%;
+  opacity: 1;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
+  pointer-events: auto;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle {
+  flex: 0 1 43px;
+  width: 43px;
+  height: 43px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  background: var(--white);
+  transition: 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon {
+  --bgcolor: var(--black);
+  --size: 20px;
+  --border: 2px;
+  height: var(--size);
+  width: var(--size);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: var(--bgcolor);
+  transition: 0.5s ease;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: var(--bgcolor);
+  transition: 0.5s ease;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon::before, .operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon::after {
+  transition: 0.5s ease;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon::before {
+  top: calc(var(--size) / 2 - var(--border) / 2);
+  bottom: auto;
+  height: var(--border);
+  width: 100%;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .circle .icon::after {
+  left: calc(var(--size) / 2);
+  translate: -50% 0;
+  right: auto;
+  width: var(--border);
+  height: 100%;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .flow_content {
+  flex: 1;
+  max-width: 460px;
+  position: relative;
+  --triangle: 18px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  z-index: 0;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .flow_content::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -2%;
+  width: var(--triangle);
+  height: var(--triangle);
+  rotate: 45deg;
+  background: var(--white);
+  z-index: -1;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .flow_content h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .flow_content .desc {
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.operational_flow_sec .operational_wrapper .colB .flow_details .flow_col .flow_content .desc p {
+  line-height: 1.3;
+}
+
+.how_it_works.procal_hospital .how_wrapper .how_slider .how_col figcaption h3 {
+  color: #686FF2;
+}
+.how_it_works .container-fluid {
+  padding: 0;
+}
+.how_it_works .heading {
+  max-width: 480px;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+.how_it_works .heading p {
+  color: var(--black);
+}
+.how_it_works .how_wrapper {
+  position: relative;
+}
+.how_it_works .how_wrapper .how-nav {
+  max-width: 72%;
+  width: 72%;
+}
+.how_it_works .how_wrapper .how-nav button svg {
+  width: 25px;
+  height: 25px;
+}
+.how_it_works .how_wrapper .how_slider .swiper-slide {
+  transition: 0.5s ease;
+}
+.how_it_works .how_wrapper .how_slider .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.3;
+}
+.how_it_works .how_wrapper .how_slider .how_col {
+  width: 100%;
+  height: 100%;
+  padding: 30px 25px;
+  background: var(--white);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.how_it_works .how_wrapper .how_slider .how_col figcaption, .how_it_works .how_wrapper .how_slider .how_col figure {
+  flex: 1;
+}
+.how_it_works .how_wrapper .how_slider .how_col figure img {
+  border-radius: 15px;
+}
+.how_it_works .how_wrapper .how_slider .how_col figcaption h3 {
+  font-size: 36px;
+  line-height: 1.1;
+  color: #19B5D7;
+}
+.how_it_works .how_wrapper .how_slider .how_col figcaption p {
+  line-height: 1.4;
+  margin: 10px 0 20px;
 }/*# sourceMappingURL=swasth.css.map */

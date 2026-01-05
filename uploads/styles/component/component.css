@@ -49,6 +49,9 @@
   position: relative;
   z-index: 0;
 }
+.product_herosec.procalyx .main_wrapper .colA .heading .btn {
+  display: none;
+}
 .product_herosec::before {
   content: "";
   position: absolute;
@@ -138,6 +141,15 @@
 }
 .network-form.amya_wellness .network_wrapper .form {
   background: #0CAC41;
+}
+.network-form.hospital .network_wrapper .form {
+  background: #686FF2;
+}
+.network-form.procalyx_pharma .network_wrapper .form {
+  background: #0AA3D4;
+}
+.network-form.procalyx_hospital .network_wrapper .form {
+  background: #686FF2;
 }
 .network-form .network_wrapper {
   --gap: 60px;
@@ -362,6 +374,80 @@
 .info_graphic.amya .main_wrapper .colA figure .card {
   animation: none;
 }
+.info_graphic.procalyx_pharma .main_wrapper {
+  background: linear-gradient(90deg, #43C0B6, #0AA3D4);
+}
+.info_graphic.procalyx_pharma .main_wrapper .colA figure .card {
+  animation: none;
+}
+.info_graphic.procalyx .main_wrapper {
+  background: linear-gradient(90deg, #111E48, #124477);
+  --gap: 40px;
+  padding: 40px 35px;
+}
+.info_graphic.procalyx .main_wrapper .colA figure {
+  width: 100%;
+}
+.info_graphic.procalyx .main_wrapper .colA figure .card {
+  animation: none;
+  border-radius: 10px;
+}
+.info_graphic.procalyx_pharma_comp .main_wrapper {
+  background: var(--white);
+  --gap: 40px;
+  padding: 40px 35px;
+  flex-direction: row-reverse;
+}
+.info_graphic.procalyx_pharma_comp .main_wrapper::before {
+  display: none;
+}
+.info_graphic.procalyx_pharma_comp .main_wrapper .colA figure {
+  width: 100%;
+}
+.info_graphic.procalyx_pharma_comp .main_wrapper .colA figure .card {
+  animation: none;
+  border-radius: 10px;
+}
+.info_graphic.procalyx_pharma_comp .main_wrapper figcaption .heading h2, .info_graphic.procalyx_pharma_comp .main_wrapper figcaption .heading p {
+  color: var(--black);
+}
+.info_graphic.hospital .main_wrapper {
+  --gap: 60px;
+  padding: 0px 60px;
+  align-items: end;
+  background: linear-gradient(90deg, #636CF1, #A292FD);
+}
+.info_graphic.hospital .main_wrapper .colA {
+  justify-content: start;
+}
+.info_graphic.hospital .main_wrapper .colA figure {
+  line-height: 0;
+}
+.info_graphic.hospital .main_wrapper .colA figure .card {
+  animation: none;
+}
+.info_graphic.hospital .main_wrapper figcaption {
+  padding: 60px 0;
+}
+.info_graphic.hospital .main_wrapper figcaption .content .btn {
+  display: none;
+}
+.info_graphic.procalyx_hospital .main_wrapper {
+  --gap: 60px;
+  padding: 0px 60px;
+  align-items: end;
+  background: linear-gradient(90deg, #636CF1, #A292FD);
+}
+.info_graphic.procalyx_hospital .main_wrapper .colA figure {
+  line-height: 0;
+  width: 100%;
+}
+.info_graphic.procalyx_hospital .main_wrapper .colA figure .card {
+  animation: none;
+}
+.info_graphic.procalyx_hospital .main_wrapper figcaption {
+  padding: 60px 0;
+}
 .info_graphic .main_wrapper {
   background: linear-gradient(90deg, #0CB1DF, #0358C6);
   padding: 50px 60px 90px;
@@ -447,6 +533,42 @@
 .why_slider_sec.amya_wellness .main_wrapper .slider_wrapper .why_slider .why_col:hover {
   background: #0CAC41;
 }
+.why_slider_sec.procalyx_pharma .main_wrapper {
+  background: linear-gradient(90deg, #CBF1FB, #B4EAF6);
+}
+.why_slider_sec.procalyx_pharma .main_wrapper .slider_wrapper .why-nav button svg path {
+  stroke: #0BA3D3;
+}
+.why_slider_sec.procalyx_pharma .main_wrapper .slider_wrapper .why_slider .why_col:hover {
+  background: #0CA4D4;
+}
+.why_slider_sec.procalyx_hospital .main_wrapper {
+  background: linear-gradient(90deg, #000000, #233F90);
+}
+.why_slider_sec.procalyx_hospital .main_wrapper .upper_sec .heading h6, .why_slider_sec.procalyx_hospital .main_wrapper .upper_sec .heading h2 {
+  color: var(--white);
+}
+.why_slider_sec.procalyx_hospital .main_wrapper .slider_wrapper .why-nav button svg path {
+  stroke: var(--white);
+}
+.why_slider_sec.procalyx_hospital .main_wrapper .slider_wrapper .why_slider .why_col:hover {
+  background: #686FF2;
+}
+.why_slider_sec.hospital {
+  padding: 0;
+}
+.why_slider_sec.hospital .main_wrapper {
+  background: linear-gradient(90deg, #000000, #233F90);
+}
+.why_slider_sec.hospital .main_wrapper .upper_sec .heading h6, .why_slider_sec.hospital .main_wrapper .upper_sec .heading h2 {
+  color: var(--white);
+}
+.why_slider_sec.hospital .main_wrapper .slider_wrapper .why-nav button svg path {
+  stroke: var(--white);
+}
+.why_slider_sec.hospital .main_wrapper .slider_wrapper .why_slider .why_col:hover {
+  background: #686FF2;
+}
 .why_slider_sec .main_wrapper {
   position: relative;
   background: linear-gradient(90deg, #C2D7F0, #A7E6FE);
@@ -521,6 +643,8 @@
 }
 .why_slider_sec .main_wrapper .slider_wrapper .why_slider .why_col .top_nav .icon img {
   transition: 0.3s ease;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .why_slider_sec .main_wrapper .slider_wrapper .why_slider .why_col .top_nav h6 {
   flex: 1;
@@ -530,4 +654,80 @@
 .why_slider_sec .main_wrapper .slider_wrapper .why_slider .why_col .desc {
   font-size: 14px;
   line-height: 1.3;
+}
+
+.case_studies_sec .heading {
+  text-align: center;
+  margin: 0 auto 50px;
+}
+.case_studies_sec .case_wrapper {
+  position: relative;
+}
+.case_studies_sec .case_wrapper .case_study_slider {
+  max-width: 96%;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col {
+  border-radius: 25px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col::before {
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 25px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figure img, .case_studies_sec .case_wrapper .case_study_slider .case_study_col figure video {
+  border-radius: 25px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption {
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .logo_vector {
+  width: 90px;
+  height: auto;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .logo_vector img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details h3 {
+  font-size: 32px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details .desc {
+  color: rgba(255, 255, 255, 0.6980392157);
+  font-size: 14px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details .case_det_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 20px 0 30px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details .case_det_grid .case_det_col {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10);
+          backdrop-filter: blur(10);
+  border-radius: 10px;
+  text-align: center;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details .case_det_grid .case_det_col .icon {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 10px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details .case_det_grid .case_det_col h5 {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.case_studies_sec .case_wrapper .case_study_slider .case_study_col figcaption .case_details .case_det_grid .case_det_col p {
+  font-size: 12px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.6980392157);
 }/*# sourceMappingURL=component.css.map */
