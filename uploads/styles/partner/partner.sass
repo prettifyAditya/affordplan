@@ -1,0 +1,39 @@
+@import '../_var'
+
+.partner_hero
+    position: relative
+    @include before-blur
+    &::before
+        top: 0
+        right: 0
+        width: 300px
+        height: 300px
+        filter: blur(200px)
+    .bg
+        line-height: 0
+        height: calc( 100vh - var(--headerheight) )
+    .banner-wrapper
+        width: 100%
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, -50%)
+        z-index: 1
+        .heading
+            text-align: center
+            h2
+                color: $black
+            .btn
+                margin: 20px auto
+
+.meet_partners_sec
+    .main_wrapper
+        padding: 40px 25px 60px
+        background: linear-gradient(90deg, #000, #233f90)
+        position: relative
+        border-radius: 20px
+        .heading
+            text-align: center
+            margin-bottom: 50px
+            h2
+                color: $white

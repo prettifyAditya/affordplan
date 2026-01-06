@@ -7,6 +7,7 @@ export const useModalStore = create((set) => {
       isEnquireOpen: false,
       isVideoOpen: false,
       isTeamPopOpen: false,
+      isPositionsOpen: false,
     });
 
   return {
@@ -14,6 +15,7 @@ export const useModalStore = create((set) => {
     isEnquireOpen: false,
     isVideoOpen: false,
     isTeamPopOpen: false,
+    isPositionsOpen: false,
 
     openHam: () => {
       closeAll();
@@ -38,6 +40,12 @@ export const useModalStore = create((set) => {
       set({ isTeamPopOpen: true });
     },
     closeTeamPop: () => set({ isTeamPopOpen: false }),
+    
+    openPositionsPop: () => {
+      closeAll();
+      set({ isPositionsOpen: true });
+    },
+    closePositionsPop: () => set({ isPositionsOpen: false }),
 
     closeAll,
   };

@@ -207,7 +207,7 @@
   pointer-events: none;
   height: calc(var(--inputsize) - var(--borderwidth));
   position: relative;
-  --filename: "Attach Resume*";
+  --filename: "Upload file*";
   --filenameinitial: var(--filename);
   --color: var(--text);
   --background: none;
@@ -1835,6 +1835,15 @@ img, video {
 }
 .swiper-nav.white-border button:hover img {
   filter: invert(0);
+}
+.swiper-nav.black-border button {
+  border: 1px solid var(--black);
+}
+.swiper-nav.black-border button:hover {
+  background: var(--black);
+}
+.swiper-nav.black-border button:hover img {
+  filter: invert(1);
 }
 .swiper-nav.primary button {
   background: var(--primary);

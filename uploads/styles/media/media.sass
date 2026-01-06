@@ -1,0 +1,125 @@
+@import '../_var' 
+
+.trends_sec
+    padding-top: 12rem
+    padding-bottom: 2rem
+    overflow: hidden
+    @include before()
+    &::before
+        background: url(/assets/images/home/circular-light-vector.svg) no-repeat
+        inset: 4% 0% 0 0
+        z-index: -1
+        background-position: 100% 0%
+        background-size: 50%
+        @include media-min(1336)
+            background-size: 30%
+            background-position: 100% 50%
+    @include after-blur
+    &::after
+        top: 0%
+        right: 2%
+        transform: translate(30%, 0)
+        filter: blur(150px)
+        width: 250px
+        height: 250px
+        z-index: -1
+    .heading
+        max-width: 470px
+        margin-bottom: 60px
+    .container-fluid
+        padding-right: 0
+        .trends_wrapper
+            position: relative
+            .trends-nav
+                position: absolute
+                bottom: 10%
+                right: 20%
+                transform: translate(20%, 10%)
+                z-index: 2
+                button
+                    background: #C5C5C5
+                    border-radius: 5px
+            .trends_slider
+                .trends_col
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    flex-wrap: wrap
+                    border-radius: 20px
+                    figure
+                        flex: 0 1 40%
+                        max-width: 40%
+                        width: 100%
+                        line-height: 0
+                        img
+                            border-top-left-radius: 20px
+                            border-bottom-left-radius: 20px
+                    figcaption
+                        flex: 1
+                        background: linear-gradient(90deg, #000000, #233F90)
+                        border-top-right-radius: 20px
+                        border-bottom-right-radius: 20px
+                        padding: 40px
+                        display: flex
+                        align-items: center
+                        @include before(url(/assets/logo-vector-light.svg)) 
+                        &::before
+                            background-repeat: no-repeat
+                            background-size: 200px
+                            background-position: 60% 100% 
+                        .desc
+                            h6, p
+                                color: $white
+                            h6
+                                font-size: 24px
+                                line-height: 1.4
+                            p
+                                margin-top: 50px
+                                font-family: $IvyPresto
+
+.more_trends_sec
+    .more_trends
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        .more_trends_col
+            display: block
+            border-radius: 20px
+            background: $white
+            width: 100%
+            height: 100%
+            &:hover
+                figure
+                    img
+                        transform: scale(1.1)
+            figure
+                border-top-left-radius: 20px
+                border-top-right-radius: 20px
+                overflow: hidden
+                @include shine()
+                img
+                    border-top-left-radius: 20px
+                    border-top-right-radius: 20px
+            figcaption
+                padding: 25px 20px 30px
+                h6
+                    font-size: 20px
+                    line-height: 1.4
+                .date
+                    margin-top: 30px
+                    font-family: $IvyPresto
+    .btn_wrap
+        margin: 50px auto 0
+        flex-direction: column
+        justify-content: center
+        gap: 5px
+        width: max-content
+        cursor: pointer
+        img
+            width: 80px
+            transition: .5s ease
+        &:hover
+            img, svg
+                transform: translateY(5px)
+        .load_btn
+            font-weight: 500

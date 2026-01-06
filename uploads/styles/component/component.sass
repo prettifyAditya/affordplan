@@ -52,6 +52,16 @@
         width: 250px
         height: 250px
         z-index: -1
+    &.contact_us
+        .main_wrapper
+            .colA .heading 
+                p 
+                    color: $black
+                    span
+                        display: block
+                        margin-top: 50px
+                        font-style: italic
+                        color: $black
     .main_wrapper
         --gap: 40px
         align-items: center
@@ -68,7 +78,7 @@
                         font-family: $IvyPresto
                 p
                     max-width: 525px
-                    color: #565656
+                    color: #070606
                     margin: 10px 0 25px
                     font-weight: 500
         .colB
@@ -816,3 +826,72 @@
                         font-size: 14px
                         &:not(:last-child)
                             margin-bottom: 10px
+
+.positions-pop
+    max-width: 90%
+    height: fit-content
+    left: 50%
+    top: 50%
+    border-radius: 15px
+    transform: translate(-50%, 100vh)
+    transition: 0.6s ease
+    @include media(768)
+        height: 100%
+        border-radius: 0
+    &.is-open
+        transform: translate(-50%, -50%)
+        transition: 0.6s ease
+    .close:not(.btn)
+        top: 35px
+        right: 35px
+        z-index: 1
+        svg
+            width: 20px
+            height: 20px
+    .model-body
+        padding: 0 30px 30px
+        margin-top: 30px
+        border-radius: 15px
+        background: $white
+        max-height: 90vh
+        overflow-y: auto
+        @include scrollbar($width: 5px,$background: #f5f5f5, $color: #000)
+        @include media(768)
+            padding: 0 20px 20px  
+        .post_wrapper
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            .post_details_wrap
+                flex: 1
+                padding: 30px
+                border-right: 1px solid #0000002E
+            .post_form
+                flex: 1
+                padding: 20px 20px 20px 40px
+                .heading
+                    h2
+                        font-size: 30px
+                .form-grid
+                    --item: 2 
+                    --labelfontbefore: 14px
+                    --gaplr: 15px
+                    --color: var(--black)
+                    margin: 30px 0 50px
+                    .form-group
+                        label
+                            position: static
+                            display: block
+                            margin-bottom: 10px
+                            color: $text
+                            font-weight: 500
+                        .form-control, .file-name
+                            background: #E8E8E8
+                            padding: 0 10px
+                            outline: none
+                            border-radius: 5px
+                            &::placeholder
+                                color: #818181
+                        .file-name
+                            --paddingleftright: 10px
+        

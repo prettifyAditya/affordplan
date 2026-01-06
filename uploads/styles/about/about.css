@@ -242,6 +242,7 @@
 .journey_sec .main_wrapper .about_journey_wrap .about_journey_slider .year figure {
   line-height: 0;
   flex: 1;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 1024px) {
   .journey_sec .main_wrapper .about_journey_wrap .about_journey_slider .year figure {
@@ -258,6 +259,9 @@
     flex: 0 1 100%;
     width: 100%;
   }
+}
+.journey_sec .main_wrapper .about_journey_wrap .about_journey_slider .year figure img {
+  border-radius: 10px;
 }
 .journey_sec .main_wrapper .about_journey_wrap .about_journey_slider .year figcaption {
   flex: 1;

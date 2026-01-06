@@ -5,6 +5,7 @@ import TeamSec from "./TeamSec"
 import "@/uploads/styles/about/about.css"
 import TeamPop from "@/components/organisms/TeamPop"
 import JourneySec from "./JourneySec"
+import PositionsPop from "@/components/molecules/PositionsPop"
 
 export default function AboutUsPage(){
     return(
@@ -25,6 +26,7 @@ export default function AboutUsPage(){
                 heading={<>Milestones That Defined <span>Our Innovative Path.</span></>}
             />
             <TeamPop />
+            <PositionsPop />
         </main>
     )
 }
