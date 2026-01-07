@@ -47,7 +47,7 @@ const TestimonialData = [
 
 export default function HomePage(){
     return(
-        <main>
+        <main>   
             <HeroSection />
             <ServicesTab />
             <InnovationSection />
@@ -55,6 +55,6 @@ export default function HomePage(){
             <GlobalSuccess />
             <Testimonials heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
             <Milestone heading={<>Milestones Defining <span>The Path of Innovation.</span></>} />
-        </main>
+        </main>   
     )
 }

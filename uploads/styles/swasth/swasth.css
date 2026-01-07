@@ -937,6 +937,7 @@
   border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 40px;
 }
 .how_it_works .how_wrapper .how_slider .how_col figcaption, .how_it_works .how_wrapper .how_slider .how_col figure {

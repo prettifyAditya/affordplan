@@ -10,7 +10,7 @@ export default function Footer(){
                 <div className="footer_wrapper">
                     <div className="upper-footer">
                         <div className="colA">
-                            <Link href="" className="logo">
+                            <Link href="/" className="logo">
                                 <Image src="/assets/logo-light.svg" width="230" height="55" alt="Logo"></Image>
                             </Link>
                             <div className="list">
@@ -51,22 +51,21 @@ export default function Footer(){
                             <div className="list">
                                 <h6>Quick Links</h6>
                                 <ul>
-                                    <li><Link href="">Home</Link></li>
-                                    <li><Link href="">About us</Link></li>
-                                    <li><Link href="">Partners</Link></li>
-                                    <li><Link href="">Media room</Link></li>
-                                    <li><Link href="">Careers</Link></li>
-                                    <li><Link href="">FAQs</Link></li>
-                                    <li><Link href="">Terms of use</Link></li>
-                                    <li><Link href="">Privacy Policy</Link></li>
+                                    <li><Link href="/">Home</Link></li>
+                                    <li><Link href="/about-us">About us</Link></li>
+                                    <li><Link href="/partners">Partners</Link></li>
+                                    <li><Link href="/media">Media room</Link></li>
+                                    <li><Link href="/careers">Careers</Link></li>
+                                    <li><Link href="/terms-of-use">Terms of use</Link></li>
+                                    <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                 </ul>
                             </div>
                             <div className="list">
                                 <h6>Solutions</h6>
                                 <ul>
-                                    <li><Link href="">Swasth</Link></li>
-                                    <li><Link href="">Procalyx™</Link></li>
-                                    <li><Link href="">Amaya Wellness</Link></li>
+                                    <li><Link href="/swasth">Swasth</Link></li>
+                                    <li><Link href="/procalyx">Procalyx™</Link></li>
+                                    <li><Link href="/amya-wellness">Amaya Wellness</Link></li>
                                 </ul>
                             </div>
                             <div className="list">
@@ -95,7 +94,7 @@ export default function Footer(){
                     <div className="lower-footer">
                         <p>© Copyright UseKiwi Infolabs Pvt. Ltd.</p>
                         <div className="links">
-                            <Link href="/terms-and-conditions">Terms of Use</Link>
+                            <Link href="/terms-of-use">Terms of Use</Link>
                             <Link href="/privacy-policy">Privacy Policy</Link>
                         </div>
                     </div>

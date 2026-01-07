@@ -51,18 +51,20 @@
 .partner_hero::before {
   background-repeat: no-repeat;
   background-position: 0 100%;
-  z-index: -1;
 }
 .partner_hero .bg {
   line-height: 0;
-  height: calc(100vh - var(--headerheight));
+  height: 500px;
+  background: url(/assets/images/home/partner_bg.svg) no-repeat;
+  background-size: 1020px;
+  background-position: 50% 90%;
 }
 .partner_hero .banner-wrapper {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 0;
-  transform: translate(0, -50%);
+  transform: translate(0, -75%);
   z-index: 1;
 }
 .partner_hero .banner-wrapper .heading {

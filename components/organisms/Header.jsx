@@ -53,7 +53,7 @@ export default function Header() {
             <div className="header-container">
                 <div className="colA">
                     <Link href="/" className="logo">
-                    <Image src="/assets/logo.svg" width={300} height={55} alt="Logo"></Image>
+                        <Image src="/assets/logo.svg" width={300} height={55} alt="Logo"></Image>
                     </Link>
                 </div>
                 <div className="colB">
@@ -86,15 +86,16 @@ export default function Header() {
                                                     </div>
                                                     <div className="submenu_grid">
                                                         <ServiceCol
+                                                            linkHref="/swasth-for-families"
                                                             classname="no_anchor"
-                                                            mediaType="video"
-                                                            mediaSrc="/assets/video/service1.mp4"
+                                                            mediaSrc="/assets/images/other/swasth-families.jpg"
                                                             title="Swasth for families"
                                                             desc="A complete ecosystem for health and wellness"
                                                         />
                                                         <ServiceCol
+                                                            linkHref="/amya-wellness"
                                                             classname="no_anchor"
-                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            mediaSrc="/assets/images/other/amaya-wellness.jpg"
                                                             title="Amaya Wellness"
                                                             desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
                                                         />
@@ -120,17 +121,25 @@ export default function Header() {
                                                     </div>
                                                     <div className="submenu_grid">
                                                         <ServiceCol
+                                                            linkHref="swasth-for-hospitals"
                                                             classname="no_anchor"
-                                                            mediaType="video"
-                                                            mediaSrc="/assets/video/service1.mp4"
-                                                            title="Swasth for families"
-                                                            desc="A complete ecosystem for health and wellness"
+                                                            mediaSrc="/assets/images/other/swasth-hospitals.jpg"
+                                                            title="Swasth for Hospitals"
+                                                            desc="Empowering hospitals for exceptional patient care"
                                                         />
                                                         <ServiceCol
+                                                            linkHref="swasth-for-corporates"
                                                             classname="no_anchor"
-                                                            mediaSrc="/assets/video/service4.jpg"
-                                                            title="Amaya Wellness"
-                                                            desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
+                                                            mediaSrc="/assets/images/other/swasth-corporate.jpg"
+                                                            title="Swasth for Corporates"
+                                                            desc="Elevating Employee Support Through Predictable Financial Access."
+                                                        />
+                                                        <ServiceCol
+                                                            linkHref="procalyx"
+                                                            classname="no_anchor"
+                                                            mediaSrc="/assets/images/other/procalyx.jpg"
+                                                            title="Procalyx™"
+                                                            desc="From Reactive Purchasing to Strategic Decision-Making: The AI-Driven Supply Chain."
                                                         />
                                                     </div>
                                                 </div>
@@ -154,15 +163,16 @@ export default function Header() {
                                                     </div>
                                                     <div className="submenu_grid">
                                                         <ServiceCol
+                                                            linkHref="procalyx"
                                                             classname="no_anchor"
-                                                            mediaType="video"
-                                                            mediaSrc="/assets/video/service1.mp4"
-                                                            title="Swasth for families"
-                                                            desc="A complete ecosystem for health and wellness"
+                                                            mediaSrc="/assets/images/other/procalyx.jpg"
+                                                            title="Procalyx™"
+                                                            desc="From Reactive Purchasing to Strategic Decision-Making: The AI-Driven Supply Chain."
                                                         />
                                                         <ServiceCol
+                                                            linkHref="/amya-wellness"
                                                             classname="no_anchor"
-                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            mediaSrc="/assets/images/other/amaya-wellness.jpg"
                                                             title="Amaya Wellness"
                                                             desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
                                                         />
@@ -188,15 +198,9 @@ export default function Header() {
                                                     </div>
                                                     <div className="submenu_grid">
                                                         <ServiceCol
+                                                            linkHref="/amya-wellness"
                                                             classname="no_anchor"
-                                                            mediaType="video"
-                                                            mediaSrc="/assets/video/service1.mp4"
-                                                            title="Swasth for families"
-                                                            desc="A complete ecosystem for health and wellness"
-                                                        />
-                                                        <ServiceCol
-                                                            classname="no_anchor"
-                                                            mediaSrc="/assets/video/service4.jpg"
+                                                            mediaSrc="/assets/images/other/amaya-wellness.jpg"
                                                             title="Amaya Wellness"
                                                             desc="Bridging the Gap Between Clinical Care and Everyday Wellness."
                                                         />
@@ -213,7 +217,7 @@ export default function Header() {
                         <Link href="/partners">Partners</Link>
                     </li>
                     <li>
-                        <Link href="/media-room">Media room</Link>
+                        <Link href="/media">Media room</Link>
                     </li>
                     <li>
                         <Link href="/contact-us">Contact us</Link>

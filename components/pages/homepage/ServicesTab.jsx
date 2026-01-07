@@ -74,25 +74,18 @@ export default function ServicesTab() {
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
+                                                linkHref="/swasth-for-families"
+                                                mediaSrc="/assets/images/other/swasth-families.jpg"
                                                 title="Swasth for families"
                                                 desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
                                             />
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaSrc="/assets/video/service4.jpg"
+                                                linkHref="/amya-wellness"
+                                                mediaSrc="/assets/images/other/amaya-wellness.jpg"
                                                 title="Amaya Wellness"
                                                 desc="A curated platform for sustained health, specializing in prevention, recovery, and chronic care support."
-                                            />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
                                             />
                                         </SwiperSlide>
                                     </Swiper>
@@ -126,25 +119,26 @@ export default function ServicesTab() {
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
+                                                linkHref="swasth-for-hospitals"
+                                                mediaSrc="/assets/images/other/swasth-hospitals.jpg"
+                                                title="Swasth for Hospitals"
+                                                desc="Solutions built to streamline financial operations, allowing hospitals to prioritize patient care above all else."
                                             />
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaSrc="/assets/video/service4.jpg"
-                                                title="Amaya Wellness"
-                                                desc="A curated platform for sustained health, specializing in prevention, recovery, and chronic care support."
+                                                linkHref="swasth-for-corporates"
+                                                mediaSrc="/assets/images/other/swasth-corporate.jpg"
+                                                title="Swasth for Corporates"
+                                                desc="Solutions built to streamline financial operations, allowing hospitals to prioritize patient care above all else."
                                             />
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
+                                                linkHref="procalyx"
+                                                mediaSrc="/assets/images/other/procalyx.jpg"
+                                                title="Procalyx™"
+                                                desc="A strategic intelligence platform designed for manufacturers and healthcare providers to optimize procurement, enhance market penetration, and ensure financial transparency."
                                             />
                                         </SwiperSlide>
                                     </Swiper>
@@ -178,25 +172,18 @@ export default function ServicesTab() {
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
+                                                linkHref="procalyx"
+                                                mediaSrc="/assets/images/other/procalyx.jpg"
+                                                title="Procalyx™"
+                                                desc="A strategic intelligence platform designed for manufacturers and healthcare providers to optimize procurement, enhance market penetration, and ensure financial transparency."
                                             />
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaSrc="/assets/video/service4.jpg"
+                                                linkHref="/amya-wellness"
+                                                mediaSrc="/assets/images/other/amaya-wellness.jpg"
                                                 title="Amaya Wellness"
                                                 desc="A curated platform for sustained health, specializing in prevention, recovery, and chronic care support."
-                                            />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
                                             />
                                         </SwiperSlide>
                                     </Swiper>
@@ -230,25 +217,10 @@ export default function ServicesTab() {
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
                                         <SwiperSlide>
                                             <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
-                                            />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <ServiceCol
-                                                mediaSrc="/assets/video/service4.jpg"
+                                                linkHref="/amya-wellness"
+                                                mediaSrc="/assets/images/other/amaya-wellness.jpg"
                                                 title="Amaya Wellness"
                                                 desc="A curated platform for sustained health, specializing in prevention, recovery, and chronic care support."
-                                            />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <ServiceCol
-                                                mediaType="video"
-                                                mediaSrc="/assets/video/service1.mp4"
-                                                title="Swasth for families"
-                                                desc="The Swasth Card delivers dependable Cashback, access to simple loans, comprehensive insurance, and dedicated rewards"
                                             />
                                         </SwiperSlide>
                                     </Swiper>

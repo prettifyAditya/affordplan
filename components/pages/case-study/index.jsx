@@ -31,7 +31,8 @@ const caseStudyData = [
                 caseDetHead: "20%",
                 caseDetDesc: "Improvement in Treatment Adherence"
             },
-        ]
+        ],
+        linkHref: "/case-study"
     },
     {
         id: 2,
@@ -57,7 +58,8 @@ const caseStudyData = [
                 caseDetHead: "20%",
                 caseDetDesc: "Improvement in Treatment Adherence"
             },
-        ]
+        ],
+        linkHref: "/case-study"
     },
     {
         id: 3,
@@ -83,7 +85,8 @@ const caseStudyData = [
                 caseDetHead: "20%",
                 caseDetDesc: "Improvement in Treatment Adherence"
             },
-        ]
+        ],
+        linkHref: "/case-study"
     },
     {
         id: 4,
@@ -109,7 +112,8 @@ const caseStudyData = [
                 caseDetHead: "20%",
                 caseDetDesc: "Improvement in Treatment Adherence"
             },
-        ]
+        ],
+        linkHref: "/case-study"
     },
 ]
 

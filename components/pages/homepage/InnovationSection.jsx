@@ -44,7 +44,6 @@ export default function InnovationSection() {
     /* ---------------- Cleanup ---------------- */
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);

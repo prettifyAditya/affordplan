@@ -7,6 +7,7 @@ import SwiperButton from "@/components/atoms/SwiperButton"
 import "swiper/css"; 
 import "swiper/css/navigation"
 import "@/uploads/styles/component/component.css"
+import Link from "next/link";
 
 export default function CaseStudies({classname="", secHeading="", caseStudyData=[]}){
     const swiperRef = useRef(null);
@@ -66,7 +67,7 @@ export default function CaseStudies({classname="", secHeading="", caseStudyData=
                                                             </div>
                                                         ))}
                                                     </div>
-                                                    <button type="button" className="btn white">Read More</button>
+                                                    <Link href={caseData.linkHref} className="btn white">Read More</Link>
                                                 </div>
                                             </figcaption>
                                         </div>
