@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
       <div className="privacy-secA sec-pad-all mt-hdrfxd">
         <div className="container">
           <div className="website-content">
-            <h1>Privacy Policy</h1>
+            <h1>Privacy <span>Policy</span></h1>
             <p>
               Afford Plan respects your privacy and is committed to
               protecting your personal information. This Privacy Policy outlines

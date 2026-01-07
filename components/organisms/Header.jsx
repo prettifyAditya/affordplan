@@ -62,7 +62,7 @@ export default function Header() {
                         <Link href="/about-us">About Us</Link>
                     </li>
                     <li className="hasDropdown">
-                        <Link href="/solution-listing">Solutions</Link>
+                        <button type="button" className="link">Solutions</button>
                         <div className="icon"></div>
                         <div className="dropdown-menu">
                             <div className="dropdown-menu-wrap">

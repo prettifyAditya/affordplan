@@ -1981,6 +1981,9 @@ img, video {
 .website-content h1, .website-content h2, .website-content h3, .website-content h4, .website-content h5, .website-content h6 {
   color: var(--black);
 }
+.website-content h1 span, .website-content h2 span, .website-content h3 span, .website-content h4 span, .website-content h5 span, .website-content h6 span {
+  font-family: "IvyPresto";
+}
 .website-content h1 {
   font-size: 48px;
   margin-bottom: 45px;
@@ -1998,7 +2001,7 @@ img, video {
   }
 }
 .website-content h2 {
-  font-size: 34px;
+  font-size: 40px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h2 {
@@ -2006,7 +2009,7 @@ img, video {
   }
 }
 .website-content h3 {
-  font-size: 28px;
+  font-size: 34px;
   line-height: 1.21;
 }
 @media only screen and (max-width: 675px) {
@@ -2015,7 +2018,7 @@ img, video {
   }
 }
 .website-content h4 {
-  font-size: 22px;
+  font-size: 28px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h4 {
@@ -2023,7 +2026,7 @@ img, video {
   }
 }
 .website-content h5 {
-  font-size: 18px;
+  font-size: 24px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h5 {
@@ -2031,7 +2034,7 @@ img, video {
   }
 }
 .website-content h6 {
-  font-size: 18px;
+  font-size: 20px;
 }
 .website-content h2, .website-content h3, .website-content h4 {
   margin: 40px 0 18px;

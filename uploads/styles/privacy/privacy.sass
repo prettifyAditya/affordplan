@@ -2,8 +2,18 @@
 
 .privacy-secA
     padding: 5rem 0 4rem
+    overflow: hidden
     @include media(675)
         padding: 3rem 0 3rem 
+    @include before-blur
+    &::before
+        top: 30%
+        left: 0%
+    @include after(url(/assets/images/home/circular-vector.svg))
+    &::after
+        background-repeat: no-repeat
+        background-position: 100% 50%
+        right: -20%
     .website-content
         h1
             font-size: 48px

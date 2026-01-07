@@ -220,7 +220,7 @@
 }
 .swasth-secC .financial_wrapper .card_wrapper figure {
   width: 300px;
-  transform: translateY(-50vh) rotate(-13deg);
+  transform: translateY(-100vh) rotate(-13deg);
   transition: 1s ease;
 }
 .swasth-secC .financial_wrapper .finance_col {
@@ -279,7 +279,7 @@
   border-radius: 20px;
   z-index: 0;
   height: 70vh;
-  max-height: 650px;
+  min-height: 650px;
   position: relative;
 }
 .swasth-secD .maternity_wrapper::before {
@@ -732,11 +732,11 @@
 }
 .operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider {
   position: absolute;
-  top: 18%;
+  top: 20%;
   left: 41%;
-  transform: translate(-45%, -18%);
+  transform: translate(-45%, -20%);
   width: 200px;
-  max-height: 160px;
+  max-height: 120px;
 }
 .operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider .hand_col {
   text-align: center;

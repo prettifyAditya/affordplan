@@ -58,7 +58,7 @@ header
                     transition: .5s ease
                     position: relative
                     height: 100%
-                    >a
+                    >a, button.link
                         display: flex
                         align-items: center
                         color: $black
@@ -71,7 +71,7 @@ header
                     &.hasDropdown
                         padding-right: 15px
                         &:hover
-                            a
+                            a, button.link
                                 &::before
                                     width: 100%
                             .icon
@@ -84,7 +84,7 @@ header
                                 user-select: auto
                                 visibility: visible
                                 display: block
-                        >a 
+                        >a, button.link
                             position: relative
                             &::before
                                content: "" 

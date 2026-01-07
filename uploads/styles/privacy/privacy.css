@@ -13,11 +13,47 @@
 }
 .privacy-secA {
   padding: 5rem 0 4rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 @media only screen and (max-width: 675px) {
   .privacy-secA {
     padding: 3rem 0 3rem;
   }
+}
+.privacy-secA::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--lightprime);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+.privacy-secA::before {
+  top: 30%;
+  left: 0%;
+}
+.privacy-secA::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: url(/assets/images/home/circular-vector.svg);
+  transition: 0.5s ease;
+}
+.privacy-secA::after {
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  right: -20%;
 }
 .privacy-secA .website-content h1 {
   font-size: 48px;

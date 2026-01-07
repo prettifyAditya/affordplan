@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Overlay from "./Overlay";
+import ThanksPop from "../molecules/ThanksPop";
 
 export default function Footer(){
     return(
@@ -102,6 +103,7 @@ export default function Footer(){
             </div>
         </footer>
         <Overlay />
+        <ThanksPop />
         </>
     )
 }

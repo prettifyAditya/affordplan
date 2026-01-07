@@ -142,10 +142,10 @@
             margin: 0 auto
             &.active
                 figure
-                    transform: translateY(0vh) rotate(-13deg)
+                    transform: translateY(0vh) rotate(-13deg) 
             figure
                 width: 300px
-                transform: translateY(-50vh) rotate(-13deg)
+                transform: translateY(-100vh) rotate(-13deg)
                 transition: 1s ease
         .finance_col
             display: flex
@@ -195,7 +195,7 @@
         border-radius: 20px
         z-index: 0
         height: 70vh
-        max-height: 650px
+        min-height: 650px
         @include before(linear-gradient(90deg, #000000, #00000000))
         &::before
             border-radius: 20px
@@ -558,11 +558,11 @@
                 line-height: 0
                 .hand_slider
                     position: absolute
-                    top: 18%
+                    top: 20%
                     left: 41%
-                    transform: translate(-45%, -18%)
+                    transform: translate(-45%, -20%)
                     width: 200px
-                    max-height: 160px
+                    max-height: 120px
                     .hand_col
                         text-align: center
                         .icon

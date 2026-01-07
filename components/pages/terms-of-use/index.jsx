@@ -6,7 +6,7 @@ export default function TermsConditionsPage() {
       <div className="privacy-secA sec-pad-all mt-hdrfxd">
         <div className="container">
           <div className="website-content">
-            <h1>Privacy Policy</h1>
+            <h1>Terms <span>& Conditions</span></h1>
             <p>
               Welcome to the Afford Plan website. By accessing or
               using our website, you agree to comply with and be bound by the

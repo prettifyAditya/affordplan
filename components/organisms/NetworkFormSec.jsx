@@ -1,7 +1,10 @@
+"use client"
+import { useModalStore } from "@/store/modalStore";
 import Link from "next/link"
 import "@/uploads/styles/component/component.css"
 
 export default function NetworkFormSec({classname="", heading="", subHeading, formHeading=""}){
+    const openThankyouPop = useModalStore((state) => state.openThankyouPop)
     return(
         <section>
             <div className={`network-form sec-pad-all ${classname}`}>
@@ -38,9 +41,9 @@ export default function NetworkFormSec({classname="", heading="", subHeading, fo
                                 </div>
                             </div>
                             <div className="disclaim">
-                                <p>By clicking on submit button, you are agreeing the <Link href="/terms-and-conditions">terms and conditions</Link></p>
+                                <p>By clicking on submit button, you are agreeing the <Link href="/terms-of-use">terms and conditions</Link></p>
                             </div>
-                            <button type="button" className="btn">Submit</button>
+                            <button type="button" className="btn" onClick={openThankyouPop}>Submit</button>
                         </div>
                     </div>
                 </div>

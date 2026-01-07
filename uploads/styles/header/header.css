@@ -1980,6 +1980,9 @@ img, video {
 .website-content h1, .website-content h2, .website-content h3, .website-content h4, .website-content h5, .website-content h6 {
   color: var(--black);
 }
+.website-content h1 span, .website-content h2 span, .website-content h3 span, .website-content h4 span, .website-content h5 span, .website-content h6 span {
+  font-family: "IvyPresto";
+}
 .website-content h1 {
   font-size: 48px;
   margin-bottom: 45px;
@@ -1997,7 +2000,7 @@ img, video {
   }
 }
 .website-content h2 {
-  font-size: 34px;
+  font-size: 40px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h2 {
@@ -2005,7 +2008,7 @@ img, video {
   }
 }
 .website-content h3 {
-  font-size: 28px;
+  font-size: 34px;
   line-height: 1.21;
 }
 @media only screen and (max-width: 675px) {
@@ -2014,7 +2017,7 @@ img, video {
   }
 }
 .website-content h4 {
-  font-size: 22px;
+  font-size: 28px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h4 {
@@ -2022,7 +2025,7 @@ img, video {
   }
 }
 .website-content h5 {
-  font-size: 18px;
+  font-size: 24px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h5 {
@@ -2030,7 +2033,7 @@ img, video {
   }
 }
 .website-content h6 {
-  font-size: 18px;
+  font-size: 20px;
 }
 .website-content h2, .website-content h3, .website-content h4 {
   margin: 40px 0 18px;
@@ -2887,7 +2890,7 @@ header .header-container .colB .nav-items > li {
   position: relative;
   height: 100%;
 }
-header .header-container .colB .nav-items > li > a {
+header .header-container .colB .nav-items > li > a, header .header-container .colB .nav-items > li button.link {
   display: flex;
   align-items: center;
   color: var(--black);
@@ -2895,17 +2898,17 @@ header .header-container .colB .nav-items > li > a {
   font-weight: 500;
 }
 @media only screen and (max-width: 991px) {
-  header .header-container .colB .nav-items > li > a {
+  header .header-container .colB .nav-items > li > a, header .header-container .colB .nav-items > li button.link {
     position: relative;
   }
 }
-header .header-container .colB .nav-items > li > a:hover {
+header .header-container .colB .nav-items > li > a:hover, header .header-container .colB .nav-items > li button.link:hover {
   color: var(--elementhover);
 }
 header .header-container .colB .nav-items > li.hasDropdown {
   padding-right: 15px;
 }
-header .header-container .colB .nav-items > li.hasDropdown:hover a::before {
+header .header-container .colB .nav-items > li.hasDropdown:hover a::before, header .header-container .colB .nav-items > li.hasDropdown:hover button.link::before {
   width: 100%;
 }
 header .header-container .colB .nav-items > li.hasDropdown:hover .icon::after {
@@ -2921,10 +2924,10 @@ header .header-container .colB .nav-items > li.hasDropdown:hover .dropdown-menu 
   visibility: visible;
   display: block;
 }
-header .header-container .colB .nav-items > li.hasDropdown > a {
+header .header-container .colB .nav-items > li.hasDropdown > a, header .header-container .colB .nav-items > li.hasDropdown button.link {
   position: relative;
 }
-header .header-container .colB .nav-items > li.hasDropdown > a::before {
+header .header-container .colB .nav-items > li.hasDropdown > a::before, header .header-container .colB .nav-items > li.hasDropdown button.link::before {
   content: "";
   position: absolute;
   left: 0;
