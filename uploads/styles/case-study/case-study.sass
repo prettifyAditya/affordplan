@@ -1,0 +1,123 @@
+@import '../_var'
+
+.challenge_sec
+    .main_wrapper
+        background: linear-gradient(90deg, #000, #233f90)
+        border-radius: 20px
+        padding: 50px 40px
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        --gap: 80px
+        gap: var(--gap)
+        figure
+            flex: 0 1 45%
+            max-width: 45%
+            width: 100%
+            img
+                border-radius: 15px
+        figcaption
+            flex: 1
+            max-width: calc( 55% - var(--gap) )
+            width: 100%
+            h2
+                margin-bottom: 30px
+                font-size: 48px
+                font-weight: 700
+                line-height: 1.1
+                color: $white
+                span
+                    font-weight: 300
+                    font-family: $IvyPresto
+            p
+                color: #FFFFFFB2
+
+.solution_sec
+    @include before(url(/assets/images/home/circular-vector.svg))
+    &::before
+        background-repeat: no-repeat
+        background-position: 100% 50%
+        right: -20%
+        background-size: 30%
+        z-index: -1
+    .main_wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        --gap: 80px
+        gap: var(--gap)
+        figure
+            flex: 0 1 45%
+            max-width: 45%
+            width: 100%
+            img
+                border-radius: 15px
+        figcaption
+            flex: 1
+            max-width: calc( 55% - var(--gap) )
+            width: 100%
+            h2
+                margin-bottom: 30px
+                font-size: 48px
+                font-weight: 700
+                line-height: 1.1
+                span
+                    font-weight: 300
+                    font-family: $IvyPresto
+            p
+                color: $black
+
+.key_results
+    .main_wrapper
+        background: linear-gradient(90deg, #000, #233f90)
+        border-radius: 20px
+        padding: 60px 40px
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        align-items: end
+        gap: 60px
+        .colA
+            flex: 1
+            max-width: calc( 50% - var(--gap) )
+            width: 100%
+            .heading
+                h2
+                    margin-bottom: 30px
+                    color: $white
+                p
+                    color: #FFFFFFB2
+                
+        .colB
+            flex: 1
+            max-width: 50%
+            width: 100%
+            .info_wrap
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                grid-gap: 10px
+                .info_col
+                    padding: 15px
+                    background: #FFFFFF33
+                    backdrop-filter: blur(10)
+                    border-radius: 10px
+                    text-align: center
+                    .icon
+                        width: 35px
+                        height: 35px
+                        margin: 0 auto 10px
+                    .count
+                        color: $white
+                        font-size: 20px
+                        line-height: 1.2
+                        margin-bottom: 5px
+                    p
+                        font-size: 12px
+                        line-height: 1.3
+                        color: #FFFFFFB2
+        .logo-vector
+            width: 100px
+            position: absolute
+            top: 15%
+            right: 50px

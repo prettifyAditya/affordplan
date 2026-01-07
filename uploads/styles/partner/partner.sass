@@ -2,13 +2,18 @@
 
 .partner_hero
     position: relative
-    @include before-blur
-    &::before
+    @include after-blur
+    &::after
         top: 0
         right: 0
         width: 300px
         height: 300px
         filter: blur(200px)
+    @include before(url(/assets/vector/left_vector.svg))
+    &::before
+        background-repeat: no-repeat
+        background-position: 0 100%
+        z-index: -1
     .bg
         line-height: 0
         height: calc( 100vh - var(--headerheight) )
@@ -37,3 +42,108 @@
             margin-bottom: 50px
             h2
                 color: $white
+        .partner_wrapper
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 15px
+            figure
+                background: $white
+                border-radius: 15px
+                width: 100%
+                height: 100%
+                padding: 15px
+                img
+                    object-fit: contain
+
+.trusted_clients
+    .upper_sec
+        position: relative
+        margin-bottom: 50px
+        .heading
+            text-align: center
+            max-width: 530px
+            margin: 0 auto
+            p
+                color: $black
+        .trusted-nav
+            position: absolute
+            right: 0
+            bottom: 0
+            transform: translate(0, 0)
+            button
+                background: #c5c5c5
+                border-radius: 5px
+    .trusted_wapper
+        .trusted_col
+            background: $white
+            width: 100%
+            height: 100%
+            border-radius: 10px
+            padding: 20px
+            .quote
+                width: 45px
+                height: 45px
+                img
+                    object-fit: contain
+            .desc
+                margin: 15px 0 20px
+                p
+                    line-height: 1.4
+            .details
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                gap: 15px
+                .icon
+                    flex: 0 1 50px
+                    width: 50px
+                    height: 50px
+                    img
+                        border-radius: 50%
+                .desgn
+                    flex: 1
+                    .name
+                        font-weight: 600 
+                        color: $black
+                        line-height: 1.2
+                    .loc
+                        line-height: 1.2
+                        color: #000000B2
+                        font-size: 14px
+
+.scale_partnership
+    .main_wrapper
+        padding: 50px 40px
+        background: linear-gradient(90deg, #000, #233f90)
+        position: relative
+        border-radius: 20px
+        .heading
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 50px
+            h2
+                color: $white
+                max-width: 640px 
+            figure
+                flex: 0 1 auto
+                width: 100px
+        .count_info_wrap
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            gap: 20px
+            .info_col
+                flex: 1
+                background: #FFFFFF1A
+                border-radius: 10px
+                padding: 30px 
+                text-align: center
+                .count
+                    color: $white
+                    margin-bottom: 5px
+                    font-size: 40px
+                p
+                    color: $white
+                    line-height: 1.2

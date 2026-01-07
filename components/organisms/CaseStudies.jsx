@@ -8,11 +8,11 @@ import "swiper/css";
 import "swiper/css/navigation"
 import "@/uploads/styles/component/component.css"
 
-export default function CaseStudies({secHeading="", caseStudyData=[]}){
+export default function CaseStudies({classname="", secHeading="", caseStudyData=[]}){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="case_studies_sec sec-pad-all">
+            <div className={`case_studies_sec sec-pad-all ${classname}`}>
                 <div className="container">
                     <div className="heading">
                         <h2>{secHeading}</h2>

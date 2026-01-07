@@ -1,10 +1,10 @@
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
-import "@/uploads/styles/career/career.css"
 import TeamInfo from "./TeamInfo"
 import LifeOrganisation from "./LifeOrganisation"
 import OpenPositions from "./OpenPositions"
 import PositionsPop from "@/components/molecules/PositionsPop"
 import FutureColleagues from "./FutureColleagues"
+import "@/uploads/styles/career/career.css"
 
 export default function CareersPage(){
     return(
