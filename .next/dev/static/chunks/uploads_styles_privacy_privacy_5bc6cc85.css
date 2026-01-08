@@ -1,0 +1,178 @@
+/* [project]/uploads/styles/privacy/privacy.css [app-client] (css) */
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.privacy-secA {
+  z-index: 0;
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA {
+    padding: 3rem 0;
+  }
+}
+
+.privacy-secA:before {
+  content: "";
+  background-color: var(--lightprime);
+  filter: blur(100px);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+}
+
+.privacy-secA:after {
+  content: "";
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: url("/assets/images/home/circular-vector.svg") 100% no-repeat;
+  transition: all .5s;
+  position: absolute;
+  inset: 0 -20% 0 0;
+}
+
+.privacy-secA .website-content h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 45px;
+  font-family: Helvetica;
+  font-size: 48px;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h1 {
+    margin-bottom: 30px;
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .privacy-secA .website-content h1 {
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+}
+
+.privacy-secA .website-content h2 {
+  font-family: Helvetica;
+  font-size: 34px;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h2 {
+    font-size: 24px;
+  }
+}
+
+.privacy-secA .website-content h3 {
+  font-family: Helvetica;
+  font-size: 28px;
+  line-height: 1.21;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h3 {
+    font-size: 22px;
+  }
+}
+
+.privacy-secA .website-content h4 {
+  font-family: Helvetica;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h4 {
+    font-size: 20px;
+  }
+}
+
+.privacy-secA .website-content h5 {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h5 {
+    font-size: 18px;
+  }
+}
+
+.privacy-secA .website-content h6 {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.privacy-secA .website-content h2, .privacy-secA .website-content h3, .privacy-secA .website-content h4 {
+  margin: 40px 0 18px;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h2, .privacy-secA .website-content h3, .privacy-secA .website-content h4 {
+    margin: 30px 0 15px;
+  }
+}
+
+.privacy-secA .website-content h5, .privacy-secA .website-content h6 {
+  margin: 28px 0 18px;
+}
+
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h5, .privacy-secA .website-content h6 {
+    margin: 20px 0 13px;
+  }
+}
+
+.privacy-secA .website-content a {
+  color: var(--black);
+  transition: all .4s;
+}
+
+.banner.thank-you-banner .bg {
+  height: 100vh;
+}
+
+.banner.thank-you-banner .banner-wrapper {
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.banner.thank-you-banner .banner-wrapper .content {
+  max-width: 435px;
+  margin: 0 auto;
+}
+
+.banner.thank-you-banner .banner-wrapper .content h1 {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.banner.thank-you-banner .banner-wrapper .content p {
+  max-width: 345px;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=uploads_styles_privacy_privacy_5bc6cc85.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(frontend)/global.css"],"sourcesContent":["@import '../../public/assets/font/font.css';/*# sourceMappingURL=global.css.map */"],"names":[],"mappings":""}}]
+}

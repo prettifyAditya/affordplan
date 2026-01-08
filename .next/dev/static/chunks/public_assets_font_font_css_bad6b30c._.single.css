@@ -1,0 +1,26 @@
+/* [project]/public/assets/font/font.css [app-client] (css) */
+@font-face {
+  font-family: IvyPresto;
+  src: url("../media/IvyPrestoDisplay-LightItalic.4abe7ad5.woff2") format("woff2"), url("../media/IvyPrestoDisplay-LightItalic.40aebaf0.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url("../media/HelveticaNowText-Bold.b6d1a46c.woff2") format("woff2"), url("../media/HelveticaNowText-Bold.c715bcdd.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica-bd;
+  src: url("../media/HelveticaNowText-Medium.1cec2220.woff2") format("woff2"), url("../media/HelveticaNowText-Medium.22323c43.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=public_assets_font_font_css_bad6b30c._.single.css.map*/
