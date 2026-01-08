@@ -1,0 +1,228 @@
+/* [project]/uploads/styles/contact/contact.css [app-client] (css) */
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.contact_form .main_wrapper {
+  --gap: 60px;
+  gap: var(--gap);
+  background: linear-gradient(90deg, #000, #233f90);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.contact_form .main_wrapper .heading {
+  flex: 0 40%;
+  width: 100%;
+  max-width: 40%;
+}
+
+.contact_form .main_wrapper .heading h2, .contact_form .main_wrapper .heading p {
+  color: var(--white);
+}
+
+.contact_form .main_wrapper .form {
+  max-width: calc(100% - var(--gap));
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+.contact_form .main_wrapper .form:before {
+  content: "";
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: url("/assets/logo-vector-light.svg") 100% 100% / 200px no-repeat;
+  transition: all .5s;
+  position: absolute;
+  inset: 0;
+}
+
+.contact_form .main_wrapper .form .form-grid {
+  --item: 2;
+  --labelfontbefore: 14px;
+  --gaplr: 15px;
+  --color: var(--black);
+}
+
+.contact_form .main_wrapper .form .form-grid .form-group label {
+  margin-bottom: 10px;
+  display: block;
+  position: static;
+}
+
+.contact_form .main_wrapper .form .form-grid .form-group .form-control {
+  background: #fbfbfb;
+  outline: none;
+  padding: 0 10px;
+}
+
+.contact_form .main_wrapper .form .form-grid .form-group .form-control::placeholder {
+  color: #818181;
+}
+
+.contact_form .main_wrapper .form .disclaim {
+  margin: 40px 0 25px;
+}
+
+.contact_form .main_wrapper .form .disclaim p {
+  color: var(--white);
+  max-width: 375px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact_form .main_wrapper .form .disclaim p a {
+  text-decoration: underline;
+}
+
+.map_section .main_wrapper {
+  background: var(--white);
+  --gap: 50px;
+  align-items: center;
+  gap: var(--gap);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px #00000059;
+}
+
+.map_section .main_wrapper .details {
+  flex: 0 35%;
+  width: 100%;
+  max-width: 35%;
+  padding: 30px;
+}
+
+.map_section .main_wrapper .details h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.map_section .main_wrapper .details ul {
+  margin: 20px 0 40px;
+}
+
+.map_section .main_wrapper .details ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.map_section .main_wrapper .details ul li a {
+  color: var(--black);
+  gap: 10px;
+  line-height: 1.2;
+  display: flex;
+}
+
+.map_section .main_wrapper .details ul li a:hover {
+  transform: translateX(5px);
+}
+
+.map_section .main_wrapper .details ul li a .icon {
+  flex: 0 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.map_section .main_wrapper .details ul li a span {
+  flex: 1;
+}
+
+.map_section .main_wrapper .map {
+  max-width: calc(100% - var(--gap));
+  flex: 1;
+  width: 100%;
+  line-height: 0;
+}
+
+.map_section .main_wrapper .map iframe {
+  filter: grayscale();
+  border-radius: 20px;
+  height: 500px;
+  transition: all .5s;
+}
+
+.map_section .main_wrapper .map iframe:hover {
+  filter: grayscale(0);
+}
+
+.location_sec {
+  z-index: 0;
+  position: relative;
+}
+
+.location_sec:before {
+  content: "";
+  background-color: var(--lightprime);
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.location_sec .heading {
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+.location_sec .location_wrapper {
+  gap: 15px;
+  display: flex;
+}
+
+.location_sec .location_wrapper .loc_col {
+  background: var(--white);
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px;
+}
+
+.location_sec .location_wrapper .loc_col:hover .details a {
+  color: var(--black);
+}
+
+.location_sec .location_wrapper .loc_col .upper_sec {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.location_sec .location_wrapper .loc_col .upper_sec h6 {
+  flex: 1;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.location_sec .location_wrapper .loc_col .upper_sec .icon {
+  flex: 0 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.location_sec .location_wrapper .loc_col .details {
+  margin-top: 15px;
+}
+
+.location_sec .location_wrapper .loc_col .details a {
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=uploads_styles_contact_contact_9345872e.css.map*/

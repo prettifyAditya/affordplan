@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/public/assets/font/font.css"],"sourcesContent":["@font-face {\r\n    font-family: 'IvyPresto';\r\n    src: url('IvyPrestoDisplay-LightItalic.woff2') format('woff2'),\r\n        url('IvyPrestoDisplay-LightItalic.woff') format('woff');\r\n    font-weight: 300;\r\n    font-style: italic;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Helvetica';\r\n    src: url('HelveticaNowText-Bold.woff2') format('woff2'),\r\n        url('HelveticaNowText-Bold.woff') format('woff');\r\n    font-weight: bold;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Helvetica-bd';\r\n    src: url('HelveticaNowText-Medium.woff2') format('woff2'),\r\n        url('HelveticaNowText-Medium.woff') format('woff');\r\n    font-weight: 500;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n"],"names":[],"mappings":"AAAA;;;;;;;;AASA;;;;;;;;AASA"}}]
+}

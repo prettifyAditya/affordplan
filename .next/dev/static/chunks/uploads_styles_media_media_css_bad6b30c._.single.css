@@ -1,0 +1,229 @@
+/* [project]/uploads/styles/media/media.css [app-client] (css) */
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.trends_sec {
+  z-index: 0;
+  padding-top: 12rem;
+  padding-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.trends_sec:before {
+  content: "";
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: -1;
+  inset: 0;
+  background: url("/assets/images/home/circular-light-vector.svg") 100% 0 / 50% no-repeat;
+  transition: all .5s;
+  position: absolute;
+  inset: 4% 0% 0 0;
+}
+
+@media only screen and (min-width: 1336px) {
+  .trends_sec:before {
+    background-position: 100%;
+    background-size: 30%;
+  }
+}
+
+.trends_sec:after {
+  content: "";
+  background-color: var(--lightprime);
+  filter: blur(150px);
+  z-index: -1;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 0%;
+  right: 2%;
+  transform: translate(30%);
+}
+
+.trends_sec .heading {
+  max-width: 470px;
+  margin-bottom: 60px;
+}
+
+.trends_sec .container-fluid {
+  padding-right: 0;
+}
+
+.trends_sec .container-fluid .trends_wrapper {
+  position: relative;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends-nav {
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  transform: translate(20%, 10%);
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends-nav button {
+  background: #c5c5c5;
+  border-radius: 5px;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col {
+  border-radius: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figure {
+  flex: 0 40%;
+  width: 100%;
+  max-width: 40%;
+  line-height: 0;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figure img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figcaption {
+  background: linear-gradient(90deg, #000, #233f90);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  flex: 1;
+  align-items: center;
+  padding: 40px;
+  display: flex;
+  position: relative;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figcaption:before {
+  content: "";
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: url("/assets/logo-vector-light.svg") 60% 100% / 200px no-repeat;
+  transition: all .5s;
+  position: absolute;
+  inset: 0;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figcaption .desc h6, .trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figcaption .desc p {
+  color: var(--white);
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figcaption .desc h6 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.trends_sec .container-fluid .trends_wrapper .trends_slider .trends_col figcaption .desc p {
+  margin-top: 50px;
+  font-family: IvyPresto;
+}
+
+.more_trends_sec .more_trends {
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.more_trends_sec .more_trends .more_trends_col {
+  background: var(--white);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.more_trends_sec .more_trends .more_trends_col:hover figure img {
+  transform: scale(1.1);
+}
+
+.more_trends_sec .more_trends .more_trends_col figure {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.more_trends_sec .more_trends .more_trends_col figure:before {
+  content: "";
+  opacity: 0;
+  z-index: 1;
+  background: #fff;
+  width: 0;
+  height: 86%;
+  display: block;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  transform: skewX(-20deg);
+  box-shadow: 0 0 55px 12px #fff;
+}
+
+.more_trends_sec .more_trends .more_trends_col figure:hover:before {
+  animation: .4s linear shine;
+}
+
+.more_trends_sec .more_trends .more_trends_col figure img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.more_trends_sec .more_trends .more_trends_col figcaption {
+  padding: 25px 20px 30px;
+}
+
+.more_trends_sec .more_trends .more_trends_col figcaption h6 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.more_trends_sec .more_trends .more_trends_col figcaption .date {
+  margin-top: 30px;
+  font-family: IvyPresto;
+}
+
+.more_trends_sec .btn_wrap {
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: max-content;
+  margin: 50px auto 0;
+}
+
+.more_trends_sec .btn_wrap img {
+  width: 80px;
+  transition: all .5s;
+}
+
+.more_trends_sec .btn_wrap:hover img, .more_trends_sec .btn_wrap:hover svg {
+  transform: translateY(5px);
+}
+
+.more_trends_sec .btn_wrap .load_btn {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=uploads_styles_media_media_css_bad6b30c._.single.css.map*/

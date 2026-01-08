@@ -1,0 +1,14 @@
+{
+  "/(admin)/afford-admin/dashboard/page": "app/(admin)/afford-admin/dashboard/page.js",
+  "/(admin)/afford-admin/login/page": "app/(admin)/afford-admin/login/page.js",
+  "/(frontend)/about-us/page": "app/(frontend)/about-us/page.js",
+  "/(frontend)/careers/page": "app/(frontend)/careers/page.js",
+  "/(frontend)/contact-us/page": "app/(frontend)/contact-us/page.js",
+  "/(frontend)/media/page": "app/(frontend)/media/page.js",
+  "/(frontend)/page": "app/(frontend)/page.js",
+  "/(frontend)/partners/page": "app/(frontend)/partners/page.js",
+  "/(frontend)/privacy-policy/page": "app/(frontend)/privacy-policy/page.js",
+  "/(frontend)/swasth-for-families/page": "app/(frontend)/swasth-for-families/page.js",
+  "/(frontend)/terms-of-use/page": "app/(frontend)/terms-of-use/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
+}
