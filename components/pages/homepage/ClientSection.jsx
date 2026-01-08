@@ -10,7 +10,7 @@ export default function ClientSection() {
     const swiperRef = useRef(null);
     return (
         <section>
-            <div className="home-secD sec-pad">
+            <div className="home-secD sec-pad-all">
                 <div className="container">
                 <div className="main_wrapper">
                     <div className="heading">

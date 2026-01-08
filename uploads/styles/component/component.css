@@ -786,12 +786,12 @@
   color: rgba(255, 255, 255, 0.6980392157);
 }
 
-.milestone_sec {
+.milestone_sec.sec-pad-all {
   padding-bottom: 130px;
   position: relative;
   z-index: 0;
 }
-.milestone_sec::before {
+.milestone_sec.sec-pad-all::before {
   content: "";
   position: absolute;
   width: 200px;
@@ -800,21 +800,21 @@
   filter: blur(100px);
   border-radius: 50%;
 }
-.milestone_sec::before {
+.milestone_sec.sec-pad-all::before {
   top: 5%;
   left: 0;
   transform: translate(0, -5%);
   z-index: -1;
 }
-.milestone_sec.about_us .heading {
+.milestone_sec.sec-pad-all.about_us .heading {
   max-width: 600px;
 }
-.milestone_sec .heading {
+.milestone_sec.sec-pad-all .heading {
   max-width: 500px;
   margin: 0 auto 50px;
   text-align: center;
 }
-.milestone_sec .milestone_wrapper {
+.milestone_sec.sec-pad-all .milestone_wrapper {
   position: relative;
   background: linear-gradient(90deg, #233F90, #000000);
   padding: 0px 50px 0;
@@ -826,7 +826,7 @@
   height: 440px;
   z-index: 0;
 }
-.milestone_sec .milestone_wrapper::before {
+.milestone_sec.sec-pad-all .milestone_wrapper::before {
   content: "";
   position: absolute;
   left: 0;
@@ -837,7 +837,7 @@
   background-position: 10% 100%;
   z-index: -1;
 }
-.milestone_sec .milestone_wrapper::after {
+.milestone_sec.sec-pad-all .milestone_wrapper::after {
   content: "";
   position: absolute;
   left: 0;
@@ -848,29 +848,29 @@
   background-position: 100% 100%;
   z-index: -1;
 }
-.milestone_sec .milestone_wrapper .milestone-nav {
+.milestone_sec.sec-pad-all .milestone_wrapper .milestone-nav {
   position: absolute;
   right: 26%;
   bottom: 28%;
   gap: 15px;
 }
-.milestone_sec .milestone_wrapper .colA {
+.milestone_sec.sec-pad-all .milestone_wrapper .colA {
   flex: 0 1 40%;
 }
-.milestone_sec .milestone_wrapper .colA .heading_slider {
+.milestone_sec.sec-pad-all .milestone_wrapper .colA .heading_slider {
   line-height: 1.2;
   height: 92px;
   max-width: 340px;
   top: 35%;
 }
-.milestone_sec .milestone_wrapper .colA .heading_slider .swiper-slide p {
+.milestone_sec.sec-pad-all .milestone_wrapper .colA .heading_slider .swiper-slide p {
   font-size: 30px;
   color: var(--white);
   font-weight: 500;
   line-height: 1.2;
   padding: 10px 0;
 }
-.milestone_sec .milestone_wrapper .colB {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB {
   flex: 0 1 auto;
   --trophywidth: 230px;
   --trophyheight: 500px;
@@ -879,45 +879,45 @@
   top: 20%;
   transform: translate(-50%, -10%);
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider {
   width: var(--trophywidth);
   height: var(--trophyheight);
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide {
   transition: 0.5s ease;
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide:not(.swiper-slide-active) {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide:not(.swiper-slide-active) {
   opacity: 0;
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide:not(.swiper-slide-active) figure {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide:not(.swiper-slide-active) figure {
   transform: scale(0.7);
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide.swiper-slide-prev {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide.swiper-slide-prev {
   transform: translateY(-100px);
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide.swiper-slide-next {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide.swiper-slide-next {
   transform: translateY(-100px);
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide figure {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide figure {
   line-height: 0;
   height: var(--trophyheight);
   padding: 15px;
   transition: 0.5s ease;
 }
-.milestone_sec .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide figure img {
+.milestone_sec.sec-pad-all .milestone_wrapper .colB .milestone_trophy_slider .swiper-slide figure img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.milestone_sec .milestone_wrapper .colC {
+.milestone_sec.sec-pad-all .milestone_wrapper .colC {
   flex: 0 1 41%;
 }
-.milestone_sec .milestone_wrapper .colC .description_slider {
+.milestone_sec.sec-pad-all .milestone_wrapper .colC .description_slider {
   max-width: 275px;
   line-height: 1.2;
   height: 120px;
   top: 30%;
 }
-.milestone_sec .milestone_wrapper .colC .description_slider .swiper-slide p {
+.milestone_sec.sec-pad-all .milestone_wrapper .colC .description_slider .swiper-slide p {
   color: var(--white);
   font-weight: 400;
   line-height: 1.5;

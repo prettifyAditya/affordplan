@@ -11,7 +11,7 @@ export default function Testimonials({TestimonialData=[], classname="", heading=
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className={`testimonial_sec sec-pad ${classname}`}>
+            <div className={`testimonial_sec sec-pad-all ${classname}`}>
                 <div className="container">
                     <div className="upper_sec">
                         <div className="heading">

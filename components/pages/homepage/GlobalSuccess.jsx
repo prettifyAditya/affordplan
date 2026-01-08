@@ -8,7 +8,7 @@ export default function GlobalSuccess(){
     const [activeSuccess, setActiveSuccess] = useState("success-tab1")
     return(
         <section>
-            <div className="home-secE sec-pad">
+            <div className="home-secE sec-pad-all">
                 <div className="container">
                     <div className="heading">
                         <h2>Verified Success: <span>Global Perspective.</span></h2>
