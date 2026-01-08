@@ -168,12 +168,18 @@
     --headingpaddingtop: 1.75rem
     --headingpaddingbottom: 5.75rem
     --headingheight: calc((var(--headingpaddingtop) + var(--headingpaddingbottom)) + (var(--headingfont) * var(--headinglineheight) * var(--totalline)))
+    --bouncedistance: 50px
     overflow: hidden
+    @media (max-width: 1400) and (max-height: 700) 
+        --bouncedistance: 30px
     @include before(url(/assets/images/home/circular-vector.svg))
     &::before
         background-repeat: no-repeat
         background-position: 100% 50%
         right: -20%
+    @include media(1400)
+        --headingpaddingbottom: 3.75rem
+        --headingpaddingtop: .75rem
     .container
         position: relative
         &::before
@@ -195,7 +201,7 @@
         position: relative
         z-index: 1
     .sticky-sec
-        min-height: calc(100vh - calc( var(--headingheight) + var(--headerheight)  ))
+        min-height: calc(100vh - calc( var(--headingheight) + var(--headerheight) ))
         position: relative
         transition: 1s ease
         --item: 3
@@ -225,6 +231,8 @@
                         animation: card_bounce 2s linear infinite
                     .cards_col
                         transform: translateX(calc(var(--colsize) * -1 + var(--gap) * -1)) translateY(100px)
+                        @media (max-width: 1400) and (max-height: 700) 
+                            transform: translateX(calc(var(--colsize) * -1 + var(--gap) * -1)) translateY(50px)
                         @include media(991)
                             transform: translateX(0)
                 &:nth-child(3)
@@ -237,6 +245,8 @@
                         animation: card_bounce 2s linear infinite
                     .cards_col
                         transform: translateX(calc(var(--colsize) * 1 + var(--gap) * 1)) translateY(100px)
+                        @media (max-width: 1400) and (max-height: 700) 
+                            transform: translateX(calc(var(--colsize) * 1 + var(--gap) * 1)) translateY(50px)
                         @include media(991)
                             transform: translateX(calc(var(--colsize) * 2 + var(--gap) * 23))
         .sticky-wrap
@@ -297,10 +307,11 @@
     0%, 100%
         transform: translateY(0)
     50%
-        transform: translateY(50px)
+        transform: translateY(var(--bouncedistance))
+
 @keyframes card_bounce2
     0%, 100%
-        transform: translateY(50px)
+        transform: translateY(var(--bouncedistance))
     50%
         transform: translateY(0px)
 
@@ -406,8 +417,13 @@
                         border-top-left-radius: 5px
                         border-bottom-left-radius: 5px
                         background: linear-gradient(179deg, #0000 0%, #0000007d 100%)
+                    &:hover
+                        .bg
+                            img
+                                transform: scale(1.1)
                     .bg
                         height: 100%
+                        overflow: hidden
                         img, video
                             border-top-left-radius: 5px
                             border-bottom-left-radius: 5px

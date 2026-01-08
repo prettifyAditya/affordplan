@@ -92,6 +92,7 @@ export default function ProcalyxHospitalPage(){
                 heading={<>Transforming Hospital <span>Operations</span> Through Unified Care <span>Systems</span></>}
                 desc="Modern hospitals face increasing complexity across clinical, operational, and financial functions. Our end-to-end healthcare solutions align people, processes, and technology to streamline workflows."
                 btnText="Go to Procalyx™"
+                btnClass="white fw-bold right shadow"
             />
             <HowItWorks />
             <WhySliderSec

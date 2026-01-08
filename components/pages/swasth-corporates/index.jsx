@@ -92,6 +92,7 @@ export default function SwasthForCorporatesPage(){
                 heading={<>Prioritizing Workplace Well-being by Removing <span>Financial Friction.</span></>}
                 desc="Built to simplify life. Comprehensive financial support and rewards dramatically reduce employee stress and empower peak performance across the workforce."
                 btnText="Book a Demo"
+                btnClass="white fw-bold shadow down"
             />
             <BenefitsSec />
             <WhySliderSec

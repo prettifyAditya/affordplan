@@ -51,6 +51,7 @@
 }
 
 .solution_sec {
+  overflow: hidden;
   position: relative;
 }
 .solution_sec::before {

@@ -23,6 +23,7 @@ export default function LifeOrganisation(){
                     <Swiper
                         ref={swiperRef}
                         className="life_slider"
+                        loop={true}
                         modules={[Navigation, Pagination]}
                         speed={1000}
                         navigation={{

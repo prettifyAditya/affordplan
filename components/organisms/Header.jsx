@@ -3,8 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useModalStore } from "@/store/modalStore";
-import "@/uploads/styles/header/header.css"
 import ServiceCol from "../molecules/ServiceCol";
+import "@/uploads/styles/header/header.css"
+import Button from "../atoms/Button";
 
 export default function Header() {
   const [headerFixed, setHeaderFixed] = useState(false);
@@ -135,7 +136,7 @@ export default function Header() {
                                                             desc="Elevating Employee Support Through Predictable Financial Access."
                                                         />
                                                         <ServiceCol
-                                                            linkHref="procalyx"
+                                                            linkHref="procalyx-hospital"
                                                             classname="no_anchor"
                                                             mediaSrc="/assets/images/other/procalyx.jpg"
                                                             title="Procalyx™"
@@ -163,7 +164,7 @@ export default function Header() {
                                                     </div>
                                                     <div className="submenu_grid">
                                                         <ServiceCol
-                                                            linkHref="procalyx"
+                                                            linkHref="procalyx-pharma"
                                                             classname="no_anchor"
                                                             mediaSrc="/assets/images/other/procalyx.jpg"
                                                             title="Procalyx™"
@@ -258,7 +259,7 @@ export default function Header() {
                         <li>Marathi</li>
                     </div>
                   </div>
-                    <button type="button" className="btn">Sign in</button>
+                    <Button buttonText="Sign in" />
                 </div>
             </div>
         </div>

@@ -15,6 +15,7 @@ export default function ContactUsPage(){
                 btnText="Join Now"
                 mediaSrc="assets/video/contact_banner.mp4"
                 videoPoster="assets/video/contact_banner_poster.png"
+                linkHref="/careers"
             />
             <ContactForm />
             <MapSection />

@@ -91,6 +91,7 @@ export default function AmyaWellnessPage(){
                 heading={<>Resolving the Fragmentation Between <span>Clinical Insight and Daily Life.</span></>}
                 desc="Complexity is eliminated through a single, curated ecosystem. Targeted, medically-influenced support provides certainty across prevention, chronic care, and recovery goals."
                 btnText="Go to Amaya Wellness"
+                btnClass="white fw-bold shadow down"
             />
             <MedicalIntegrated />
             <WhySliderSec

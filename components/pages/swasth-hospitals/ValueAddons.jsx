@@ -5,6 +5,7 @@ import { Navigation} from "swiper/modules";
 import "swiper/css"; 
 import "swiper/css/navigation"
 import SwiperButton from "@/components/atoms/SwiperButton";
+import Button from "@/components/atoms/Button";
 
 const valueData = [
     {
@@ -92,24 +93,7 @@ export default function ValueAddons(){
                 </Swiper>
             </div>
             <div className="btn_wrap">
-                <button type="button" className="btn">
-                  For more detail get in touch{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20px"
-                    height="22px"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.2}
-                      d="M12 5v14m0 0l6-6m-6 6l-6-6"
-                    ></path>
-                  </svg>
-                </button>
+                <Button buttonText="For more detail get in touch" classname="down" />
               </div>
           </div>
         </div>

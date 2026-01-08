@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import "@/uploads/styles/component/component.css"
+import Button from "../atoms/Button"
 
 export default function ServiceCol({ mediaType="", mediaSrc="", linkHref="", classname="", title="", desc="" }){
     return(
@@ -17,7 +18,7 @@ export default function ServiceCol({ mediaType="", mediaSrc="", linkHref="", cla
             <figcaption>
                 <h4>{title}</h4>
                 <p>{desc}</p>
-                <button className="btn white">Explore More</button>
+                <Button classname="white" buttonText="Explore More" />
             </figcaption>
         </Link>
     )

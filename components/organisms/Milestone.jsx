@@ -59,10 +59,11 @@ export default function Milestone({ classname="" ,heading="" }){
                                 className="milestone_trophy_slider"
                                 loop = {true}
                                 navigation={{
-                                    prevEl: ".milestone-prev",
-                                    nextEl: ".milestone-next"
+                                    prevEl: ".milestone-next",
+                                    nextEl: ".milestone-prev"
                                 }}
                                 modules={[Navigation]}
+                                direction="horizontal"
                                 ref={swiperRef}
                                 spaceBetween={20}
                                 speed={1000}

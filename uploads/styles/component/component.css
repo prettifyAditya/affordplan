@@ -11,37 +11,62 @@
     left: 100%;
   }
 }
-.service_col {
+.service_col.item-md {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 25px;
 }
-.service_col::before {
+.service_col.item-md::before {
   background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 25px;
 }
-.service_col.no_anchor figcaption .btn {
+.service_col.item-md:hover figure img {
+  transform: scale(1.1);
+}
+.service_col.item-md.no_anchor figcaption .btn {
   display: none;
 }
-.service_col figure img, .service_col figure video {
+.service_col.item-md figure {
+  border-radius: 25px;
+  position: relative;
+}
+.service_col.item-md figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.service_col.item-md figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.service_col.item-md figure img, .service_col.item-md figure video {
   border-radius: 25px;
 }
-.service_col figcaption {
+.service_col.item-md figcaption {
   padding: 0 25px 50px;
   max-width: 460px;
 }
-.service_col figcaption h4 {
+.service_col.item-md figcaption h4 {
   color: var(--white);
   font-size: 36px;
 }
-.service_col figcaption p {
+.service_col.item-md figcaption p {
   color: rgba(255, 255, 255, 0.6980392157);
   line-height: 1.2;
   margin: 5px 0 20px;
 }
 
-.product_herosec {
+.product_herosec.sec-pad-all, .product_herosec.sec-pad {
   padding-top: 10rem;
   padding-bottom: 2rem;
   overflow: hidden;
@@ -49,10 +74,10 @@
   position: relative;
   z-index: 0;
 }
-.product_herosec.procalyx .main_wrapper .colA .heading .btn, .product_herosec.about_us .main_wrapper .colA .heading .btn {
+.product_herosec.sec-pad-all.procalyx .main_wrapper .colA .heading .btn, .product_herosec.sec-pad-all.about_us .main_wrapper .colA .heading .btn, .product_herosec.sec-pad.procalyx .main_wrapper .colA .heading .btn, .product_herosec.sec-pad.about_us .main_wrapper .colA .heading .btn {
   display: none;
 }
-.product_herosec::before {
+.product_herosec.sec-pad-all::before, .product_herosec.sec-pad::before {
   content: "";
   position: absolute;
   top: 0;
@@ -67,7 +92,7 @@
   background: none;
   transition: 0.5s ease;
 }
-.product_herosec::before {
+.product_herosec.sec-pad-all::before, .product_herosec.sec-pad::before {
   background: url(/assets/images/home/circular-light-vector.svg) no-repeat;
   inset: 4% 0% 0 0;
   z-index: -1;
@@ -75,12 +100,12 @@
   background-size: 50%;
 }
 @media only screen and (min-width: 1336px) {
-  .product_herosec::before {
+  .product_herosec.sec-pad-all::before, .product_herosec.sec-pad::before {
     background-size: 30%;
     background-position: 100% 50%;
   }
 }
-.product_herosec::after {
+.product_herosec.sec-pad-all::after, .product_herosec.sec-pad::after {
   content: "";
   position: absolute;
   width: 200px;
@@ -89,7 +114,7 @@
   filter: blur(100px);
   border-radius: 50%;
 }
-.product_herosec::after {
+.product_herosec.sec-pad-all::after, .product_herosec.sec-pad::after {
   top: 0%;
   right: 2%;
   transform: translate(30%, 0);
@@ -98,50 +123,50 @@
   height: 250px;
   z-index: -1;
 }
-.product_herosec.contact_us .main_wrapper .colA .heading p {
+.product_herosec.sec-pad-all.contact_us .main_wrapper .colA .heading p, .product_herosec.sec-pad.contact_us .main_wrapper .colA .heading p {
   color: var(--black);
 }
-.product_herosec.contact_us .main_wrapper .colA .heading p span {
+.product_herosec.sec-pad-all.contact_us .main_wrapper .colA .heading p span, .product_herosec.sec-pad.contact_us .main_wrapper .colA .heading p span {
   display: block;
   margin-top: 50px;
   font-style: italic;
   color: var(--black);
 }
-.product_herosec .main_wrapper {
+.product_herosec.sec-pad-all .main_wrapper, .product_herosec.sec-pad .main_wrapper {
   --gap: 40px;
   align-items: center;
   gap: var(--gap);
 }
-.product_herosec .main_wrapper .colA {
+.product_herosec.sec-pad-all .main_wrapper .colA, .product_herosec.sec-pad .main_wrapper .colA {
   flex: 0 1 calc(50% - var(--gap));
   max-width: calc(50% - var(--gap));
   width: 100%;
 }
-.product_herosec .main_wrapper .colA .heading h2 {
+.product_herosec.sec-pad-all .main_wrapper .colA .heading h2, .product_herosec.sec-pad .main_wrapper .colA .heading h2 {
   font-size: 48px;
   line-height: 1.1;
 }
-.product_herosec .main_wrapper .colA .heading h2 span {
+.product_herosec.sec-pad-all .main_wrapper .colA .heading h2 span, .product_herosec.sec-pad .main_wrapper .colA .heading h2 span {
   font-family: "IvyPresto";
 }
-.product_herosec .main_wrapper .colA .heading p {
+.product_herosec.sec-pad-all .main_wrapper .colA .heading p, .product_herosec.sec-pad .main_wrapper .colA .heading p {
   max-width: 525px;
   color: #070606;
   margin: 10px 0 25px;
   font-weight: 500;
 }
-.product_herosec .main_wrapper .colB {
+.product_herosec.sec-pad-all .main_wrapper .colB, .product_herosec.sec-pad .main_wrapper .colB {
   flex: 1;
   max-width: 50%;
   width: 100%;
 }
-.product_herosec .main_wrapper .colB figure {
+.product_herosec.sec-pad-all .main_wrapper .colB figure, .product_herosec.sec-pad .main_wrapper .colB figure {
   width: 100%;
   height: 100%;
   line-height: 0;
   border-radius: 150px 15px 15px 15px;
 }
-.product_herosec .main_wrapper .colB figure img, .product_herosec .main_wrapper .colB figure video {
+.product_herosec.sec-pad-all .main_wrapper .colB figure img, .product_herosec.sec-pad-all .main_wrapper .colB figure video, .product_herosec.sec-pad .main_wrapper .colB figure img, .product_herosec.sec-pad .main_wrapper .colB figure video {
   min-height: 405px;
   border-radius: 150px 15px 15px 15px;
 }
@@ -409,9 +434,10 @@
   background: linear-gradient(90deg, #AEBDEC, #364C8D);
 }
 .info_graphic.procalyx_pharma_comp.swasth_hospitals .main_wrapper {
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 .info_graphic.procalyx_pharma_comp.swasth_corporates .main_wrapper {
+  flex-direction: row;
   background: linear-gradient(90deg, #0358C6, #0CB1DF);
 }
 .info_graphic.procalyx_pharma_comp.swasth_corporates .main_wrapper figcaption .heading h2, .info_graphic.procalyx_pharma_comp.swasth_corporates .main_wrapper figcaption .heading p {
@@ -1154,7 +1180,6 @@
 .positions-pop.model .model-body .post_wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 }
 .positions-pop.model .model-body .post_wrapper .post_details_wrap {
   flex: 1;

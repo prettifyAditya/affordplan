@@ -164,6 +164,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  line-height: 0;
   position: relative;
 }
 .more_trends_sec .more_trends .more_trends_col figure::before {

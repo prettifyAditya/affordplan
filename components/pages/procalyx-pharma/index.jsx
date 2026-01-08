@@ -93,6 +93,7 @@ export default function ProcalyxPharmaPage(){
                 heading={<>Bridging the Gap Between <span>Manufacturers</span> and <span>Healthcare Providers</span></>}
                 desc="Fragmented supply chains and opaque financial cycles hinder growth. Procalyx™ streamlines these connections by providing a unified platform for inventory intelligence and secure, predictable settlement cycles."
                 btnText="Go to Procalyx™"
+                btnClass="white right fw-bold shadow"
             />
             <HowItWorks />
             <WhySliderSec

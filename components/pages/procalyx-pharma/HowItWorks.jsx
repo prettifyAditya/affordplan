@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation} from "swiper/modules";
@@ -56,10 +55,11 @@ export default function HowItWorks(){
               <Swiper
                 ref={swiperRef}
                 className="how_slider"
+                loop ={true}
                 modules={[Navigation]}
                 centeredSlides={true}
-                loop={true}
                 speed={1000}
+                direction="horizontal"
                 navigation={{
                   prevEl: ".how-prev",
                   nextEl: ".how-next",
@@ -96,24 +96,6 @@ export default function HowItWorks(){
                         stronger, data-backed hospital partnerships across
                         diverse Indian markets.
                       </p>
-                      <Link href="" className="btn">
-                        Book a demo{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.2}
-                            d="M12 5v14m0 0l6-6m-6 6l-6-6"
-                          ></path>
-                        </svg>
-                      </Link>
                     </figcaption>
                     <figure>
                         <Image src="/assets/images/procalyx/pharma_how1.jpg" width="410" height="340" alt="How Works"></Image>
@@ -132,24 +114,6 @@ export default function HowItWorks(){
                         stronger, data-backed hospital partnerships across
                         diverse Indian markets.
                       </p>
-                      <Link href="" className="btn">
-                        Book a demo{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.2}
-                            d="M12 5v14m0 0l6-6m-6 6l-6-6"
-                          ></path>
-                        </svg>
-                      </Link>
                     </figcaption>
                     <figure>
                         <Image src="/assets/images/procalyx/pharma_how1.jpg" width="410" height="340" alt="How Works"></Image>
@@ -168,24 +132,6 @@ export default function HowItWorks(){
                         stronger, data-backed hospital partnerships across
                         diverse Indian markets.
                       </p>
-                      <Link href="" className="btn">
-                        Book a demo{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.2}
-                            d="M12 5v14m0 0l6-6m-6 6l-6-6"
-                          ></path>
-                        </svg>
-                      </Link>
                     </figcaption>
                     <figure>
                         <Image src="/assets/images/procalyx/pharma_how1.jpg" width="410" height="340" alt="How Works"></Image>
@@ -204,24 +150,24 @@ export default function HowItWorks(){
                         stronger, data-backed hospital partnerships across
                         diverse Indian markets.
                       </p>
-                      <Link href="" className="btn">
-                        Book a demo{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20px"
-                          height="22px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.2}
-                            d="M12 5v14m0 0l6-6m-6 6l-6-6"
-                          ></path>
-                        </svg>
-                      </Link>
+                    </figcaption>
+                    <figure>
+                        <Image src="/assets/images/procalyx/pharma_how1.jpg" width="410" height="340" alt="How Works"></Image>
+                    </figure>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="how_col">
+                    <figcaption>
+                      <h3>For Pharma and Med Device Companies</h3>
+                      <p>
+                        Data-Driven Market Penetration Gain granular consumption
+                        intelligence that transforms your account management
+                        strategies. Our platform enables you to efficiently
+                        identify opportunities, allocate resources, and build
+                        stronger, data-backed hospital partnerships across
+                        diverse Indian markets.
+                      </p>
                     </figcaption>
                     <figure>
                         <Image src="/assets/images/procalyx/pharma_how1.jpg" width="410" height="340" alt="How Works"></Image>

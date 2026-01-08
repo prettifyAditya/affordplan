@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useModalStore } from "@/store/modalStore";
 import "@/uploads/styles/component/component.css"
+import Button from "../atoms/Button";
 
 export default function PositionsPop(){
     const isPositionsOpen = useModalStore((state) => state.isPositionsOpen)
@@ -107,12 +108,7 @@ export default function PositionsPop(){
                                 <div className="error">Please Upload File</div>
                             </div>
                         </div>
-                        <button type="button" className="btn">Submit
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 1024 1024">
-                                <path fill="currentColor" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"></path>
-                                <path fill="currentColor" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"></path>
-                            </svg>
-                        </button>
+                        <Button buttonText="Submit" classname="top-right" />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
-import "./global.css";
 import { Poppins } from "next/font/google";
 import MainTemplate from "@/components/template/MainTemplate";
+import "./global.css";
 
 export const metadata = {
   title: "Affordplan",

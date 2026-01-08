@@ -1,6 +1,7 @@
 "use client"
 import { useModalStore } from "@/store/modalStore";
 import Link from "next/link"
+import Button from "../atoms/Button";
 import "@/uploads/styles/component/component.css"
 
 export default function NetworkFormSec({classname="", heading="", subHeading, formHeading=""}){
@@ -43,7 +44,7 @@ export default function NetworkFormSec({classname="", heading="", subHeading, fo
                             <div className="disclaim">
                                 <p>By clicking on submit button, you are agreeing the <Link href="/terms-of-use">terms and conditions</Link></p>
                             </div>
-                            <button type="button" className="btn" onClick={openThankyouPop}>Submit</button>
+                            <Button buttonText="Submit" onClick={openThankyouPop} />
                         </div>
                     </div>
                 </div>

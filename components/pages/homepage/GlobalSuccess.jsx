@@ -1,4 +1,5 @@
 "use client"
+import Button from "@/components/atoms/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -50,7 +51,7 @@ export default function GlobalSuccess(){
                                             <Image src="/assets/images/home/success_bg.jpg" width="780" height="609" alt="banner Image"></Image>
                                             <div className="banner-wrapper">
                                                 <h4>Empowering Affordable Healthcare An Exclusive Interview with Dr. Pruthvinath  Kancherla, Co-Founder of Affordplan®</h4>
-                                                <Link className="btn white" href="">Read More</Link>
+                                                <Button classname="white" linkHref="" buttonText="Read More" />
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +62,7 @@ export default function GlobalSuccess(){
                                             <Image src="/assets/images/home/success_bg.jpg" width="780" height="609" alt="banner Image"></Image>
                                             <div className="banner-wrapper">
                                                 <h4>Empowering Affordable Healthcare An Exclusive Interview with Dr. Pruthvinath  Kancherla, Co-Founder of Affordplan®</h4>
-                                                <Link className="btn white" href="">Read More</Link>
+                                                <Button classname="white" linkHref="" buttonText="Read More" />
                                             </div>
                                         </div>
                                     </div>
@@ -72,7 +73,7 @@ export default function GlobalSuccess(){
                                             <Image src="/assets/images/home/success_bg.jpg" width="780" height="609" alt="banner Image"></Image>
                                             <div className="banner-wrapper">
                                                 <h4>Empowering Affordable Healthcare An Exclusive Interview with Dr. Pruthvinath  Kancherla, Co-Founder of Affordplan®</h4>
-                                                <Link className="btn white" href="">Read More</Link>
+                                                <Button classname="white" linkHref="" buttonText="Read More" />
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +84,7 @@ export default function GlobalSuccess(){
                                             <Image src="/assets/images/home/success_bg.jpg" width="780" height="609" alt="banner Image"></Image>
                                             <div className="banner-wrapper">
                                                 <h4>Empowering Affordable Healthcare An Exclusive Interview with Dr. Pruthvinath  Kancherla, Co-Founder of Affordplan®</h4>
-                                                <Link className="btn white" href="">Read More</Link>
+                                                <Button classname="white" linkHref="" buttonText="Read More" />
                                             </div>
                                         </div>
                                     </div>
@@ -125,10 +126,7 @@ export default function GlobalSuccess(){
                             </div>
                         </div>
                         <div className="btn_wrap">
-                            <Link className="btn black" href="/media">Explore all voices <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 1024 1024">
-        <path fill="currentColor" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"></path>
-        <path fill="currentColor" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"></path>
-    </svg></Link>
+                            <Button classname="top-right" linkHref="/media" buttonText="Explore all voices" />
                         </div>
                     </div>
                 </div>

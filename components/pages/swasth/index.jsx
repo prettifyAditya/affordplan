@@ -20,13 +20,14 @@ export default function SwasthPage(){
                 btnText="Explore"
                 btnType="anchor"
                 linkHref="/swasth-for-families"
+                btnClass="white right shadow fw-bold"
             />
             <InfoGraphic 
                 classname="procalyx_pharma_comp swasth_hospitals"
                 imgSrc="/assets/images/swasth/swasth_hospitals.jpg" 
                 heading={<>Swasth for <span>Hospitals</span></>}
                 desc="Hospitals face growing complexity across clinical, operational, and financial workflows. Swasth for Hospitals brings these functions together on a single integrated platform, enabling better patient flow, optimized resource utilization, improved financial transparency, and consistent, high-quality care delivery."
-                btnClass=""
+                btnClass="right shadow fw-bold"
                 btnText="Explore"
                 btnType="anchor"
                 linkHref="/swasth-for-hospitals"
@@ -39,6 +40,7 @@ export default function SwasthPage(){
                 btnText="Explore"
                 btnType="anchor"
                 linkHref="/swasth-for-corporates"
+                btnClass="white right shadow fw-bold"
             />
         </main>
     )

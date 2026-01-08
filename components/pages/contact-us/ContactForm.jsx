@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useState } from "react";
 import MySelect from "@/components/molecules/MySelect"
+import Button from "@/components/atoms/Button";
 
 const optionsProject = [
     { value: "Swasth", label: "Swasth"},
@@ -66,7 +67,7 @@ export default function ContactForm(){
                             <div className="disclaim">
                                 <p>By clicking on submit button, you are agreeing the <Link href="/terms-and-conditions">terms and conditions</Link></p>
                             </div>
-                            <button type="button" className="btn white">Submit</button>
+                            <Button classname="white" buttonText="Submit" />
                         </div>
                     </div>
                 </div>

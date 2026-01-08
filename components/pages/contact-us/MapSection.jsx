@@ -1,3 +1,4 @@
+import Button from "@/components/atoms/Button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,24 +37,7 @@ export default function MapSection(){
                     </Link>
                   </li>
                 </ul>
-                <Link className="btn" href="https://maps.app.goo.gl/9CdJCXihL5aoKmWf7" target="_blank">
-                  Get Direction
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18px"
-                    height="18px"
-                    viewBox="0 0 1024 1024"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"
-                    ></path>
-                    <path
-                      fill="currentColor"
-                      d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"
-                    ></path>
-                  </svg>
-                </Link>
+                <Button classname="top-right" buttonText="Get Direction" linkHref="https://maps.app.goo.gl/9CdJCXihL5aoKmWf7" target="_blank"></Button>
               </div>
               <div className="map">
                 <iframe

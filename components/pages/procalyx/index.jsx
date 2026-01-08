@@ -20,16 +20,17 @@ export default function ProcalyxPage(){
                 btnText="Explore"
                 btnType="anchor"
                 linkHref="/procalyx-hospital"
+                btnClass="white fw-bold right shadow"
             />
             <InfoGraphic 
                 classname="procalyx_pharma_comp"
                 imgSrc="/assets/images/procalyx/procalyx_pharma_comp.jpg"
                 heading={<>Procalyx™ for <span>Pharmaceutical companies</span></>}
                 desc="Pharmaceutical companies operate in highly complex supply chains with constant pressure on efficiency, compliance, and market reach. Procalyx™ provides an integrated intelligence platform that connects demand signals, inventory movement, and financial workflows."
-                btnClass=""
                 btnText="Explore"
                 btnType="anchor"
                 linkHref="/procalyx-pharma"
+                btnClass="fw-bold right shadow"
             />
         </main>
     )
