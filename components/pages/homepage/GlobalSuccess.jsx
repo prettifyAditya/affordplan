@@ -14,7 +14,7 @@ export default function GlobalSuccess(){
                         <h2>Verified Success: <span>Global Perspective.</span></h2>
                     </div>
                     <div className="top_sucess">
-                        <div className="success_col">
+                        <Link className="success_col" href="">
                             <figure>
                                 <Image src="/assets/images/home/success1.jpg" width="120" height="110" alt="Client Image" />
                             </figure>
@@ -22,8 +22,8 @@ export default function GlobalSuccess(){
                                 <p>Mother's Day 2024: Ten financial tips for empowering mothers on this day, May 12</p>
                                 <span className="date">01 Nov, 2025</span>
                             </figcaption>
-                        </div>
-                        <div className="success_col">
+                        </Link>
+                        <Link className="success_col" href="">
                             <figure>
                                 <Image src="/assets/images/home/success2.jpg" width="120" height="110" alt="Client Image" />
                             </figure>
@@ -31,8 +31,8 @@ export default function GlobalSuccess(){
                                 <p>Mother's Day 2024: Ten financial tips for empowering mothers on this day, May 12</p>
                                 <span className="date">01 Nov, 2025</span>
                             </figcaption>
-                        </div>
-                        <div className="success_col">
+                        </Link>
+                        <Link className="success_col" href="">
                             <figure>
                                 <Image src="/assets/images/home/success3.jpg" width="120" height="110" alt="Client Image" />
                             </figure>
@@ -40,7 +40,7 @@ export default function GlobalSuccess(){
                                 <p>Mother's Day 2024: Ten financial tips for empowering mothers on this day, May 12</p>
                                 <span className="date">01 Nov, 2025</span>
                             </figcaption>
-                        </div>
+                        </Link>
                     </div>
                     <div className="success_wrapper">
                         <div className="flex main_wrap">

@@ -13,6 +13,7 @@ export default function ContactUsPage(){
                 heading={<>Strategic Connections for<span> Accessible Healthcare.</span></>}
                 subHeading={<>Whether seeking individual assistance, exploring hospital partnerships, or initiating manufacturer innovation, the appropriate channel is available below. <span>Join Us—Let’s Build Tomorrow Together.</span></>}
                 btnText="Join Now"
+                btnClass="right fw-bold"
                 mediaSrc="assets/video/contact_banner.mp4"
                 videoPoster="assets/video/contact_banner_poster.png"
                 linkHref="/careers"

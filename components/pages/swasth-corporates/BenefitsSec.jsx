@@ -2,9 +2,9 @@
 import Image from "next/image"
 import { useEffect } from "react";
 
-export default function BenefitsSec(){
+export default function BenefitsSec({ ref }){
     useEffect(() => {
-            const section = document.querySelector('.swarth_corp_A.sec-pad');
+            const section = document.querySelector('.swarth_corp_A.sec-pad-all');
             const cardWrapper = document.querySelector('.card_wrapper');
             const benefitsWrapper = document.querySelector('.benefits_wrapper');
             if (!section || !cardWrapper || !benefitsWrapper) return;
@@ -45,7 +45,7 @@ export default function BenefitsSec(){
         }, []);
     return(
         <section>
-            <div className="swarth_corp_A sec-pad">
+            <div className="swarth_corp_A sec-pad-all" ref={ref}>
                 <div className="container">
                     <div className="heading">
                         <h2>All Your Strategic HR Benefits, <span>Seamlessly Integrated</span></h2>

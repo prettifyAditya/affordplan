@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function TeamInfo(){
     return(
         <section>
-            <div className="team_info_sec sec-pad">
+            <div className="team_info_sec sec-pad-all">
                 <div className="container">
                     <div className="heading">
                         <h2>A team <span>Redefining Healthcare</span></h2>

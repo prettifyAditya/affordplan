@@ -22,24 +22,14 @@ const valueData = [
         id: 3,
         heading: "Upcoming Product",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-    {
-        id: 4,
-        heading: "Corporates",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-    {
-        id: 5,
-        heading: "RWA",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
+    }
 ]
 
 export default function ValueAddons(){
     const swiperRef = useRef(null);
     return (
       <section>
-        <div className="value_add_sec sec-pad">
+        <div className="value_add_sec sec-pad-all">
           <div className="container">
             <div className="heading">
               <h2>
@@ -81,7 +71,7 @@ export default function ValueAddons(){
                                 <div className="top_nav">
                                     <h6>{value.heading}</h6>
                                     <div className="count">
-                                        <span>{value.id}</span>
+                                        <span>0{value.id}</span>
                                     </div>
                                 </div>
                                 <div className="desc">

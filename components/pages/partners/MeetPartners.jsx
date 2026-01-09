@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function MeetPartners(){
     return(
         <section>
-            <div className="meet_partners_sec sec-pad">
+            <div className="meet_partners_sec sec-pad-all">
                 <div className="container">
                     <div className="main_wrapper">
                         <div className="heading">

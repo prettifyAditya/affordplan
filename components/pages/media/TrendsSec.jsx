@@ -11,7 +11,7 @@ export default function TrendsSec(){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="trends_sec">
+            <div className="trends_sec sec-pad-all">
                 <div className="container">
                     <div className="heading">
                         <h2>Insights & Trends <span>The future of healthcare</span></h2>

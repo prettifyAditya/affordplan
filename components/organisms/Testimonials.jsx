@@ -34,16 +34,16 @@ export default function Testimonials({TestimonialData=[], classname="", heading=
                             }}
                             breakpoints={{
                                 0: {
-                                slidesPerView: 1.3,
-                                spaceBetween: 15,
+                                    slidesPerView: 1.3,
+                                    spaceBetween: 15,
                                 },
                                 540: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
+                                    slidesPerView: 2,
+                                    spaceBetween: 15,
                                 },
-                                768: {
-                                slidesPerView: 3,
-                                spaceBetween: 20,
+                                991: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20,
                                 }
                             }}
                             onSwiper={(swiper) => (swiperRef.current = swiper)}>

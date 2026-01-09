@@ -63,12 +63,12 @@ export default function ServicesTab() {
                                         }}
                                         breakpoints={{
                                             0: {
-                                            slidesPerView: 1.3,
-                                            spaceBetween: 10,
+                                                slidesPerView: 1.3,
+                                                spaceBetween: 10,
                                             },
-                                            540: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 20,
+                                            768: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 20,
                                             }
                                         }}
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
@@ -108,12 +108,12 @@ export default function ServicesTab() {
                                         }}
                                         breakpoints={{
                                             0: {
-                                            slidesPerView: 1.3,
-                                            spaceBetween: 10,
+                                                slidesPerView: 1.3,
+                                                spaceBetween: 10,
                                             },
-                                            540: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 20,
+                                            768: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 20,
                                             }
                                         }}
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
@@ -161,12 +161,12 @@ export default function ServicesTab() {
                                         }}
                                         breakpoints={{
                                             0: {
-                                            slidesPerView: 1.3,
-                                            spaceBetween: 10,
+                                                slidesPerView: 1.3,
+                                                spaceBetween: 10,
                                             },
-                                            540: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 20,
+                                            768: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 20,
                                             }
                                         }}
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>
@@ -206,12 +206,12 @@ export default function ServicesTab() {
                                         }}
                                         breakpoints={{
                                             0: {
-                                            slidesPerView: 1.3,
-                                            spaceBetween: 10,
+                                                slidesPerView: 1.3,
+                                                spaceBetween: 10,
                                             },
-                                            540: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 20,
+                                            768: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 20,
                                             }
                                         }}
                                         onSwiper={(swiper) => (swiperRef.current = swiper)}>

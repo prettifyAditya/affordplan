@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function KeyResults(){
     return(
         <section>
-            <div className="key_results sec-pad">
+            <div className="key_results sec-pad-all">
                 <div className="container">
                     <div className="main_wrapper">
                         <div className="colA">

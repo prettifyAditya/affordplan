@@ -99,7 +99,7 @@
 
 .swasth-secB .main_wrapper {
   background: linear-gradient(90deg, #364C8D, #AEBDEC);
-  padding: 50px 60px 90px;
+  padding: 60px 60px 100px;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -736,10 +736,11 @@
   left: 41%;
   transform: translate(-45%, -20%);
   width: 200px;
-  max-height: 120px;
+  max-height: 125px;
 }
 .operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider .hand_col {
   text-align: center;
+  padding: 10px 0;
 }
 .operational_flow_sec .operational_wrapper .colA .hand_wrapper .hand_slider .hand_col .icon {
   width: 56px;

@@ -4,7 +4,7 @@ import TeamCol from "@/components/molecules/TeamCol";
 export default function TeamSec({ classname="" ,heading="" }){
     return(
         <section>
-            <div className={`team_sec sec-pad ${classname}`}>
+            <div className={`team_sec sec-pad-all ${classname}`}>
                 <div className="container">
                     <div className="heading">
                         <h2>{heading}</h2>

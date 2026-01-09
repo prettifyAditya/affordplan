@@ -1,3 +1,5 @@
+"use client"
+import { useRef } from "react"
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
 import HealthcareSec from "./HealthcareSec"
 import FinancialSec from "./FinancialSec"
@@ -45,6 +47,17 @@ const TestimonialData = [
     },
 ]
 export default function SwasthForFamiliesPage(){
+    const financialSec = useRef(null)
+    const networkSec = useRef(null)
+    const activeScroll = (ref) => {
+        if (ref.current) {
+            const top = ref.current.offsetTop - 110;
+            window.scrollTo({
+                top,
+                behavior: "smooth"
+            })
+        }
+    }
     return(
         <main>
             <ProductHeroSection
@@ -55,15 +68,17 @@ export default function SwasthForFamiliesPage(){
                 btnText="Explore Benefits"
                 mediaSrc="assets/video/swasth_banner.mp4"
                 videoPoster="assets/video/swasth_banner_poster.png"
+                onClick={() => activeScroll(financialSec)}
             />
-            <HealthcareSec />
-            <FinancialSec />
-            <MaternitySec />
+            <HealthcareSec onClick={() => activeScroll(networkSec)} />
+            <FinancialSec ref={financialSec} />
+            <MaternitySec onClick={() => activeScroll(networkSec)} />
             <SwasthLocater />
-            <NetworkFormSec
+            <NetworkFormSec 
                 heading={<>Strategic Network Enrollment: <span>Request a Complimentary Demo.</span></>}
                 subHeading="Access a demonstration to quantify competitive advantages and accelerate institutional transformation in an evolving market."
                 formHeading="Get Your Swasth Card Today"
+                ref={networkSec}
             />
             <Testimonials classname="products_testimonials" heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
         </main>

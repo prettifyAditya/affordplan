@@ -3,7 +3,7 @@ import Button from "@/components/atoms/Button";
 export default function SwasthLocater(){
     return (
         <section>
-            <div className="swasth-secE sec-pad">
+            <div className="swasth-secE sec-pad-all">
                 <div className="container">
                 <div className="heading">
                     <h2>

@@ -11,7 +11,7 @@ export default function WhySliderSec({ classname="", topHeading="", heading="", 
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className={`why_slider_sec sec-pad ${classname}`}>
+            <div className={`why_slider_sec sec-pad-all ${classname}`}>
                 <div className="container">
                     <div className="main_wrapper">
                         <div className="upper_sec">

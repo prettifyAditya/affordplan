@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ScalePartnership(){
     return(
         <section>
-            <div className="scale_partnership">
+            <div className="scale_partnership sec-pad-all">
                 <div className="container">
                     <div className="main_wrapper">
                         <div className="heading">

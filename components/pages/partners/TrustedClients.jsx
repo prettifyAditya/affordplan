@@ -50,7 +50,7 @@ export default function TrustedClients(){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="trusted_clients sec-pad">
+            <div className="trusted_clients sec-pad-all">
                 <div className="container">
                     <div className="upper_sec">
                         <div className="heading">

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function MissionVission(){
     return(
         <section>
-            <div className="mission_sec sec-pad">
+            <div className="mission_sec sec-pad-all">
                 <div className="container">
                     <div className="heading">
                         <p>Guiding Principles: </p>

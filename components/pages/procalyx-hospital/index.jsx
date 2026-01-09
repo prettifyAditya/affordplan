@@ -1,3 +1,5 @@
+"use client"
+import { useRef } from "react"
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
 import InfoGraphic from "../../organisms/InfoGraphic"
 import WhySliderSec from "@/components/organisms/WhySliderSec"
@@ -78,6 +80,16 @@ const TestimonialData = [
 ]
 
 export default function ProcalyxHospitalPage(){
+    const networkSec = useRef(null)
+    const activeScroll = (ref) => {
+        if (ref.current) {
+            const top = ref.current.offsetTop - 110;
+            window.scrollTo({
+                top,
+                behavior: "smooth"
+            })
+        }
+    }
     return(
         <main>
             <ProductHeroSection
@@ -85,6 +97,7 @@ export default function ProcalyxHospitalPage(){
                 subHeading="A comprehensive healthcare platform designed for hospitals and medical institutions to enhance patient outcomes, streamline clinical and administrative workflows, improve resource utilization, and ensure transparency, safety, and regulatory compliance across all levels of care."
                 mediaType="photo"
                 mediaSrc="/assets/images/swasth/procalyx_hospital_banner.jpg"  
+                onClick={() => activeScroll(networkSec)}
             />
             <InfoGraphic 
                 classname="procalyx_hospital"
@@ -107,6 +120,7 @@ export default function ProcalyxHospitalPage(){
                 heading={<>Strategic Network Enrollment: <span>Book Your Free Demo Now.</span></>}
                 subHeading="Explore how to quantify competitive advantages and accelerate business growth through data-driven partnership."
                 formHeading="Book a Demo"
+                ref={networkSec}
             />
             <Testimonials classname="products_testimonials" heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
         </main>

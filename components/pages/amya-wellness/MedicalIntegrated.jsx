@@ -2,9 +2,9 @@
 import Image from "next/image"
 import { useEffect } from "react";
 
-export default function MedicalIntegrated(){
+export default function MedicalIntegrated({ }){
     useEffect(() => {
-        const section = document.querySelector('.amya_wellness_A.sec-pad');
+        const section = document.querySelector('.amya_wellness_A.sec-pad-all');
         const cardWrapper = document.querySelector('.card_wrapper');
         const amyaWrapper = document.querySelector('.amya_wrapper');
         if (!section || !cardWrapper || !amyaWrapper) return;
@@ -45,7 +45,7 @@ export default function MedicalIntegrated(){
     }, []);
     return(
         <section>
-            <div className="amya_wellness_A sec-pad">
+            <div className="amya_wellness_A sec-pad-all">
                 <div className="container">
                     <div className="heading">
                         <h2>Integrated Wellness Support on a <span>Medically-Curated Platform.</span></h2>

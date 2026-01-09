@@ -60,14 +60,13 @@ export default function OperationalFlow(){
                                     className="hand_slider"
                                     direction="vertical"
                                     modules={[Autoplay]}
-                                    // autoplay = {{
-                                    //     delay: 1000,
-                                    //     disableOnInteraction: false,
-                                    //     pauseOnMouseEnter: true
-                                    // }}
+                                    autoplay = {{
+                                        delay: 1000,
+                                        disableOnInteraction: false,
+                                        pauseOnMouseEnter: true
+                                    }}
                                     speed={1000}
                                     slidesPerView={1}
-                                    spaceBetween={5}
                                     onSwiper={(swiper) => (swiperRef.current = swiper)}>
                                         <SwiperSlide>
                                             <div className="hand_col">
