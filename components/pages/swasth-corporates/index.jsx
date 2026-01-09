@@ -1,3 +1,5 @@
+"use client"
+import { useRef } from "react"
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
 import InfoGraphic from "../../organisms/InfoGraphic"
 import WhySliderSec from "@/components/organisms/WhySliderSec"
@@ -77,6 +79,17 @@ const TestimonialData = [
     },
 ]
 export default function SwasthForCorporatesPage(){
+    const benefitsSec = useRef(null)
+    const networkSec = useRef(null)
+    const activeScroll = (ref) => {
+        if (ref.current) {
+            const top = ref.current.offsetTop - 110;
+            window.scrollTo({
+                top,
+                behavior: "smooth"
+            })
+        }
+    }
     return(
         <main>
             <ProductHeroSection
@@ -85,6 +98,7 @@ export default function SwasthForCorporatesPage(){
                 btnText="Explore Benefits"
                 mediaSrc="assets/video/swasth_corporate_banner.mp4"
                 videoPoster="assets/video/swasth_corporate_poster.png"
+                onClick={() => activeScroll(benefitsSec)}
             />
             <InfoGraphic 
                 classname="corporate"
@@ -93,8 +107,9 @@ export default function SwasthForCorporatesPage(){
                 desc="Built to simplify life. Comprehensive financial support and rewards dramatically reduce employee stress and empower peak performance across the workforce."
                 btnText="Book a Demo"
                 btnClass="white fw-bold shadow down"
+                onClick={() => activeScroll(networkSec)}
             />
-            <BenefitsSec />
+            <BenefitsSec ref={benefitsSec} />
             <WhySliderSec
                 topHeading="Why Partner With the Swasth Ecosystem"
                 heading={<>Strategic Advantages for <span>Corporate Growth.</span></>}
@@ -106,6 +121,7 @@ export default function SwasthForCorporatesPage(){
                 heading={<>Strategic Network Enrollment: <span>Request a Complimentary Demo.</span></>}
                 subHeading="Access a demonstration to quantify competitive advantages and accelerate institutional transformation in an evolving market."
                 formHeading="Book a Demo"
+                ref={networkSec}
             />
             <Testimonials classname="products_testimonials" heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
         </main>

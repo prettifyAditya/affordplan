@@ -8,11 +8,11 @@ import "swiper/css/navigation"
 import SwiperButton from "@/components/atoms/SwiperButton"
 import Button from "@/components/atoms/Button";
 
-export default function MaternitySec(){
+export default function MaternitySec({ onClick }){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="swasth-secD sec-pad">
+            <div className="swasth-secD sec-pad-all">
                 <div className="container">
                     <div className="maternity_wrapper">
                         <video src="/assets/video/maternity_banner.mp4" poster="/assets/video/maternity_banner_poster.png" autoPlay muted loop playsInline></video>
@@ -86,7 +86,7 @@ export default function MaternitySec(){
                                         </SwiperSlide>
                                     </Swiper>
                                 </div>
-                                <Button classname="white down" buttonText="Know More" />
+                                <Button classname="white down" onClick={onClick} buttonText="Know More" />
                             </div>
                         </div>
                         <figure className="logo_icon">

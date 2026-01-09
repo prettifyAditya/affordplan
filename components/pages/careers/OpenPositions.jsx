@@ -1,9 +1,9 @@
 import PoistionsCol from "@/components/molecules/PoistionsCol";
 
-export default function OpenPositions(){
+export default function OpenPositions({ref}){
     return(
         <section>
-            <div className="open_positions_sec sec-pad">
+            <div className="open_positions_sec sec-pad-all" ref={ref}>
                 <div className="container">
                     <div className="main_wrapper">
                         <div className="heading">

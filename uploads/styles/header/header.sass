@@ -11,7 +11,7 @@ header
     background: $white
     border-radius: 10px
     transform: translate(-50%, 0)
-    z-index: 5
+    z-index: 5  
     transition: .5s ease
     @include media(1336) 
         max-width: 92%
@@ -25,11 +25,19 @@ header
         align-items: center 
         transition: .5s ease
         gap: 2rem
+        @include media(1280) 
+            gap: 1.5rem 
+        @include media(991) 
+            justify-content: space-between
+        @include media(540)
+            gap: 1rem
         .colB, .colC
             height: 100%
             display: flex
         .colA
             flex: 0 1 auto
+            @include media(540)
+                flex: 0 1 120px
             .logo
                 height: 100%
                 width: 100%
@@ -40,7 +48,9 @@ header
             flex: 1
             align-items: center
             justify-content: end
-            @include media(768) 
+            @include media(1280) 
+                justify-content: center
+            @include media(991) 
                 display: none
             .nav-items
                 display: flex
@@ -48,8 +58,9 @@ header
                 justify-content: center
                 gap: 35px
                 height: 100%
-                @include media(1336)
-                    gap: 30px
+                @include media(1280)
+                    gap: 15px
+                    width: 100%
                 @include media(768)
                     gap: 20px
                 @include media(540)
@@ -124,6 +135,7 @@ header
                             position: absolute
                             background: url(/assets/logo-vector.svg) no-repeat, linear-gradient(0deg, #e2e8f8 0%, #fff 100%) 
                             background-position: 5% 100%
+                            background-size: 130px
                             top: 100%
                             width: max-content
                             height: 390px
@@ -140,17 +152,20 @@ header
                             --triangle: 10px
                             opacity: 0
                             display: none
-                            @include media(991)    
-                                left: 6%
-                                top: 85%
+                            @include media(1280) 
+                                left: -60%
                             .dropdown-menu-wrap
                                 height: 100%
                                 width: 1100px
+                                @include media(1280) 
+                                    width: 920px
                                 .colA-md
                                     position: relative
                                     --leftwidth: 27%
                                     --ulpadding: 15px 10px 20px
                                     height: 100%
+                                    @include media(1280) 
+                                        --leftwidth: 30%
                                     .solutions_ul
                                         width: var(--leftwidth)
                                         height: 100%
@@ -211,6 +226,8 @@ header
                                                 visibility: hidden
                                                 user-select: none
                                                 pointer-events: none
+                                                @include media(1280) 
+                                                    padding: 30px 20px
                                                 .heading
                                                     h2
                                                         font-size: 24px
@@ -246,20 +263,22 @@ header
             align-items: center
             justify-content: end 
             gap: 30px
-            @include media(1336)
-                gap: 30px
+            @include media(1280)
+                gap: 15px
             @include media(991)
                 flex: 0 1 auto
             @include media(768) 
                 flex: 1
             @include media(540)
-                gap: 20px
+                gap: 10px
             .lang_select
                 position: relative
                 display: flex
                 align-items: center
                 margin-left: 20px
                 height: 100%
+                @include media(1280)
+                    margin-left: 0
                 &.open
                     .dropdown_list
                         opacity: 1
@@ -269,6 +288,8 @@ header
                     align-items: center
                     cursor: pointer
                     gap: 10px
+                    @include media(540)
+                        gap: 7px
                     .icon
                         flex: 0 1 20px
                         width: 20px
@@ -908,6 +929,8 @@ header
 footer
     .container-fluid
         padding-bottom: 50px
+        @include media(768)
+            padding-bottom: 40px
         .footer_wrapper
             background: #000000E5
             border-radius: 20px
@@ -918,6 +941,13 @@ footer
                 background-position: 50% 100%
                 background-size: 80%
                 opacity: .2
+            @include media(1280) 
+                padding: 60px 40px 40px
+            @include media(991)
+                padding: 50px 40px 40px
+            @include media(540)
+                padding: 30px 20px
+                border-radius: 15px
             .upper-footer
                 display: flex
                 flex-wrap: wrap
@@ -925,24 +955,46 @@ footer
                 gap: var(--gap)
                 padding-bottom: 50px
                 border-bottom: 1px solid #666464
+                @include media(1280) 
+                    --gap: 70px
+                    padding-bottom: 40px
+                @include media(991)
+                    --gap: 40px
+                @include media(540)
+                    padding-bottom: 30px
+                    --gap: 30px
                 .colA
                     flex: 0 1 auto
+                    @include media(991)
+                        margin: 0 auto
+                    @include media(540)
+                        width: 100%
                     .logo
                         display: block
                         width: 240px
+                        @include media(1280) 
+                            width: 200px
+                        @include media(540)
+                            margin: 0 auto
                     .list
                         margin-top: 40px
+                        @include media(540)
+                            margin-top: 30px
                         h6
                             font-size: 16px
                             color: $white
                             padding-bottom: 10px
                             border-bottom: 1px solid #666464
+                            @include media(540)
+                                text-align: center
                         .social_icons
                             display: flex
                             flex-wrap: wrap
                             align-items: center
                             gap: 15px
                             margin-top: 20px
+                            @include media(540)
+                                justify-content: center
                             li
                                 a
                                     display: flex
@@ -960,13 +1012,23 @@ footer
                     display: flex
                     flex-wrap: wrap
                     justify-content: space-around
+                    @include media(991)
+                        flex: 0 1 100%
+                        justify-content: space-between
+                    @include media(768)
+                        gap: 30px
                     .list
                         flex: 0 1 auto
+                        @include media(768)
+                            &:last-child
+                                flex: 0 1 100%
                         h6
                             font-size: 22px
                             color: $white
                             padding-bottom: 10px
                             border-bottom: 1px solid #666464
+                            @include media(540)
+                                font-size: 18px
                         ul
                             margin-top: 15px
                             li
@@ -987,6 +1049,8 @@ footer
                                     display: block
                                     font-size: 16px
                                     font-weight: 400
+                                    @include media(540)
+                                        font-size: 14px
                                     &:hover
                                         transform: translateX(5px)
             .lower-footer
@@ -995,6 +1059,8 @@ footer
                 align-items: center
                 justify-content: center
                 gap: 10px
+                @include media(768)
+                    flex-direction: column
                 p
                     font-size: 14px
                     color: $white
@@ -1008,6 +1074,9 @@ footer
                         border-left: 1px solid $white
                         font-size: 14px
                         font-weight: 600
+                        &:first-child
+                            @include media(768)
+                                border-left: none
 
 .thanks_banner
     margin-top: var(--headerheight)

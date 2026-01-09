@@ -1,3 +1,5 @@
+"use client"
+import { useRef } from "react"
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
 import TeamInfo from "./TeamInfo"
 import LifeOrganisation from "./LifeOrganisation"
@@ -7,6 +9,16 @@ import FutureColleagues from "./FutureColleagues"
 import "@/uploads/styles/career/career.css"
 
 export default function CareersPage(){
+    const positionsSec = useRef(null)
+    const activeScroll = (ref) => {
+        if (ref.current) {
+            const top = ref.current.offsetTop - 110;
+            window.scrollTo({
+                top,
+                behavior: "smooth"
+            })
+        }
+    }
     return(
         <main>
             <ProductHeroSection
@@ -15,10 +27,11 @@ export default function CareersPage(){
                 btnText="Join Now"
                 mediaSrc="assets/video/career_banner.mp4"
                 videoPoster="assets/video/career_banner_poster.png"
+                onClick={() => activeScroll(positionsSec)}
             />
             <TeamInfo />
             <LifeOrganisation />
-            <OpenPositions />
+            <OpenPositions ref={positionsSec} />
             <FutureColleagues />
             <PositionsPop />
         </main>

@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Solution(){
     return(
         <section>
-            <div className="solution_sec sec-pad">
+            <div className="solution_sec sec-pad-all">
                 <div className="container">
                     <div className="main_wrapper">
                         <figcaption>

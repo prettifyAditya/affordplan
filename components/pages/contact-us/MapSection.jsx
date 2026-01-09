@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MapSection(){
     return (
       <section>
-        <div className="map_section sec-pad">
+        <div className="map_section sec-pad-all">
           <div className="container">
             <div className="main_wrapper flex">
               <div className="details">

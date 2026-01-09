@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function MoreTrends(){
     return(
         <section>
-            <div className="more_trends_sec">
+            <div className="more_trends_sec sec-pad-all">
                 <div className="container">
                     <div className="more_trends">
                         <Link className="more_trends_col" href="">

@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useEffect } from "react";
 
-export default function FinancialSec(){
+export default function FinancialSec({ ref="" }){
     useEffect(() => {
         const section = document.querySelector('.swasth-secC.sec-pad-all');
         const cardWrapper = document.querySelector('.card_wrapper');
@@ -45,7 +45,7 @@ export default function FinancialSec(){
     }, []);
     return(
         <section>
-            <div className="swasth-secC sec-pad-all">
+            <div className="swasth-secC sec-pad-all" ref={ref}>
                 <div className="container">
                     <div className="heading">
                         <h2>Seamlessly Integrated, <span>Essential Financial Benefits.</span></h2>

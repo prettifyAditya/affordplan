@@ -4,11 +4,11 @@ import Link from "next/link"
 import Button from "../atoms/Button";
 import "@/uploads/styles/component/component.css"
 
-export default function NetworkFormSec({classname="", heading="", subHeading, formHeading=""}){
+export default function NetworkFormSec({classname="", heading="", subHeading, formHeading="", ref}){
     const openThankyouPop = useModalStore((state) => state.openThankyouPop)
     return(
         <section>
-            <div className={`network-form sec-pad-all ${classname}`}>
+            <div className={`network-form sec-pad-all ${classname}`} ref={ref}>
                 <div className="container">
                     <div className="network_wrapper flex">
                         <div className="heading">

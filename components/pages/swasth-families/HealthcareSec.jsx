@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Button from "@/components/atoms/Button";
 
-export default function HealthcareSec(){
+export default function HealthcareSec({ onClick }){
     return(
         <section>
-            <div className="swasth-secB sec-pad">
+            <div className="swasth-secB sec-pad-all">
                 <div className="container">
                     <div className="main_wrapper">
                         <figcaption>
                             <div className="content heading">
                                 <h2>Simplified Management of <span>Healthcare Expenses</span></h2>
                                 <p>From routine checkups, diagnostics, and labs to unexpected medical needs, financial stress is reduced through smart savings. A single card manages all family healthcare finances efficiently.</p>
-                                <Button classname="white down" buttonText="Get Your Swasth Card Now" />
+                                <Button classname="white down" buttonText="Get Your Swasth Card Now" onClick={onClick} />
                             </div>
                         </figcaption>
                         <figure>

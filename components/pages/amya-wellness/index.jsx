@@ -1,3 +1,5 @@
+"use client"
+import { useRef } from "react"
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
 import InfoGraphic from "../../organisms/InfoGraphic"
 import WhySliderSec from "@/components/organisms/WhySliderSec"
@@ -77,6 +79,16 @@ const TestimonialData = [
     },
 ]
 export default function AmyaWellnessPage(){
+    const networkSec = useRef(null)
+    const activeScroll = (ref) => {
+        if (ref.current) {
+            const top = ref.current.offsetTop - 110;
+            window.scrollTo({
+                top,
+                behavior: "smooth"
+            })
+        }
+    }
     return(
         <main>
             <ProductHeroSection
@@ -84,6 +96,7 @@ export default function AmyaWellnessPage(){
                 subHeading="A curated platform for sustained health, specializing in prevention, recovery, and chronic care support."
                 mediaSrc="assets/video/amya_banner.mp4"
                 videoPoster="assets/video/amya_poster.png"
+                onClick={() => activeScroll(networkSec)}
             />
             <InfoGraphic
                 classname="amya"
@@ -106,6 +119,7 @@ export default function AmyaWellnessPage(){
                 heading={<>The First Step Toward  <span>Sustained Wellness</span></>}
                 subHeading="Complete a confidential assessment to receive a complimentary, medically-informed pathway for prevention, recovery, or chronic care. Gain clarity on the path to predictable, long-term health."
                 formHeading="Book a Demo"
+                ref={networkSec}
             />
             <Testimonials classname="products_testimonials" heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
         </main>

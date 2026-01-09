@@ -14,7 +14,7 @@ export default function ContactForm(){
     const [project, setProject] = useState(null);
     return(
         <section>
-            <div className="contact_form sec-pad">
+            <div className="contact_form sec-pad-all">
                 <div className="container">
                     <div className="main_wrapper flex">
                         <div className="heading">

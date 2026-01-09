@@ -12,7 +12,7 @@ export default function FutureColleagues(){
     const swiperRef = useRef(null);
     return(
         <section>
-            <div className="future_colleague_sec sec-pad">
+            <div className="future_colleague_sec sec-pad-all">
                 <div className="container">
                     <div className="future_wrapper">
                         <div className="colA">

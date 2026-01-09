@@ -1,3 +1,5 @@
+"use client"
+import { useRef } from "react"
 import ProductHeroSection from "@/components/molecules/ProductHeroSection"
 import InfoGraphic from "../../organisms/InfoGraphic"
 import WhySliderSec from "@/components/organisms/WhySliderSec"
@@ -191,6 +193,16 @@ const TestimonialData = [
 ]
 
 export default function SwasthForHospitalsPage(){
+    const networkSec = useRef(null)
+    const activeScroll = (ref) => {
+        if (ref.current) {
+            const top = ref.current.offsetTop - 110;
+            window.scrollTo({
+                top,
+                behavior: "smooth"
+            })
+        }
+    }
     return(
         <main> 
             <ProductHeroSection
@@ -198,6 +210,7 @@ export default function SwasthForHospitalsPage(){
                 subHeading="Solutions built to streamline financial operations, allowing hospitals to prioritize patient care above all else."
                 mediaSrc="assets/video/hospital_banner.mp4"
                 videoPoster="assets/video/hospital_banner_poster.png"
+                onClick={() => activeScroll(networkSec)}
             />
             <InfoGraphic 
                 classname="hospital"
@@ -223,6 +236,7 @@ export default function SwasthForHospitalsPage(){
                 heading={<>Strategic Network Enrollment: <span>Request a Complimentary Demo.</span></>}
                 subHeading="Access a demonstration to quantify competitive advantages and accelerate institutional transformation in an evolving market."
                 formHeading="Book a Demo"
+                ref={networkSec}
             />
             <Testimonials classname="products_testimonials" heading={<>Voices of the <span>Swasth Community</span></>} TestimonialData={TestimonialData} />
         </main>

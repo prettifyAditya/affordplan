@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function LocationSec(){
     return(
         <section>
-            <div className="location_sec sec-pad">
+            <div className="location_sec sec-pad-all">
                 <div className="container">
                     <div className="heading">
                         <h2>Affordplan <span>Locations</span></h2>
