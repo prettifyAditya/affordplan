@@ -10,7 +10,10 @@ import Button from "../atoms/Button";
 export default function Header() {
   const [headerFixed, setHeaderFixed] = useState(false);
   const [openLang, setOpenLang] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const isHamOpen = useModalStore((state) => state.isHamOpen)
   const openHam = useModalStore((state) => state.openHam)
+  const closeHam = useModalStore((state) => state.closeHam)
   useEffect(() => {
     const langDropdown = document.querySelector('.lang_select')
     const handleBodyClick = (e) => {
@@ -24,10 +27,15 @@ export default function Header() {
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 991);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
     return () => {
         window.removeEventListener("scroll", handleScroll);
         document.body.removeEventListener("click", handleBodyClick);
+        window.removeEventListener('resize', handleResize);
     };
   }, []);
   useEffect(() => {
@@ -49,7 +57,7 @@ export default function Header() {
     };
     }, []);
   return (
-      <header className={`${headerFixed ? "header-fixed" : ""}`}>
+      <header className={`${headerFixed ? "header-fixed" : ""} ${isHamOpen ? "ham-open" : ""}`}>
         <div className="container-fluid">
             <div className="header-container">
                 <div className="colA">
@@ -65,7 +73,23 @@ export default function Header() {
                     <li className="hasDropdown">
                         <button type="button" className="link">Solutions</button>
                         <div className="icon"></div>
-                        <div className="dropdown-menu">
+                        <div className={`dropdown-menu ${isMobile ? "model" : ""} ${isHamOpen ? "is-open" : ""}`}>
+                            <button className="close" onClick={closeHam}>
+                                <svg
+                                    width={24}
+                                    height={24}
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                <path
+                                    d="M0.75 0.75L23.25 23.25M0.75 23.25L23.25 0.75"
+                                    stroke="black"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                </svg>
+                            </button>
                             <div className="dropdown-menu-wrap">
                                 <div className="colA-md">
                                     <ul className="solutions_ul">
@@ -259,7 +283,12 @@ export default function Header() {
                         <li>Marathi</li>
                     </div>
                   </div>
-                    <Button buttonText="Sign in" />
+                <Button buttonText="Sign in" />
+                <button type="button" className="ham-btn" onClick={openHam}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 </div>
             </div>
         </div>
