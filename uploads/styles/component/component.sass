@@ -1117,3 +1117,35 @@
             p
                 color: #FFFFFFB2
         
+.footer-strip
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 4
+    height: var(--footerstrip)
+    background: $primary
+    display: none
+    @include media(540)
+        display: block
+    ul
+        @include flex
+        li
+            flex: 1
+            &:not(:last-child)
+                border-right: 1px solid rgb(256 256 256 / 10%)
+            a[href]
+                display: flex
+                flex-direction: column
+                align-items: center
+                text-align: center
+                padding: 8px
+                gap: 3px
+                color: $white
+                font-size: 12px
+                line-height: 1.2
+                height: var(--footerstrip)
+                svg, img
+                    width: 25px
+                    height: 25px
+                    filter: invert(1)
