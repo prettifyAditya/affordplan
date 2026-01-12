@@ -95,6 +95,8 @@
         width: 250px
         height: 250px
         z-index: -1
+    @include media(540)
+        padding-top: 8rem
     &.contact_us
         .main_wrapper
             .colA .heading 
@@ -109,33 +111,58 @@
         --gap: 40px
         align-items: center
         gap: var(--gap)
+        @include media(540)
+            --gap: 30px 
         .colA
             flex: 0 1 calc( 50% - var(--gap) )
             max-width: calc( 50% - var(--gap) )
             width: 100%
+            @include media(768)
+                flex: 0 1 100%
+                max-width: 100%
             .heading
+                @include media(540)
+                    text-align: center
                 h2
                     font-size: 48px
                     line-height: 1.1
                     span
                         font-family: $IvyPresto
+                    @include media(991) 
+                        font-size: 36px
+                    @include media(768)
+                        font-size: 32px
+                    @include media(540)
+                        font-size: 26px
                 p
                     max-width: 525px
                     color: #070606
                     margin: 10px 0 25px
                     font-weight: 500
+                    @include media(540)
+                        margin: 10px 0 15px
+                .btn
+                    @include media(540)
+                        margin: 0 auto
         .colB
             flex: 1 
             max-width: 50%
             width: 100%  
+            @include media(768)
+                flex: 0 1 100%
+                max-width: 100%
             figure
                 width: 100%
                 height: 100%
                 line-height: 0
                 border-radius: 150px 15px 15px 15px
+                @include media(768)
+                    border-radius: 10px
                 img, video
                     min-height: 405px 
                     border-radius: 150px 15px 15px 15px
+                    @include media(768)
+                        border-radius: 10px
 
 .network-form
     &.corporate
@@ -162,12 +189,27 @@
         --gap: 60px
         gap: var(--gap)
         justify-content: space-between
+        @include media(991)
+            --gap: 40px
+        @include media(768)
+            flex-direction: column
+            --gap: 30px
+        @include media(540) 
+            --gap: 20px
         .heading
             flex: 0 1 calc( 50% - var(--gap) )
             max-width: 520px
             width: 100%
+            @include media(768)
+                flex: 0 1 100%
+            @include media(540) 
+                text-align: center
             h2
                 margin-bottom: 20px
+                @include media(768)
+                    max-width: 460px
+                @include media(540) 
+                    margin-bottom: 10px
             p
                 color: #070606
         .form
@@ -182,21 +224,43 @@
                 background-repeat: no-repeat
                 background-size: 210px
                 background-position: 95% 100% 
+            @include media(991)
+                padding: 30px 
+            @include media(768)
+                flex: 0 1 100%
+                max-width: 100%
+            @include media(540) 
+                padding: 25px 15px
             .heading
+                @include media(540) 
+                    max-width: 210px
+                    margin: 0 auto
                 h3
                     font-size: 36px
                     color: $white
+                    @include media(991)
+                        font-size: 28px
+                    @include media(768)
+                        font-size: 24px
+                    @include media(540) 
+                        font-size: 22px
             .form-grid
                 margin: 25px 0 20px
                 --item: 2 
                 --labelfontbefore: 14px
                 --gaplr: 15px
                 --color: var(--black)
+                @include media(991)
+                    font-size: 14px
+                @include media(540) 
+                    --item: 1
                 .form-group
                     label
                         position: static
                         display: block
                         margin-bottom: 10px
+                        @include media(540) 
+                            font-size: 12px
                     .form-control
                         background: #FBFBFB
                         padding: 0 10px
@@ -434,18 +498,47 @@
             background-repeat: no-repeat
             background-position: 95% 100%
             z-index: -1
+        @include media(1280) 
+            --gap: 60px
+            padding: 50px 50px 80px
+        @include media(991) 
+            --gap: 50px
+            padding: 50px 40px 70px
+        @include media(768) 
+            padding: 40px 40px 60px
+            flex-direction: column
+            --gap: 40px
+        @include media(540) 
+            padding: 40px 20px 50px
+            --gap: 30px
         figcaption
             flex: 1
             width: 100%
             max-width: 55%
+            @include media(991) 
+                max-width: 60%
+            @include media(768) 
+                max-width: 100% 
+            @include media(540) 
+                text-align: center
             .heading
                 h2
                     font-size: 48px
                     color: $white
+                    @include media(1280) 
+                        font-size: 40px
+                    @include media(991) 
+                        font-size: 32px
+                    @include media(768) 
+                        font-size: 28px
+                    @include media(540) 
+                        font-size: 24px
                 p
                     margin: 20px 0 30px
                     color: $white
                     max-width: 560px
+                    @include media(540) 
+                        margin: 15px 0 20px
         .colA
             flex: 0 1 40%
             max-width: 40%
@@ -453,13 +546,23 @@
             display: flex
             align-items: center
             justify-content: center
+            --transform: 50px
             @keyframes jiggle
                 0%, 100%
                     transform: translateY(0)
                 50%
-                    transform: translateY(50px)
+                    transform: translateY(var(--transform))
+            @include media(991) 
+                max-width: 40%
+                --transform: 40px
+            @include media(768) 
+                max-width: 50%
+            @include media(540) 
+                --transform: 30px
             figure
                 width: 360px
+                @include media(991) 
+                    width: 100%
                 .card
                     animation: jiggle 3s linear infinite
 
@@ -535,24 +638,56 @@
         background: linear-gradient(90deg, #C2D7F0, #A7E6FE)
         padding: 50px 40px 60px 50px
         border-radius: 20px
+        @include media(1280) 
+            padding: 40px 40px 60px 40px
+        @include media(991) 
+            padding: 30px 30px 50px 30px
+        @include media(540) 
+            padding: 30px 0 30px 20px
         .upper_sec
             display: flex
             flex-wrap: wrap
             align-items: start
             justify-content: space-between
+            @include media(768) 
+                gap: 15px
+            @include media(540) 
+                padding-right: 20px
             .heading
                 flex: 1
                 max-width: 650px
+                @include media(991) 
+                    max-width: 500px
                 h6
                     font-size: 18px
                     margin-bottom: 30px
                     font-weight: 700
+                    @include media(991) 
+                        margin-bottom: 20px
+                    @include media(768) 
+                        font-size: 16px
+                        margin-bottom: 15px
+                    @include media(540) 
+                        font-size: 14px
+                        line-height: 1.2
             figure
                 flex: 0 1 auto
                 width: 130px
+                @include media(991) 
+                    width: 110px
+                @include media(768) 
+                    width: 90px
+                @include media(540) 
+                    display: none
         .slider_wrapper
             position: relative
             margin-top: 60px
+            @include media(991) 
+                margin-top: 50px
+            @include media(768) 
+                margin-top: 40px
+            @include media(540) 
+                margin-top: 30px
             .why-nav
                 width: 106%
                 max-width: 106%
@@ -570,6 +705,10 @@
                     background: $white
                     border-radius: 20px
                     transition: .5s ease
+                    @include media(991) 
+                        padding: 20px 20px 30px
+                    @include media(540) 
+                        padding: 15px 15px 20px
                     &:hover
                         background: #1C82FA
                         .top_nav
@@ -587,10 +726,20 @@
                         align-items: center
                         margin-bottom: 15px
                         gap: 15px
+                        @include media(991) 
+                            gap: 10px
                         .icon
                             flex: 0 1 48px
                             width: 48px
                             height: 48px
+                            @include media(991) 
+                                flex: 0 1 40px
+                                width: 40px
+                                height: 40px
+                            @include media(540) 
+                                flex: 0 1 30px
+                                width: 30px
+                                height: 30px
                             img
                                 transition: .3s ease
                                 object-fit: contain
@@ -598,6 +747,8 @@
                             flex: 1
                             font-size: 18px
                             line-height: 1.2
+                            @include media(991) 
+                                font-size: 16px
                     .desc
                         font-size: 14px
                         line-height: 1.3

@@ -972,6 +972,11 @@ h4, h5 {
     font-size: 24px;
   }
 }
+@media only screen and (max-width: 360px) {
+  .heading h3, .heading h2 {
+    font-size: 22px;
+  }
+}
 .heading h3 span, .heading h2 span {
   font-weight: 300;
   font-family: "IvyPresto";
@@ -1608,6 +1613,7 @@ img, video {
     font-size: 12px;
     --padding: 14px;
     --height: 32px;
+    margin: 0 auto;
   }
 }
 .btn:hover {
